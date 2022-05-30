@@ -1,0 +1,1 @@
+java -ea -classpath $JANET -Djava.rmi.server.codebase=http://www.cs.ucsb.edu/~cappello/classes/ -Djava.security.policy=policy janet.examples.helloworld.Application $1

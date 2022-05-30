@@ -1,0 +1,584 @@
+java -ea -classpath /cs/faculty/cappello/z/jicos/framework/build/classes -Djava.security.policy=/cs/faculty/cappello/z/jicos/framework/policy/policy edu.ucsb.cs.jicos.applications.branchandbound.tsp.demo.Application 9
+GraphEuclidean.constructor: $nodes: 9, seed: 9, magnification: 1000
+0:  
+1: 564  
+2: 602 37  
+3: 753 249 227  
+4: 226 691 727 914  
+5: 355 597 629 672 578  
+6: 311 333 367 461 513 270  
+7: 197 716 753 869 349 297 407  
+8: 337 848 884 984 457 353 527 141  
+UpperBound.makeNodesArray: path[0]:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+UpperBound.makeNodesArray: path[1]:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+UpperBound.makeNodesArray: path[2]:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+UpperBound.makeNodesArray: path[3]:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+UpperBound.makeNodesArray: path[4]:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+UpperBound.makeNodesArray: path[5]:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+UpperBound.makeNodesArray: path[6]:  PATH: index: 6, set: 6, i: 6, j: 6, cost: 0, list:  6
+UpperBound.makeNodesArray: path[7]:  PATH: index: 7, set: 7, i: 7, j: 7, cost: 0, list:  7
+UpperBound.makeNodesArray: path[8]:  PATH: index: 8, set: 8, i: 8, j: 8, cost: 0, list:  8
+UpperBound.makeNodesArray: nodes.length: 9
+ makesNodesArray: node: 0 is   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+ makesNodesArray: node: 1 is   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+ makesNodesArray: node: 2 is   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+ makesNodesArray: node: 3 is   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+ makesNodesArray: node: 4 is   costsIndex: 4, myPath:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+ makesNodesArray: node: 5 is   costsIndex: 5, myPath:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+ makesNodesArray: node: 6 is   costsIndex: 6, myPath:  PATH: index: 6, set: 6, i: 6, j: 6, cost: 0, list:  6
+ makesNodesArray: node: 7 is   costsIndex: 7, myPath:  PATH: index: 7, set: 7, i: 7, j: 7, cost: 0, list:  7
+ makesNodesArray: node: 8 is   costsIndex: 8, myPath:  PATH: index: 8, set: 8, i: 8, j: 8, cost: 0, list:  8
+UpperBound.makeWeightsArray: node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+UpperBound.makeWeightsArray: node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[1,0]: 564
+UpperBound.makeWeightsArray: node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[2,0]: 602
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[2,1]: 37
+UpperBound.makeWeightsArray: node: 3:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[3,0]: 753
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[3,1]: 249
+                            node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+        weights[3,2]: 227
+UpperBound.makeWeightsArray: node: 4:   costsIndex: 4, myPath:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[4,0]: 226
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[4,1]: 691
+                            node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+        weights[4,2]: 727
+                            node: 3:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+        weights[4,3]: 914
+UpperBound.makeWeightsArray: node: 5:   costsIndex: 5, myPath:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[5,0]: 355
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[5,1]: 597
+                            node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+        weights[5,2]: 629
+                            node: 3:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+        weights[5,3]: 672
+                            node: 4:   costsIndex: 4, myPath:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+        weights[5,4]: 578
+UpperBound.makeWeightsArray: node: 6:   costsIndex: 6, myPath:  PATH: index: 6, set: 6, i: 6, j: 6, cost: 0, list:  6
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[6,0]: 311
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[6,1]: 333
+                            node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+        weights[6,2]: 367
+                            node: 3:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+        weights[6,3]: 461
+                            node: 4:   costsIndex: 4, myPath:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+        weights[6,4]: 513
+                            node: 5:   costsIndex: 5, myPath:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+        weights[6,5]: 270
+UpperBound.makeWeightsArray: node: 7:   costsIndex: 7, myPath:  PATH: index: 7, set: 7, i: 7, j: 7, cost: 0, list:  7
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[7,0]: 197
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[7,1]: 716
+                            node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+        weights[7,2]: 753
+                            node: 3:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+        weights[7,3]: 869
+                            node: 4:   costsIndex: 4, myPath:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+        weights[7,4]: 349
+                            node: 5:   costsIndex: 5, myPath:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+        weights[7,5]: 297
+                            node: 6:   costsIndex: 6, myPath:  PATH: index: 6, set: 6, i: 6, j: 6, cost: 0, list:  6
+        weights[7,6]: 407
+UpperBound.makeWeightsArray: node: 8:   costsIndex: 8, myPath:  PATH: index: 8, set: 8, i: 8, j: 8, cost: 0, list:  8
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[8,0]: 337
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[8,1]: 848
+                            node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+        weights[8,2]: 884
+                            node: 3:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+        weights[8,3]: 984
+                            node: 4:   costsIndex: 4, myPath:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+        weights[8,4]: 457
+                            node: 5:   costsIndex: 5, myPath:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+        weights[8,5]: 353
+                            node: 6:   costsIndex: 6, myPath:  PATH: index: 6, set: 6, i: 6, j: 6, cost: 0, list:  6
+        weights[8,6]: 527
+                            node: 7:   costsIndex: 7, myPath:  PATH: index: 7, set: 7, i: 7, j: 7, cost: 0, list:  7
+        weights[8,7]: 141
+UpperBound.setTour: mates.length: 10
+UpperBound.setTour: 0 matches 4
+UpperBound.setTour: 1 matches 2
+UpperBound.setTour: 2 matches 1
+UpperBound.setTour: 3 matches 9
+UpperBound.setTour: 4 matches 0
+UpperBound.setTour: 5 matches 6
+UpperBound.setTour: 6 matches 5
+UpperBound.setTour: 7 matches 8
+UpperBound.setTour: 8 matches 7
+UpperBound.setTour: 9 matches 3
+UpperBound.connectMatedPaths: 0 to 4: 0 to 4
+UpperBound.connectMatedPaths: i: 0 path[0]:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+UpperBound.connectMatedPaths: mate[i]: 4 path[4]:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+Path.add: this.set: 0 path.set: 4
+Path.add:  0 to  4 = path  0 4
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 0
+UpperBound.connectMatedPaths: 1 to 2: 1 to 2
+UpperBound.connectMatedPaths: i: 1 path[1]:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+UpperBound.connectMatedPaths: mate[i]: 2 path[2]:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+Path.add: this.set: 1 path.set: 2
+Path.add:  1 to  2 = path  1 2
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 1
+UpperBound.connectMatedPaths: 5 to 6: 5 to 6
+UpperBound.connectMatedPaths: i: 5 path[5]:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+UpperBound.connectMatedPaths: mate[i]: 6 path[6]:  PATH: index: 6, set: 6, i: 6, j: 6, cost: 0, list:  6
+Path.add: this.set: 5 path.set: 6
+Path.add:  5 to  6 = path  5 6
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 5
+UpperBound.connectMatedPaths: 7 to 8: 7 to 8
+UpperBound.connectMatedPaths: i: 7 path[7]:  PATH: index: 7, set: 7, i: 7, j: 7, cost: 0, list:  7
+UpperBound.connectMatedPaths: mate[i]: 8 path[8]:  PATH: index: 8, set: 8, i: 8, j: 8, cost: 0, list:  8
+Path.add: this.set: 7 path.set: 8
+Path.add:  7 to  8 = path  7 8
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 7
+connectMatedPaths: determining reduced set of paths ... 
+    path[0]:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+    path[1]:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+    path[2]:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+    path[3]:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+    path[4]:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+connectMatedPaths: new paths.length: 5
+UpperBound.makeNodesArray: path[0]:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+UpperBound.makeNodesArray: path[1]:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+UpperBound.makeNodesArray: path[2]:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+UpperBound.makeNodesArray: path[3]:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+UpperBound.makeNodesArray: path[4]:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+UpperBound.makeNodesArray: nodes.length: 9
+ makesNodesArray: node: 0 is   costsIndex: 7, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+ makesNodesArray: node: 1 is   costsIndex: 8, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+ makesNodesArray: node: 2 is   costsIndex: 5, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+ makesNodesArray: node: 3 is   costsIndex: 6, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+ makesNodesArray: node: 4 is   costsIndex: 0, myPath:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+ makesNodesArray: node: 5 is   costsIndex: 4, myPath:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+ makesNodesArray: node: 6 is   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+ makesNodesArray: node: 7 is   costsIndex: 1, myPath:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+ makesNodesArray: node: 8 is   costsIndex: 2, myPath:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+UpperBound.makeWeightsArray: node: 0:   costsIndex: 7, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+UpperBound.makeWeightsArray: node: 1:   costsIndex: 8, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+                            node: 0:   costsIndex: 7, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[1,0]: 1000000
+UpperBound.makeWeightsArray: node: 2:   costsIndex: 5, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+                            node: 0:   costsIndex: 7, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[2,0]: 297
+                            node: 1:   costsIndex: 8, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[2,1]: 353
+UpperBound.makeWeightsArray: node: 3:   costsIndex: 6, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+                            node: 0:   costsIndex: 7, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[3,0]: 407
+                            node: 1:   costsIndex: 8, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[3,1]: 527
+                            node: 2:   costsIndex: 5, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+        weights[3,2]: 1000000
+UpperBound.makeWeightsArray: node: 4:   costsIndex: 0, myPath:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+                            node: 0:   costsIndex: 7, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[4,0]: 197
+                            node: 1:   costsIndex: 8, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[4,1]: 337
+                            node: 2:   costsIndex: 5, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+        weights[4,2]: 355
+                            node: 3:   costsIndex: 6, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+        weights[4,3]: 311
+UpperBound.makeWeightsArray: node: 5:   costsIndex: 4, myPath:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+                            node: 0:   costsIndex: 7, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[5,0]: 349
+                            node: 1:   costsIndex: 8, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[5,1]: 457
+                            node: 2:   costsIndex: 5, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+        weights[5,2]: 578
+                            node: 3:   costsIndex: 6, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+        weights[5,3]: 513
+                            node: 4:   costsIndex: 0, myPath:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+        weights[5,4]: 1000000
+UpperBound.makeWeightsArray: node: 6:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+                            node: 0:   costsIndex: 7, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[6,0]: 869
+                            node: 1:   costsIndex: 8, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[6,1]: 984
+                            node: 2:   costsIndex: 5, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+        weights[6,2]: 672
+                            node: 3:   costsIndex: 6, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+        weights[6,3]: 461
+                            node: 4:   costsIndex: 0, myPath:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+        weights[6,4]: 753
+                            node: 5:   costsIndex: 4, myPath:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+        weights[6,5]: 914
+UpperBound.makeWeightsArray: node: 7:   costsIndex: 1, myPath:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+                            node: 0:   costsIndex: 7, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[7,0]: 716
+                            node: 1:   costsIndex: 8, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[7,1]: 848
+                            node: 2:   costsIndex: 5, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+        weights[7,2]: 597
+                            node: 3:   costsIndex: 6, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+        weights[7,3]: 333
+                            node: 4:   costsIndex: 0, myPath:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+        weights[7,4]: 564
+                            node: 5:   costsIndex: 4, myPath:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+        weights[7,5]: 691
+                            node: 6:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+        weights[7,6]: 249
+UpperBound.makeWeightsArray: node: 8:   costsIndex: 2, myPath:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+                            node: 0:   costsIndex: 7, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[8,0]: 753
+                            node: 1:   costsIndex: 8, myPath:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+        weights[8,1]: 884
+                            node: 2:   costsIndex: 5, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+        weights[8,2]: 629
+                            node: 3:   costsIndex: 6, myPath:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+        weights[8,3]: 367
+                            node: 4:   costsIndex: 0, myPath:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+        weights[8,4]: 602
+                            node: 5:   costsIndex: 4, myPath:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+        weights[8,5]: 727
+                            node: 6:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+        weights[8,6]: 227
+                            node: 7:   costsIndex: 1, myPath:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+        weights[8,7]: 1000000
+UpperBound.setTour: mates.length: 10
+UpperBound.setTour: 0 matches 4
+UpperBound.setTour: 1 matches 2
+UpperBound.setTour: 2 matches 1
+UpperBound.setTour: 3 matches 7
+UpperBound.setTour: 4 matches 0
+UpperBound.setTour: 5 matches 9
+UpperBound.setTour: 6 matches 8
+UpperBound.setTour: 7 matches 3
+UpperBound.setTour: 8 matches 6
+UpperBound.setTour: 9 matches 5
+UpperBound.connectMatedPaths: 0 to 4: 7 to 0
+UpperBound.connectMatedPaths: i: 0 path[0]:  PATH: index: 0, set: 0, i: 7, j: 8, cost: 141, list:  7 8
+UpperBound.connectMatedPaths: mate[i]: 4 path[2]:  PATH: index: 2, set: 2, i: 0, j: 4, cost: 226, list:  0 4
+Path.add: this.set: 0 path.set: 2
+Path.add:  7 8 to  0 4 = path  8 7 0 4
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 0
+UpperBound.connectMatedPaths: 1 to 2: 8 to 5
+UpperBound.connectMatedPaths: i: 1 path[0]:  PATH: index: 0, set: 0, i: 8, j: 4, cost: 564, list:  8 7 0 4
+UpperBound.connectMatedPaths: mate[i]: 2 path[1]:  PATH: index: 1, set: 1, i: 5, j: 6, cost: 270, list:  5 6
+Path.add: this.set: 0 path.set: 1
+Path.add:  8 7 0 4 to  5 6 = path  4 0 7 8 5 6
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 0
+UpperBound.connectMatedPaths: 3 to 7: 6 to 1
+UpperBound.connectMatedPaths: i: 3 path[1]:  PATH: index: 0, set: 0, i: 4, j: 6, cost: 1187, list:  4 0 7 8 5 6
+UpperBound.connectMatedPaths: mate[i]: 7 path[4]:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+Path.add: this.set: 0 path.set: 4
+Path.add:  4 0 7 8 5 6 to  1 2 = path  4 0 7 8 5 6 1 2
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 0
+UpperBound.connectMatedPaths: 6 to 8: 3 to 2
+UpperBound.connectMatedPaths: i: 6 path[3]:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+UpperBound.connectMatedPaths: mate[i]: 8 path[4]:  PATH: index: 0, set: 0, i: 4, j: 2, cost: 1557, list:  4 0 7 8 5 6 1 2
+Path.add: this.set: 3 path.set: 0
+Path.add:  3 to  4 0 7 8 5 6 1 2 = path  3 2 1 6 5 8 7 0 4
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 3
+connectMatedPaths: determining reduced set of paths ... 
+    path[0]:  PATH: index: 0, set: 0, i: 3, j: 4, cost: 1784, list:  3 2 1 6 5 8 7 0 4
+connectMatedPaths: new paths.length: 1
+UpperBound.makeNodesArray: path[0]:  PATH: index: 0, set: 0, i: 3, j: 4, cost: 1784, list:  3 2 1 6 5 8 7 0 4
+UpperBound.makeNodesArray: nodes.length: 2
+ makesNodesArray: node: 0 is   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 4, cost: 1784, list:  3 2 1 6 5 8 7 0 4
+ makesNodesArray: node: 1 is   costsIndex: 4, myPath:  PATH: index: 0, set: 0, i: 3, j: 4, cost: 1784, list:  3 2 1 6 5 8 7 0 4
+UpperBound.makeWeightsArray: node: 0:   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 4, cost: 1784, list:  3 2 1 6 5 8 7 0 4
+UpperBound.makeWeightsArray: node: 1:   costsIndex: 4, myPath:  PATH: index: 0, set: 0, i: 3, j: 4, cost: 1784, list:  3 2 1 6 5 8 7 0 4
+                            node: 0:   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 4, cost: 1784, list:  3 2 1 6 5 8 7 0 4
+        weights[1,0]: 1000000
+UpperBound.setTour: finishing tour.
+UpperBound.minCostTour: paths.length: 1
+ 3 2 1 6 5 8 7 0 4UpperBound.makeNodesArray: path[0]:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+UpperBound.makeNodesArray: path[1]:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+UpperBound.makeNodesArray: path[2]:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+UpperBound.makeNodesArray: path[3]:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+UpperBound.makeNodesArray: path[4]:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+UpperBound.makeNodesArray: path[5]:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+UpperBound.makeNodesArray: path[6]:  PATH: index: 6, set: 6, i: 6, j: 6, cost: 0, list:  6
+UpperBound.makeNodesArray: path[7]:  PATH: index: 7, set: 7, i: 7, j: 7, cost: 0, list:  7
+UpperBound.makeNodesArray: path[8]:  PATH: index: 8, set: 8, i: 8, j: 8, cost: 0, list:  8
+UpperBound.makeNodesArray: nodes.length: 9
+ makesNodesArray: node: 0 is   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+ makesNodesArray: node: 1 is   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+ makesNodesArray: node: 2 is   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+ makesNodesArray: node: 3 is   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+ makesNodesArray: node: 4 is   costsIndex: 4, myPath:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+ makesNodesArray: node: 5 is   costsIndex: 5, myPath:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+ makesNodesArray: node: 6 is   costsIndex: 6, myPath:  PATH: index: 6, set: 6, i: 6, j: 6, cost: 0, list:  6
+ makesNodesArray: node: 7 is   costsIndex: 7, myPath:  PATH: index: 7, set: 7, i: 7, j: 7, cost: 0, list:  7
+ makesNodesArray: node: 8 is   costsIndex: 8, myPath:  PATH: index: 8, set: 8, i: 8, j: 8, cost: 0, list:  8
+UpperBound.makeWeightsArray: node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+UpperBound.makeWeightsArray: node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[1,0]: 564
+UpperBound.makeWeightsArray: node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[2,0]: 602
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[2,1]: 37
+UpperBound.makeWeightsArray: node: 3:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[3,0]: 753
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[3,1]: 249
+                            node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+        weights[3,2]: 227
+UpperBound.makeWeightsArray: node: 4:   costsIndex: 4, myPath:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[4,0]: 226
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[4,1]: 691
+                            node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+        weights[4,2]: 727
+                            node: 3:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+        weights[4,3]: 914
+UpperBound.makeWeightsArray: node: 5:   costsIndex: 5, myPath:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[5,0]: 355
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[5,1]: 597
+                            node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+        weights[5,2]: 629
+                            node: 3:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+        weights[5,3]: 672
+                            node: 4:   costsIndex: 4, myPath:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+        weights[5,4]: 578
+UpperBound.makeWeightsArray: node: 6:   costsIndex: 6, myPath:  PATH: index: 6, set: 6, i: 6, j: 6, cost: 0, list:  6
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[6,0]: 311
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[6,1]: 333
+                            node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+        weights[6,2]: 367
+                            node: 3:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+        weights[6,3]: 461
+                            node: 4:   costsIndex: 4, myPath:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+        weights[6,4]: 513
+                            node: 5:   costsIndex: 5, myPath:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+        weights[6,5]: 270
+UpperBound.makeWeightsArray: node: 7:   costsIndex: 7, myPath:  PATH: index: 7, set: 7, i: 7, j: 7, cost: 0, list:  7
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[7,0]: 197
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[7,1]: 716
+                            node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+        weights[7,2]: 753
+                            node: 3:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+        weights[7,3]: 869
+                            node: 4:   costsIndex: 4, myPath:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+        weights[7,4]: 349
+                            node: 5:   costsIndex: 5, myPath:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+        weights[7,5]: 297
+                            node: 6:   costsIndex: 6, myPath:  PATH: index: 6, set: 6, i: 6, j: 6, cost: 0, list:  6
+        weights[7,6]: 407
+UpperBound.makeWeightsArray: node: 8:   costsIndex: 8, myPath:  PATH: index: 8, set: 8, i: 8, j: 8, cost: 0, list:  8
+                            node: 0:   costsIndex: 0, myPath:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+        weights[8,0]: 337
+                            node: 1:   costsIndex: 1, myPath:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+        weights[8,1]: 848
+                            node: 2:   costsIndex: 2, myPath:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+        weights[8,2]: 884
+                            node: 3:   costsIndex: 3, myPath:  PATH: index: 3, set: 3, i: 3, j: 3, cost: 0, list:  3
+        weights[8,3]: 984
+                            node: 4:   costsIndex: 4, myPath:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+        weights[8,4]: 457
+                            node: 5:   costsIndex: 5, myPath:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+        weights[8,5]: 353
+                            node: 6:   costsIndex: 6, myPath:  PATH: index: 6, set: 6, i: 6, j: 6, cost: 0, list:  6
+        weights[8,6]: 527
+                            node: 7:   costsIndex: 7, myPath:  PATH: index: 7, set: 7, i: 7, j: 7, cost: 0, list:  7
+        weights[8,7]: 141
+UpperBound.setTour: mates.length: 10
+UpperBound.setTour: 0 matches 4
+UpperBound.setTour: 1 matches 2
+UpperBound.setTour: 2 matches 1
+UpperBound.setTour: 3 matches 9
+UpperBound.setTour: 4 matches 0
+UpperBound.setTour: 5 matches 6
+UpperBound.setTour: 6 matches 5
+UpperBound.setTour: 7 matches 8
+UpperBound.setTour: 8 matches 7
+UpperBound.setTour: 9 matches 3
+UpperBound.connectMatedPaths: 0 to 4: 0 to 4
+UpperBound.connectMatedPaths: i: 0 path[0]:  PATH: index: 0, set: 0, i: 0, j: 0, cost: 0, list:  0
+UpperBound.connectMatedPaths: mate[i]: 4 path[4]:  PATH: index: 4, set: 4, i: 4, j: 4, cost: 0, list:  4
+Path.add: this.set: 0 path.set: 4
+Path.add:  0 to  4 = path  0 4
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 0
+UpperBound.connectMatedPaths: 1 to 2: 1 to 2
+UpperBound.connectMatedPaths: i: 1 path[1]:  PATH: index: 1, set: 1, i: 1, j: 1, cost: 0, list:  1
+UpperBound.connectMatedPaths: mate[i]: 2 path[2]:  PATH: index: 2, set: 2, i: 2, j: 2, cost: 0, list:  2
+Path.add: this.set: 1 path.set: 2
+Path.add:  1 to  2 = path  1 2
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 1
+UpperBound.connectMatedPaths: 5 to 6: 5 to 6
+UpperBound.connectMatedPaths: i: 5 path[5]:  PATH: index: 5, set: 5, i: 5, j: 5, cost: 0, list:  5
+UpperBound.connectMatedPaths: mate[i]: 6 path[6]:  PATH: index: 6, set: 6, i: 6, j: 6, cost: 0, list:  6
+Path.add: this.set: 5 path.set: 6
+Path.add:  5 to  6 = path  5 6
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 5
+UpperBound.connectMatedPaths: 7 to 8: 7 to 8
+UpperBound.connectMatedPaths: i: 7 path[7]:  PATH: index: 7, set: 7, i: 7, j: 7, cost: 0, list:  7
+UpperBound.connectMatedPaths: mate[i]: 8 path[8]:  PATH: index: 8, set: 8, i: 8, j: 8, cost: 0, list:  8
+Path.add: this.set: 7 path.set: 8
+Path.add:  7 to  8 = path  7 8
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 7
+connectMatedPaths: determining reduced set of paths ... 
+    path[0]:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+    path[1]:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+    path[2]:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+    path[3]:  PATH: index: 3, set: 3, i: 0, j: 4, cost: 226, list:  0 4
+    path[4]:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+connectMatedPaths: new paths.length: 5
+UpperBound.makeNodesArray: path[0]:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+UpperBound.makeNodesArray: path[1]:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+UpperBound.makeNodesArray: path[2]:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+UpperBound.makeNodesArray: path[3]:  PATH: index: 3, set: 3, i: 0, j: 4, cost: 226, list:  0 4
+UpperBound.makeNodesArray: path[4]:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+UpperBound.makeNodesArray: nodes.length: 9
+ makesNodesArray: node: 0 is   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+ makesNodesArray: node: 1 is   costsIndex: 7, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+ makesNodesArray: node: 2 is   costsIndex: 8, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+ makesNodesArray: node: 3 is   costsIndex: 5, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+ makesNodesArray: node: 4 is   costsIndex: 6, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+ makesNodesArray: node: 5 is   costsIndex: 0, myPath:  PATH: index: 3, set: 3, i: 0, j: 4, cost: 226, list:  0 4
+ makesNodesArray: node: 6 is   costsIndex: 4, myPath:  PATH: index: 3, set: 3, i: 0, j: 4, cost: 226, list:  0 4
+ makesNodesArray: node: 7 is   costsIndex: 1, myPath:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+ makesNodesArray: node: 8 is   costsIndex: 2, myPath:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+UpperBound.makeWeightsArray: node: 0:   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+UpperBound.makeWeightsArray: node: 1:   costsIndex: 7, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+                            node: 0:   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+        weights[1,0]: 869
+UpperBound.makeWeightsArray: node: 2:   costsIndex: 8, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+                            node: 0:   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+        weights[2,0]: 984
+                            node: 1:   costsIndex: 7, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[2,1]: 1000000
+UpperBound.makeWeightsArray: node: 3:   costsIndex: 5, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+                            node: 0:   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+        weights[3,0]: 672
+                            node: 1:   costsIndex: 7, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[3,1]: 297
+                            node: 2:   costsIndex: 8, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[3,2]: 353
+UpperBound.makeWeightsArray: node: 4:   costsIndex: 6, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+                            node: 0:   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+        weights[4,0]: 461
+                            node: 1:   costsIndex: 7, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[4,1]: 407
+                            node: 2:   costsIndex: 8, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[4,2]: 527
+                            node: 3:   costsIndex: 5, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+        weights[4,3]: 1000000
+UpperBound.makeWeightsArray: node: 5:   costsIndex: 0, myPath:  PATH: index: 3, set: 3, i: 0, j: 4, cost: 226, list:  0 4
+                            node: 0:   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+        weights[5,0]: 753
+                            node: 1:   costsIndex: 7, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[5,1]: 197
+                            node: 2:   costsIndex: 8, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[5,2]: 337
+                            node: 3:   costsIndex: 5, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+        weights[5,3]: 355
+                            node: 4:   costsIndex: 6, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+        weights[5,4]: 311
+UpperBound.makeWeightsArray: node: 6:   costsIndex: 4, myPath:  PATH: index: 3, set: 3, i: 0, j: 4, cost: 226, list:  0 4
+                            node: 0:   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+        weights[6,0]: 914
+                            node: 1:   costsIndex: 7, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[6,1]: 349
+                            node: 2:   costsIndex: 8, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[6,2]: 457
+                            node: 3:   costsIndex: 5, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+        weights[6,3]: 578
+                            node: 4:   costsIndex: 6, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+        weights[6,4]: 513
+                            node: 5:   costsIndex: 0, myPath:  PATH: index: 3, set: 3, i: 0, j: 4, cost: 226, list:  0 4
+        weights[6,5]: 1000000
+UpperBound.makeWeightsArray: node: 7:   costsIndex: 1, myPath:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+                            node: 0:   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+        weights[7,0]: 249
+                            node: 1:   costsIndex: 7, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[7,1]: 716
+                            node: 2:   costsIndex: 8, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[7,2]: 848
+                            node: 3:   costsIndex: 5, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+        weights[7,3]: 597
+                            node: 4:   costsIndex: 6, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+        weights[7,4]: 333
+                            node: 5:   costsIndex: 0, myPath:  PATH: index: 3, set: 3, i: 0, j: 4, cost: 226, list:  0 4
+        weights[7,5]: 564
+                            node: 6:   costsIndex: 4, myPath:  PATH: index: 3, set: 3, i: 0, j: 4, cost: 226, list:  0 4
+        weights[7,6]: 691
+UpperBound.makeWeightsArray: node: 8:   costsIndex: 2, myPath:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+                            node: 0:   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+        weights[8,0]: 227
+                            node: 1:   costsIndex: 7, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[8,1]: 753
+                            node: 2:   costsIndex: 8, myPath:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+        weights[8,2]: 884
+                            node: 3:   costsIndex: 5, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+        weights[8,3]: 629
+                            node: 4:   costsIndex: 6, myPath:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+        weights[8,4]: 367
+                            node: 5:   costsIndex: 0, myPath:  PATH: index: 3, set: 3, i: 0, j: 4, cost: 226, list:  0 4
+        weights[8,5]: 602
+                            node: 6:   costsIndex: 4, myPath:  PATH: index: 3, set: 3, i: 0, j: 4, cost: 226, list:  0 4
+        weights[8,6]: 727
+                            node: 7:   costsIndex: 1, myPath:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+        weights[8,7]: 1000000
+UpperBound.setTour: mates.length: 10
+UpperBound.setTour: 0 matches 8
+UpperBound.setTour: 1 matches 5
+UpperBound.setTour: 2 matches 3
+UpperBound.setTour: 3 matches 2
+UpperBound.setTour: 4 matches 7
+UpperBound.setTour: 5 matches 1
+UpperBound.setTour: 6 matches 9
+UpperBound.setTour: 7 matches 4
+UpperBound.setTour: 8 matches 0
+UpperBound.setTour: 9 matches 6
+UpperBound.connectMatedPaths: 0 to 8: 3 to 2
+UpperBound.connectMatedPaths: i: 0 path[0]:  PATH: index: 0, set: 0, i: 3, j: 3, cost: 0, list:  3
+UpperBound.connectMatedPaths: mate[i]: 8 path[4]:  PATH: index: 4, set: 4, i: 1, j: 2, cost: 37, list:  1 2
+Path.add: this.set: 0 path.set: 4
+Path.add:  3 to  1 2 = path  3 2 1
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 0
+UpperBound.connectMatedPaths: 1 to 5: 7 to 0
+UpperBound.connectMatedPaths: i: 1 path[1]:  PATH: index: 1, set: 1, i: 7, j: 8, cost: 141, list:  7 8
+UpperBound.connectMatedPaths: mate[i]: 5 path[3]:  PATH: index: 3, set: 3, i: 0, j: 4, cost: 226, list:  0 4
+Path.add: this.set: 1 path.set: 3
+Path.add:  7 8 to  0 4 = path  8 7 0 4
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 1
+UpperBound.connectMatedPaths: 2 to 3: 8 to 5
+UpperBound.connectMatedPaths: i: 2 path[1]:  PATH: index: 1, set: 1, i: 8, j: 4, cost: 564, list:  8 7 0 4
+UpperBound.connectMatedPaths: mate[i]: 3 path[2]:  PATH: index: 2, set: 2, i: 5, j: 6, cost: 270, list:  5 6
+Path.add: this.set: 1 path.set: 2
+Path.add:  8 7 0 4 to  5 6 = path  4 0 7 8 5 6
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 1
+UpperBound.connectMatedPaths: 4 to 7: 6 to 1
+UpperBound.connectMatedPaths: i: 4 path[2]:  PATH: index: 1, set: 1, i: 4, j: 6, cost: 1187, list:  4 0 7 8 5 6
+UpperBound.connectMatedPaths: mate[i]: 7 path[4]:  PATH: index: 0, set: 0, i: 3, j: 1, cost: 264, list:  3 2 1
+Path.add: this.set: 1 path.set: 0
+Path.add:  4 0 7 8 5 6 to  3 2 1 = path  4 0 7 8 5 6 1 2 3
+UpperBound.connectMatedPaths: identifying paths: set (i,j)PathsIndex: 1
+connectMatedPaths: determining reduced set of paths ... 
+    path[0]:  PATH: index: 0, set: 0, i: 4, j: 3, cost: 1784, list:  4 0 7 8 5 6 1 2 3
+connectMatedPaths: new paths.length: 1
+UpperBound.makeNodesArray: path[0]:  PATH: index: 0, set: 0, i: 4, j: 3, cost: 1784, list:  4 0 7 8 5 6 1 2 3
+UpperBound.makeNodesArray: nodes.length: 2
+ makesNodesArray: node: 0 is   costsIndex: 4, myPath:  PATH: index: 0, set: 0, i: 4, j: 3, cost: 1784, list:  4 0 7 8 5 6 1 2 3
+ makesNodesArray: node: 1 is   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 4, j: 3, cost: 1784, list:  4 0 7 8 5 6 1 2 3
+UpperBound.makeWeightsArray: node: 0:   costsIndex: 4, myPath:  PATH: index: 0, set: 0, i: 4, j: 3, cost: 1784, list:  4 0 7 8 5 6 1 2 3
+UpperBound.makeWeightsArray: node: 1:   costsIndex: 3, myPath:  PATH: index: 0, set: 0, i: 4, j: 3, cost: 1784, list:  4 0 7 8 5 6 1 2 3
+                            node: 0:   costsIndex: 4, myPath:  PATH: index: 0, set: 0, i: 4, j: 3, cost: 1784, list:  4 0 7 8 5 6 1 2 3
+        weights[1,0]: 1000000
+UpperBound.setTour: finishing tour.
+UpperBound.minCostTour: paths.length: 1
+ 4 0 7 8 5 6 1 2 3

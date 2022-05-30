@@ -1,0 +1,3 @@
+echo java -ea -classpath $JICOS/build/classes -Djava.security.policy=$JICOS/policy/policy edu.ucsb.cs.jicos.applications.branchandbound.tsp.demo.Application $1
+
+java -ea -classpath $JICOS/build/classes -Djava.security.policy=$JICOS/policy/policy edu.ucsb.cs.jicos.applications.branchandbound.tsp.demo.Application $1

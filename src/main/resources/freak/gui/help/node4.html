@@ -1,0 +1,699 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.48)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>2. Creating a Schedule</TITLE>
+<META NAME="description" CONTENT="2. Creating a Schedule">
+<META NAME="keywords" CONTENT="usersguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="usersguide.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="usersguide.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html191"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html185"
+  HREF="usersguide.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html179"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html187"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html189"
+  HREF="node7.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html192"
+  HREF="node5.html">3. Controlling Runs</A>
+<B> Up:</B> <A NAME="tex2html186"
+  HREF="usersguide.html">FrEAK Free Evolutionary Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html180"
+  HREF="node3.html">1. Introduction</A>
+ &nbsp <B>  <A NAME="tex2html188"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html190"
+  HREF="node7.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html193"
+  HREF="#SECTION00410000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN> Some Words about Schedules</A>
+<UL>
+<LI><A NAME="tex2html194"
+  HREF="#SECTION00411000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN> What is a Schedule?</A>
+<LI><A NAME="tex2html195"
+  HREF="#SECTION00412000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN> What is a Batch?</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html196"
+  HREF="#SECTION00420000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">2</SPAN> Overview and Navigation</A>
+<LI><A NAME="tex2html197"
+  HREF="#SECTION00430000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">3</SPAN> General Notes</A>
+<LI><A NAME="tex2html198"
+  HREF="#SECTION00440000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN> Designing the Algorithm</A>
+<UL>
+<LI><A NAME="tex2html199"
+  HREF="#SECTION00441000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN> Step 1: Select a Search Space</A>
+<LI><A NAME="tex2html200"
+  HREF="#SECTION00442000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN> Step 2: Select a Fitness Function</A>
+<UL>
+<LI><A NAME="tex2html201"
+  HREF="#SECTION00442100000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN> Defining Fitness Transformers</A>
+</UL>
+<LI><A NAME="tex2html202"
+  HREF="#SECTION00443000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN> Step 3: Choosing a Genotype-Mapper</A>
+<LI><A NAME="tex2html203"
+  HREF="#SECTION00444000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">4</SPAN> Step 4: Create an Algorithm Graph</A>
+<LI><A NAME="tex2html204"
+  HREF="#SECTION00445000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">5</SPAN> Step 5: Select Stopping Criteria</A>
+<LI><A NAME="tex2html205"
+  HREF="#SECTION00446000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">6</SPAN> Step 6: Select Population Model and Initialization</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html206"
+  HREF="#SECTION00450000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">5</SPAN> Preparing the Simulation</A>
+<UL>
+<LI><A NAME="tex2html207"
+  HREF="#SECTION00451000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">1</SPAN> Step 7: Add Observers and Views</A>
+<LI><A NAME="tex2html208"
+  HREF="#SECTION00452000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">2</SPAN> Step 8: Creating Batches of Runs</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html209"
+  HREF="#SECTION00460000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">6</SPAN> Configuration of Modules</A>
+<UL>
+<LI><A NAME="tex2html210"
+  HREF="#SECTION00461000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">1</SPAN> Configuration of Properties</A>
+<LI><A NAME="tex2html211"
+  HREF="#SECTION00462000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">2</SPAN> Advanced Feature: Code Editing</A>
+<LI><A NAME="tex2html212"
+  HREF="#SECTION00463000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">3</SPAN> Configuration of Event Sources</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00400000000000000000"></A>
+<A NAME="chapter2"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>. Creating a Schedule
+</H1>
+
+<H1><A NAME="SECTION00410000000000000000">
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN> Some Words about Schedules</A>
+</H1>
+The <SPAN  CLASS="textit">schedule</SPAN><A NAME="233"></A> is the central object you deal with in FrEAK, so it is necessary to explain it a little bit more in detail.
+
+<H2><A NAME="SECTION00411000000000000000">
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN> What is a Schedule?</A>
+</H2>
+A schedule is the collection of all data that is needed to simulate one or several runs of your algorithm. It contains the algorithm you want to simulate with all its components and the preferences for the simulation itself.
+
+<H2><A NAME="SECTION00412000000000000000"></A>
+<A NAME="WhatIsABatch"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN> What is a Batch?
+</H2>
+The runs that are to be simulated consist of one or multiple <SPAN  CLASS="textit">batches</SPAN><A NAME="238"></A>. A batch is a collection of configurations for the phenotype search space, the fitness function, and the initial population. Furthermore, it contains the number of runs you want to simulate with these settings. A schedule will contain at least one batch with at least one run with the settings defined using the <SPAN  CLASS="textbf">Schedule Editor</SPAN><A NAME="240"></A> but you are free to either increase the number of runs or to append new batches to your schedule.
+
+It is important to realize that the modules of the schedule stay the same throughout all runs and batches and that a batch simply gets new configuration settings for these modules.
+
+A batch consists of the following four components:
+
+<UL>
+<LI>the number of runs,
+</LI>
+<LI>configuration settings for the phenotype search space,
+</LI>
+<LI>configuration settings for the selected fitness function, and
+</LI>
+<LI>configuration settings for the initialization module that creates the initial population.
+</LI>
+</UL>
+<H1><A NAME="SECTION00420000000000000000">
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">2</SPAN> Overview and Navigation</A>
+</H1>
+Most certainly, you now want to create your own schedule to see some algorithms in action, so let's begin right away.
+
+First of all, select <SPAN  CLASS="textbf">New</SPAN> from the <SPAN  CLASS="textbf">File</SPAN> menu:
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:newschedule"></A><A NAME="248"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.1:</STRONG>
+Creating a new schedule.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="282" HEIGHT="156" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-newschedule.png"
+ ALT="Image images/ch02-newschedule.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+You will be presented the <SPAN  CLASS="textbf">Schedule Editor</SPAN>.
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:overview"></A><A NAME="254"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.2:</STRONG>
+The Schedule Editor.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="800" HEIGHT="554" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-overview.png"
+ ALT="Image images/ch02-overview.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+The dialog consists of three parts. At the bottom of the window, you find the navigation buttons <SPAN  CLASS="textbf">Back</SPAN> and <SPAN  CLASS="textbf">Next</SPAN>. Use them to navigate back and forth through the wizard. Press <SPAN  CLASS="textbf">Help</SPAN> to get context-sensitive help and hit <SPAN  CLASS="textbf">Finish</SPAN> to end editing the schedule and run it. At any time you can press <SPAN  CLASS="textbf">Cancel</SPAN> if you changed your mind and discard all changes you made to the schedule.
+
+The progress in the wizard is displayed on the left side of the window. The step you are working on is highlighted. In the lower left corner you can see the chosen search spaces and the fitness function.
+
+The rest of the dialog will contain panels where you can construct your schedule step by step.
+So let's take a quick tour through the <SPAN  CLASS="textbf">Schedule Editor</SPAN>.
+
+<H1><A NAME="SECTION00430000000000000000">
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">3</SPAN> General Notes</A>
+</H1>
+Before you start creating a schedule keep the following in mind:
+
+<UL>
+<LI>Whenever you can select a module from a list, there is most probably a <SPAN  CLASS="textbf">Configure</SPAN> button near it. So whatever you choose, check the configuration of the module if it suits your needs. If there is a text field above the button that says ``<SPAN  CLASS="textbf">Options</SPAN>", this field will contain the current configuration of the selection in a human readable format. For more information about configuring modules, see Section <A HREF="node4.html#configurationOfModules">2.6</A>: configurationOfModules.
+</LI>
+<LI>Most modules you select from a list will show their description in a text area beside or below the list.
+</LI>
+<LI>The navigation buttons at the bottom are context sensitive. So, if <SPAN  CLASS="textbf">Finish</SPAN> is enabled, your schedule is syntactically correct and you <SPAN  CLASS="textbf">may</SPAN> run it. If, for example, the <SPAN  CLASS="textbf">Next</SPAN> button is disabled, you forgot to select or configure something in the current step.
+</LI>
+<LI>Several modules of the schedule depend heavily on other modules. So, when you exchange a module for another one, e.g., if you change the phenotype search space, modules selected and configured in following steps may be removed from the schedule and might even not be available for selection any more.
+</LI>
+</UL>
+<H1><A NAME="SECTION00440000000000000000">
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN> Designing the Algorithm</A>
+</H1>
+
+<H2><A NAME="SECTION00441000000000000000"></A>
+<A NAME="SelectSearchSpace"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN> Step 1: Select a Search Space
+</H2>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:searchspace"></A><A NAME="278"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.3:</STRONG>
+Selecting a search space.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="543" HEIGHT="490" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-searchspace.png"
+ ALT="Image images/ch02-searchspace.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+First, you need to choose a <SPAN  CLASS="textit">phenotype search space</SPAN><A NAME="282"></A> as a domain for the upcoming fitness function from the list (see Figure <A HREF="node4.html#fig:searchspace">2.3</A>). B<SMALL>IT </SMALL>S<SMALL>TRING</SMALL> is the default selection right now. If you want to change the search space, just click on another one and configure it using the <SPAN  CLASS="textbf">Configure</SPAN> button.
+
+For now, we are satisfied with B<SMALL>IT </SMALL>S<SMALL>TRING</SMALL> with a dimension of 64. Press <SPAN  CLASS="textbf">Next</SPAN> to continue.
+
+<H2><A NAME="SECTION00442000000000000000">
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN> Step 2: Select a Fitness Function</A>
+</H2>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fitness"></A><A NAME="291"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.4:</STRONG>
+Selecting a fitness function.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="544" HEIGHT="485" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-fitnessfunction.png"
+ ALT="Image images/ch02-fitnessfunction.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+In the second step you need to choose the <SPAN  CLASS="textit">fitness function</SPAN><A NAME="295"></A> your algorithm is supposed to optimize.
+
+Just like the search space you can choose it by selecting one from the list and configure it by pressing the <SPAN  CLASS="textbf">Configure</SPAN> button (see Figure <A HREF="node4.html#fig:fitness">2.4</A>).
+
+The <SPAN  CLASS="textbf">Edit Fitness Transformers</SPAN> button is an advanced option to define <SPAN  CLASS="textit">fitness transformers</SPAN><A NAME="300"></A> that provide additional functionality to your fitness function.
+Fitness transformers are applied to your fitness function and transform the computed values.
+
+If you want to know how to use fitness transformers, read the next paragraph, otherwise
+simply select R<SMALL>IDGE</SMALL> as fitness function and press <SPAN  CLASS="textbf">Next</SPAN> to continue.
+
+<H3><A NAME="SECTION00442100000000000000">
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN> Defining Fitness Transformers</A>
+</H3>
+
+If you want to add fitness transformers to your schedule, click on <SPAN  CLASS="textbf">Edit Fitness Transformers</SPAN>. You will be presented the following dialog:
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:fitnesstransformer"></A><A NAME="307"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.5:</STRONG>
+Defining fitness transformers</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="530" HEIGHT="354" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-fitnesstransformer.png"
+ ALT="Image images/ch02-fitnesstransformer.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+On the left side you can choose the fitness transformer you want to apply on your fitness function. Click on <SPAN  CLASS="textbf">Add</SPAN> to use the selected transformer. The transformer will then appear in the list of your <SPAN  CLASS="textbf">Current Fitness Transformers</SPAN> on the right. You can apply as many transformers as you want, they will be applied in the order specified by the list.
+
+Of course, you can configure each transformer after adding it to the list of <SPAN  CLASS="textbf">Current Fitness Transformers</SPAN> by clicking on the <SPAN  CLASS="textbf">Configure</SPAN> button.
+
+If you are satisfied with the fitness transformer setup, click on <SPAN  CLASS="textbf">Close</SPAN> to get back to the schedule editor dialog. You will notice a small table containing information about your selected fitness transformers below the List of available fitness functions (see Figure <A HREF="node4.html#fig:transformersetup">2.6</A>).
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:transformersetup"></A><A NAME="318"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.6:</STRONG>
+Setup of fitness transformers.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="523" HEIGHT="145" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-transformersetup.png"
+ ALT="Image images/ch02-transformersetup.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+But let's get back to editing the schedule...
+
+<H2><A NAME="SECTION00443000000000000000"></A>
+<A NAME="ChooseMapper"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN> Step 3: Choosing a Genotype-Mapper
+</H2>
+
+Some search spaces represent their individuals in a way that is inappropriate for the mutation and crossover modules you want to use or sometimes you just want to represent an individual differently from their original encoding. An obvious example is the use of the search space <SPAN  CLASS="textbf">Graph Edge Selection</SPAN>. This search space works with an internal encoding of edge selections of a graph. Now imagine you want to represent graphs (spanning trees in this case) using a Prüfer number. You can either write a completely new search space and new mutation and crossover modules or you can <SPAN  CLASS="textit">map</SPAN> the individuals to a new search space, in this case to the search space <SPAN  CLASS="textbf">General String</SPAN> using a <SPAN  CLASS="textbf">Mapper</SPAN><A NAME="327"></A>. We call the the individuals that are created by the original search space <SPAN  CLASS="textbf">Phenotypes</SPAN><A NAME="329"></A> and the individuals being produced by the mapper <SPAN  CLASS="textbf">Genotypes</SPAN><A NAME="331"></A>. If you don't select any mapper, phenotypes and genotypes are obviously identical.
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:mapper"></A><A NAME="334"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.7:</STRONG>
+Choosing a Genotype-Mapper.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="542" HEIGHT="488" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-mapper.png"
+ ALT="Image images/ch02-mapper.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+Before you can select a mapper you have to mark the checkbox <SPAN  CLASS="textbf">Use Phenotype - Genotype Mapper</SPAN>. Then you can select one of the offered mappers from the listbox and configure it the same way you did it with the search space and the fitness function. That's all you have to do.
+
+<IMG
+ WIDTH="705" HEIGHT="170" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="\fbox{\parbox{15.3cm}{{\bf Note:} \newline If you selected a mapper in this step...
+...ad selected the \textbf{General String} search space right from the beginning.}}">
+<P>
+At the moment we don't need any mappers, so just click on <SPAN  CLASS="textbf">Next</SPAN> to advance.
+
+<H2><A NAME="SECTION00444000000000000000"></A>
+<A NAME="SelectAlgorithmGraph"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">4</SPAN> Step 4: Create an Algorithm Graph
+</H2>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:graph"></A><A NAME="347"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.8:</STRONG>
+Creating an algorithm graph.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="547" HEIGHT="490" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-graph.png"
+ ALT="Image images/ch02-graph.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+In this step you specify the <SPAN  CLASS="textit">algorithm graph</SPAN><A NAME="351"></A> which is the core of your algorithm.
+For further explanations on algorithm graphs, read Section <A HREF="node3.html#section1.2">1.2</A>: section1.2 or Chapter <A HREF="node6.html#chapter4">4</A>: chapter4.
+
+In the center of the window, you see a preview of the current algorithm graph. You can either choose a predefined graph from the drop-down list on top, or create your own graph by clicking the button <SPAN  CLASS="textbf">Edit Graph</SPAN>.
+
+For now we use the default graph. To see how to create custom graphs, see Chapter <A HREF="node6.html#chapter4">4</A>: chapter4.
+
+Press <SPAN  CLASS="textbf">Next</SPAN>.
+
+<H2><A NAME="SECTION00445000000000000000"></A>
+<A NAME="SelectStoppingCriterion"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">5</SPAN> Step 5: Select Stopping Criteria
+</H2>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:stopcrit"></A><A NAME="364"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.9:</STRONG>
+Selecting stopping criteria.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="544" HEIGHT="489" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-stoppingcrit.png"
+ ALT="Image images/ch02-stoppingcrit.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<SPAN  CLASS="textit">Stopping criteria</SPAN><A NAME="368"></A> tell the algorithm to stop the current run if a specified condition is fulfilled. Select one or more stopping criteria from the list of available stopping criteria (Figure <A HREF="node4.html#fig:stopcrit">2.9</A>). The check boxes will show you which stopping criteria have been selected. If you select multiple stopping criteria, the run is stopped if any of the criteria is fulfilled. In case no criterion is selected, you have to end the run manually by pressing the <SPAN  CLASS="textbf">Skip Run</SPAN> button in the main window.
+
+After selecting a stopping criterion in the list you can configure it by pressing the <SPAN  CLASS="textbf">Configure</SPAN> button.
+
+Select O<SMALL>PTIMUM </SMALL>R<SMALL>EACHED</SMALL> and press <SPAN  CLASS="textbf">Next</SPAN>.
+
+<IMG
+ WIDTH="705" HEIGHT="127" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="\fbox{\parbox{15.3cm}{{\bf Note:} \newline The \textsc{Optimum Reached} stopping...
+...rion so that it won't be displayed in the list of available stopping criteria.}}">
+<P>
+
+<H2><A NAME="SECTION00446000000000000000"></A>
+<A NAME="SelectingPopulationModel"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">6</SPAN> Step 6: Select Population Model and Initialization
+</H2>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:population"></A><A NAME="379"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.10:</STRONG>
+Selecting population model and initialization.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="543" HEIGHT="489" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-population.png"
+ ALT="Image images/ch02-population.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+This step consists of two parts that both deal with the population of the algorithm and how this population is initialized. In the upper panel you select your <SPAN  CLASS="textit">population model</SPAN><A NAME="383"></A>. The population model is an optional choice and allows you to maintain subdivisions inside the population. The D<SMALL>EFAULT </SMALL>P<SMALL>OPULATION </SMALL>M<SMALL>ODEL</SMALL> is appropriate if you do not want to use subdivisions at all.
+
+In the lower panel you select the <SPAN  CLASS="textit">initialization module</SPAN><A NAME="386"></A> which creates the initial population.
+
+For now, leave the population model and the initialization module as it is to create a randomly chosen population of size 10.
+
+With the completion of this step, you also completed the algorithm itself. What's missing is the collection and display of the data the algorithm produces. This is configured in the next step.
+
+<H1><A NAME="SECTION00450000000000000000">
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">5</SPAN> Preparing the Simulation</A>
+</H1>
+
+<H2><A NAME="SECTION00451000000000000000"></A>
+<A NAME="SelectObserversAndViews"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">1</SPAN> Step 7: Add Observers and Views
+</H2>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:observers"></A><A NAME="392"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.11:</STRONG>
+Adding observers and views.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="542" HEIGHT="489" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-observers.png"
+ ALT="Image images/ch02-observers.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+Now that your algorithm is complete, you surely want to see what it does and how it performs. FrEAK uses two types of modules to accomplish your needs, <SPAN  CLASS="textit">observers</SPAN><A NAME="396"></A> and <SPAN  CLASS="textit">views</SPAN><A NAME="398"></A>. Observers collect and compute data that is produced by the algorithm and then displayed by one or several views on the screen or written to a file. There is (virtually) no limit of the number of observers and views you can use to process data.
+
+The <SPAN  CLASS="textbf">Current Observer Setup</SPAN> shows your current setup of selected observers and views in a tree view where observers are containers for views and views are leaves in the tree.
+
+At first, the <SPAN  CLASS="textbf">Current Observer Setup</SPAN> is empty, so you will most probably want to add an observer now. Select A<SMALL>LL </SMALL>I<SMALL>NDIVIDUALS</SMALL> from the list of available observers and press the <SPAN  CLASS="textbf">Add Observer</SPAN> button or double click on the list entry to add the observer to your current setup. This Observer just forwards the individuals to its views so they can display them in whatever way they want.
+
+Since observers without any views do not make sense, you should add some views now, too. Select B<SMALL>OOLEAN HYPERCUBE</SMALL> from the list of available views and press <SPAN  CLASS="textbf">Add View</SPAN> or double click on the list entry. The B<SMALL>OOLEAN HYPERCUBE</SMALL> displays B<SMALL>IT </SMALL>S<SMALL>TRING</SMALL> individuals in a graphical visualization. Also add the view I<SMALL>NDIVIDUAL </SMALL>T<SMALL>ABLE</SMALL> to the observer. This view displays all individuals in a table.
+
+<IMG
+ WIDTH="705" HEIGHT="128" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="\fbox{\parbox{15.3cm}{{\bf Note:} \newline The list of available views depends o...
+...cted an observer) or the owning observer of the view (if you selected a view).}}">
+<P>
+You can delete observers and views by selecting them and pressing the trash can button.
+
+You should now have the setup as shown in Figure <A HREF="node4.html#fig:observers">2.11</A>.
+
+<H2><A NAME="SECTION00452000000000000000"></A>
+<A NAME="CreateBatches"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">2</SPAN> Step 8: Creating Batches of Runs
+</H2>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:batches"></A><A NAME="414"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.12:</STRONG>
+Creating batches of runs.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="544" HEIGHT="489" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-batches.png"
+ ALT="Image images/ch02-batches.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+If you have read Section <A HREF="node4.html#WhatIsABatch">2.1.2</A>: WhatIsABatch, you should know by now what a batch is. Here, you can setup your batches. Figure <A HREF="node4.html#fig:batches">2.12</A> shows the first batch that is created automatically at the first time you enter this panel or hit the <SPAN  CLASS="textbf">Finish</SPAN> button. As you can see, the table-row has a light green background and the last cell of the row (in the status-column) says "<SPAN  CLASS="textit">coming up</SPAN>". Rows can have 3 different colors which reflect the progress of the corresponding batch:
+
+<DL>
+<DT><STRONG>green background / status: coming up</STRONG></DT>
+<DD>The batch has not yet started. You can modify any setting of this batch.
+</DD>
+<DT><STRONG>yellow background / status: running</STRONG></DT>
+<DD>The batch is currently running. At least one run has already started. You cannot modify anything but the number of runs this batch has. You cannot decrease the number of runs below the number of already completed runs (plus the actual running one) though.
+</DD>
+<DT><STRONG>red background / status: finished</STRONG></DT>
+<DD>This batch has been finished completely. All runs have completed. Nothing can be changed here.
+</DD>
+</DL>
+
+You can add new batches by either pressing <SPAN  CLASS="textbf">New Batch</SPAN> or <SPAN  CLASS="textbf">Copy Batch</SPAN>. The <SPAN  CLASS="textbf">New Batch</SPAN> button creates a copy of the default batch that contains the configurations made in the first panels. The <SPAN  CLASS="textbf">Copy Batch</SPAN> button simply copies the selected batch and appends it to the list.
+
+You can remove batches with the <SPAN  CLASS="textbf">Remove Batch</SPAN> button and change the order of batches with the arrow-buttons to the right. To modify the settings of a batch, first select it from the table by clicking on the corresponding row (the row will become bold). As soon as you select a batch, the <SPAN  CLASS="textbf">Batch Properties</SPAN> panel at the bottom will show the configuration of it. You may then change the number of runs or the configurations for the phenotype search space, the fitness function, or the initial population. Changes are applied directly to the batch.
+
+<IMG
+ WIDTH="705" HEIGHT="145" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="\fbox{\parbox{15.3cm}{{\bf Note:} \newline The first batch is created automatica...
+...es to run with the new configurations, you have to create new batches instead.}}">
+<P>
+Try adding a few batches with different configurations and press <SPAN  CLASS="textbf">Finish</SPAN>.
+
+Well done. Your schedule is now complete. Now you might want to simulate (run) your schedule to see what it really does. This is covered in Chapter <A HREF="node5.html#chapter3">3</A>: chapter3.
+
+<H1><A NAME="SECTION00460000000000000000"></A>
+<A NAME="configurationOfModules"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">6</SPAN> Configuration of Modules
+</H1>
+
+<H2><A NAME="SECTION00461000000000000000">
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">1</SPAN> Configuration of Properties</A>
+</H2>
+Whenever a module offers the option to be configured, the <SPAN  CLASS="textbf">Property Dialog</SPAN> <A NAME="438"></A> shown in Figure <A HREF="node4.html#fig:propertiesonly">2.13</A> (with varying contents of course) pops up:
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:propertiesonly"></A><A NAME="494"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.13:</STRONG>
+Property dialog of view B<SMALL>OOLEAN HYPERCUBE</SMALL>.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="369" HEIGHT="394" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-propertydlg-propertiesonly.png"
+ ALT="Image images/ch02-propertydlg-propertiesonly.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+It displays some information about the module you are configuring, in particular the name and the description of the module as well as the properties the module allows to be configured.
+
+Figure <A HREF="node4.html#fig:propertiesonly">2.13</A> shows the property dialog for a B<SMALL>OOLEAN </SMALL>H<SMALL>YPERCUBE</SMALL>. As you might have guessed, you can change the values displayed in the dialog to your needs. Numeric values can be edited, checkboxes can be set or unset, and so on.
+
+<H2><A NAME="SECTION00462000000000000000"></A>
+<A NAME="CodeEditing"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">2</SPAN> Advanced Feature: Code Editing
+</H2>
+
+When choosing the tab <SPAN  CLASS="textbf">Code Editing</SPAN>, you will see a large text area where you can use Java code to adjust properties of the configured module. This is an advanced feature that is used to generate properties automatically for multiple batches as the entered code will be applied to every new batch.
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:propertiesonly-2"></A><A NAME="495"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.14:</STRONG>
+Code Editing of search space B<SMALL>IT </SMALL>S<SMALL>TRING</SMALL>.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="400" HEIGHT="454" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-propertydlg-propertiesonly-2.png"
+ ALT="Image images/ch02-propertydlg-propertiesonly-2.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+At the top of the panel, you see a Java comment telling you that the variable <SPAN  CLASS="textit">batch</SPAN> contains the current batch number. Below, you see definitions for the variables representing the properties within the module. Note that the variable declarations may differ from their names displayed in <SPAN  CLASS="textbf">Static Editing</SPAN>.
+
+<IMG
+ WIDTH="705" HEIGHT="105" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="\fbox{\parbox{15.3cm}{{\bf Note:} \newline When entering the \textbf{Code Editin...
+...move the comment signs if you want to write your own property generation code.}}">
+<P>
+At the bottom of the panel, you see another text field informing you about compilation errors. If you finish editing code and hit the <SPAN  CLASS="textbf">Close</SPAN> button, FrEAK tries to checks whether the generated code matches the corresponding property types. If you assigned incompatible property types, e.g., by assigning a String value to an integer, FrEAK might displays an error message to inform you of this problem.
+
+An example for using Code Editing follows. To generate batches with the search space B<SMALL>IT </SMALL>S<SMALL>TRING</SMALL> where the dimension grows in powers of two, you can enter the following code snippet:
+<PRE>
+// variable batch contains the current batch number (starting from 0)
+
+java.lang.Integer Dimension;
+
+Dimension = Math.pow(2, batch);
+</PRE>
+
+The variable <code>batch</code> is used to refer to the index of the batch. If you then close the dialog and create new batches, the <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ i$"></SPAN>-th batch in the list of batches (starting with 0) will now have a search space dimension of <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ 2^i$"></SPAN>.
+
+<H2><A NAME="SECTION00463000000000000000"></A>
+<A NAME="ConfigurationOfEventSources"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">3</SPAN> Configuration of Event Sources
+</H2>
+
+Some modules offer the possibility to be registered as event listener for certain events. An example for such a module is an observer that computes data from a specified set of individuals. This observer has to be notified when new individuals are available by an event. In fact, most observers work that way. So where does this event come from? Which other module is the <SPAN  CLASS="textit">event source</SPAN> for this event?
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:eventsonly"></A><A NAME="497"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.15:</STRONG>
+Property dialog of observer A<SMALL>LL </SMALL>I<SMALL>NDIVIDUALS</SMALL>.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="382" HEIGHT="404" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-propertydlg-eventsonly.png"
+ ALT="Image images/ch02-propertydlg-eventsonly.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+Modules that can be registered as event listeners have a <SPAN  CLASS="textbf">Property Dialog</SPAN> as shown in Figure <A HREF="node4.html#fig:eventsonly">2.15</A>. (Here, the <SPAN  CLASS="textbf">Property Dialog</SPAN> of the A<SMALL>LL </SMALL>I<SMALL>NDIVIDUALS</SMALL> observer is shown.) You will notice a table of events each displayed with a name and an event source where the module receives this event from. The event source may or may not yet have been set to a valid source (in fact most, if not all, modules will be assigned to meaningful default event sources), but you can change the event source at any time by selecting an item from the drop down box of the event.
+
+Some events allow only one event source (mainly the S<SMALL>CHEDULE</SMALL> itself), where other events even allow <SPAN  CLASS="textit">outports</SPAN><A NAME="476"></A> of operators of the graph to be selected as event source. See Figure <A HREF="node4.html#fig:prop-eventdropdown">2.16</A> for an example.
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:prop-eventdropdown"></A><A NAME="498"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.16:</STRONG>
+Possible event sources for the observer A<SMALL>LL </SMALL>I<SMALL>NDIVIDUALS</SMALL>.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="427" HEIGHT="151" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch02-eventdropdown.png"
+ ALT="Image images/ch02-eventdropdown.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+For more information about operators and outports, see Section <A HREF="node6.html#sec:op-graph-concept">4.1</A>: sec:op-graph-concept.
+
+Of course there are modules that have both properties and event sources to be configured. An example for these modules are the <SPAN  CLASS="textbf">Parameter Controllers</SPAN> described in Section <A HREF="node6.html#sec:param-control">4.3</A>: sec:param-control.
+
+If you are done with configuring the module, click on <SPAN  CLASS="textbf">OK</SPAN> to return to the <SPAN  CLASS="textbf">Schedule Editor</SPAN>.
+
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html191"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html185"
+  HREF="usersguide.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html179"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html187"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html189"
+  HREF="node7.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html192"
+  HREF="node5.html">3. Controlling Runs</A>
+<B> Up:</B> <A NAME="tex2html186"
+  HREF="usersguide.html">FrEAK Free Evolutionary Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html180"
+  HREF="node3.html">1. Introduction</A>
+ &nbsp <B>  <A NAME="tex2html188"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html190"
+  HREF="node7.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

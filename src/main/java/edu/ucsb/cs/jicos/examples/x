@@ -1,0 +1,2 @@
+echo java -ea -classpath $JICOS/build/classes -Djava.security.policy=$JICOS/policy/policy -Djicos.log.level=fine -Djicos.log.services.level=info edu.ucsb.cs.jicos.examples.$1.Application $2 $3 $4
+java -ea -classpath $JICOS/build/classes -Djava.security.policy=$JICOS/policy/policy -Djicos.log.level=fine -Djicos.log.services.level=info edu.ucsb.cs.jicos.examples.$1.Application $2 $3 $4

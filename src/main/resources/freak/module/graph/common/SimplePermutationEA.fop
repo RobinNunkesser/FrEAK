@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FreakPersistence>
+  <handler>
+    <String>freak.core.modulesupport.PersistenceManager$StringPersistenceHandler</String>
+    <Integer>freak.core.modulesupport.PersistenceManager$IntegerPersistenceHandler</Integer>
+    <Property>freak.core.modulesupport.Configuration$PropertyWrapperPersistenceHandler</Property>
+    <Map>freak.core.modulesupport.PersistenceManager$MapPersistenceHandler</Map>
+    <Double>freak.core.modulesupport.PersistenceManager$DoublePersistenceHandler</Double>
+    <Color>freak.core.modulesupport.PersistenceManager$ColorPersistenceHandler</Color>
+    <Boolean>freak.core.modulesupport.PersistenceManager$BooleanPersistenceHandler</Boolean>
+    <Node>freak.gui.graph.OperatorGraphFile$Node$NodePersistenceHandler</Node>
+    <Edge>freak.gui.graph.OperatorGraphFile$Edge$EdgePersistenceHandler</Edge>
+    <List>freak.core.modulesupport.PersistenceManager$ListPersistenceHandler</List>
+    <Configuration>freak.core.modulesupport.Configuration$ConfigurationPersistenceHandler</Configuration>
+    <OperatorGraphFile>freak.gui.graph.OperatorGraphFile$OperatorGraphFilePersistenceHandler</OperatorGraphFile>
+    <Parameter>freak.gui.graph.OperatorGraphFile$PWrapper$PWrapperPersistenceHandler</Parameter>
+    <ParameterController>freak.gui.graph.OperatorGraphFile$PController$PControllerPersistenceHandler</ParameterController>
+    <Rectangle>freak.core.modulesupport.PersistenceManager$RectanglePersistenceHandler</Rectangle>
+    <BevelBorder>freak.core.modulesupport.PersistenceManager$BevelBorderPersistenceHandler</BevelBorder>
+  </handler>
+  <OperatorGraphFile>
+    <List type="java.util.ArrayList">
+      <Edge source="3" sourcePort="0" target="1" targetPort="0" />
+      <Edge source="2" sourcePort="0" target="3" targetPort="0" />
+      <Edge source="0" sourcePort="0" target="2" targetPort="0" />
+      <Edge source="0" sourcePort="0" target="3" targetPort="0" />
+    </List>
+    <List type="java.util.ArrayList">
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="192" green="255" blue="255" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="20" width="100" x="131" y="9" />
+          <String>opaque</String>
+          <Boolean id="12">true</Boolean>
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>Start</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.core.graph.Start</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="192" green="255" blue="255" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="20" width="100" x="131" y="254" />
+          <String>opaque</String>
+          <ref id="12" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>Finish</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.core.graph.Finish</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="192" blue="192" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="109" x="52" y="94" />
+          <String>opaque</String>
+          <ref id="12" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Lambda</String>
+            <Property description="Lambda">
+              <Double>1.0</Double>
+            </Property>
+            <String>Name</String>
+            <Property description="Name">
+              <String>Jump &amp; Exchange</String>
+            </Property>
+            <String>ExchangeProb</String>
+            <Property description="Prob of exchange">
+              <Double>0.5</Double>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.mutation.common.JumpExchange</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="83" x="140" y="186" />
+          <String>opaque</String>
+          <ref id="12" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>NoOfIndividualsToSelect</String>
+            <Property description="Selected individuals">
+              <Integer>1</Integer>
+            </Property>
+            <String>Name</String>
+            <Property description="Name">
+              <String>Cut Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.CutSelection</String>
+      </Node>
+    </List>
+    <List type="java.util.ArrayList">
+      <ParameterController type="freak.module.parametercontroller.Mu">
+        <null />
+        <Map type="java.util.HashMap">
+          <String>Mu</String>
+          <Parameter type="java.lang.Integer" operator="3" name="NoOfIndividualsToSelect" />
+        </Map>
+        <List type="java.util.ArrayList" />
+      </ParameterController>
+    </List>
+  </OperatorGraphFile>
+</FreakPersistence>
+

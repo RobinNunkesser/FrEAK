@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.48)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>1. Introduction</TITLE>
+<META NAME="description" CONTENT="1. Introduction">
+<META NAME="keywords" CONTENT="usersguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="usersguide.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="usersguide.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html171"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html165"
+  HREF="usersguide.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html159"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html167"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html169"
+  HREF="node7.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html172"
+  HREF="node4.html">2. Creating a Schedule</A>
+<B> Up:</B> <A NAME="tex2html166"
+  HREF="usersguide.html">FrEAK Free Evolutionary Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html160"
+  HREF="node2.html">List of Figures</A>
+ &nbsp <B>  <A NAME="tex2html168"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html170"
+  HREF="node7.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html173"
+  HREF="#SECTION00310000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN> What is FrEAK?</A>
+<LI><A NAME="tex2html174"
+  HREF="#SECTION00320000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN> Evolutionary Algorithms</A>
+<LI><A NAME="tex2html175"
+  HREF="#SECTION00330000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN> Overview</A>
+<UL>
+<LI><A NAME="tex2html176"
+  HREF="#SECTION00331000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN> Schedule Creation: Designing the Algorithm</A>
+<LI><A NAME="tex2html177"
+  HREF="#SECTION00332000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">2</SPAN> Schedule Creation: Preparing the Simulation</A>
+<LI><A NAME="tex2html178"
+  HREF="#SECTION00333000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">3</SPAN> Controlling Runs</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00300000000000000000"></A>
+<A NAME="chapter1"></A>
+<BR>
+<SPAN CLASS="arabic">1</SPAN>. Introduction
+</H1>
+
+<H1><A NAME="SECTION00310000000000000000"></A>
+<A NAME="section1.1"></A>
+<BR>
+<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN> What is FrEAK?
+</H1>
+
+FrEAK, the Free Evolutionary Algorithm Kit, is a free toolkit for the creation, simulation,
+and analysis of evolutionary algorithms within a graphical interface.
+
+We created FrEAK as a comfortable, flexible and extendable platform to perform
+experimental analysis of evolutionary algorithms. Several components
+commonly used in evolutionary algorithms are provided with FrEAK 
+and a developer's guide
+explains how to create your own components.
+
+The graphical interface allows you to create your own algorithms and to
+watch your algorithm running.
+With the built-in replay function, you can step back anytime and watch
+past runs and generations.
+Observers may be used to show, e.g., different
+performance measures, the individuals of the current population or
+other data derived from the algorithm.
+
+FrEAK uses the approved random number generator ``Mersenne Twister''<A NAME="tex2html1"
+  HREF="footnode.html#foot149"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>
+to provide
+well-distributed pseudorandom numbers. 
+The random seed is drawn from the current system time
+on schedule creation and preserved during load and save operations.
+
+<H1><A NAME="SECTION00320000000000000000"></A>
+<A NAME="section1.2"></A>
+<BR>
+<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN> Evolutionary Algorithms
+</H1>
+
+There are many views of evolutionary algorithms in the scientific community.
+In FrEAK, we consider evolutionary algorithms<A NAME="152"></A>
+as randomized search heuristics
+used to optimize a specified <SPAN  CLASS="textit">fitness function</SPAN><A NAME="154"></A>.
+The fitness function is defined on a <SPAN  CLASS="textit">phenotype search space</SPAN><A NAME="156"></A>
+which represents the set of all search points.
+Search points are referred to as <SPAN  CLASS="textit">individuals</SPAN><A NAME="158"></A>.
+An individual contains a <SPAN  CLASS="textit">phenotype</SPAN><A NAME="160"></A> used to determine the individual's fitness, a <SPAN  CLASS="textit">genotype</SPAN><A NAME="162"></A> out of the <SPAN  CLASS="textit">genotype search space</SPAN><A NAME="164"></A> representing the individual's gene data and some other attributes like, e.g., its date of birth.
+
+Evolutionary algorithms in FrEAK are represented by
+<SPAN  CLASS="textit">algorithm graphs</SPAN><A NAME="166"></A>, also denoted as
+<SPAN  CLASS="textit">operator graphs</SPAN><A NAME="168"></A>.
+Algorithm graphs are acyclic flow graphs leading individuals through various
+nodes. The nodes represent <SPAN  CLASS="textit">operators</SPAN><A NAME="170"></A> like mutation, recombination, selection, and several other operators. They process the incoming individuals and propagate
+the resulting individuals through their outgoing edges.
+
+Every generation, the current population<A NAME="tex2html2"
+  HREF="footnode.html#foot209"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>
+is led through the algorithm graph from a start node towards a finish node where
+the new population is received. A graphical editor is provided that enables you to
+design your own algorithm graphs.
+For further information, read Chapter&nbsp;<A HREF="node6.html#chapter4">4</A>: chapter4.
+
+<H1><A NAME="SECTION00330000000000000000"></A>
+<A NAME="section1.3"></A>
+<BR>
+<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN> Overview
+</H1>
+
+FrEAK is based on <SPAN  CLASS="textit">schedules</SPAN><A NAME="177"></A> containing the algorithm and
+simulation options. A wizard guides you through the process of creating a
+new schedule, as described in Chapter&nbsp;<A HREF="node4.html#chapter2">2</A>.
+You may save the current schedule to share the results of your algorithm or to continue the simulation later on.
+
+When a schedule has been created, lean back and start the simulation.
+FrEAK provides a replay mode allowing you to watch past runs and past generations
+in the current run. To learn more about controlling runs, read Chapter&nbsp;<A HREF="node5.html#chapter3">3</A>: 
+chapter3.
+
+<H2><A NAME="SECTION00331000000000000000"></A>
+<A NAME="section1.4"></A>
+<BR>
+<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN> Schedule Creation: Designing the Algorithm
+</H2>
+
+The algorithm consists of seven components, which are called
+<SPAN  CLASS="textit">modules</SPAN><A NAME="184"></A>:
+
+<UL>
+<LI>a phenotype search space,
+</LI>
+<LI>a fitness function,
+</LI>
+<LI>a genotype-mapper,
+</LI>
+<LI>an algorithm graph,
+</LI>
+<LI>a set of stopping criteria,
+</LI>
+<LI>a population model, and
+</LI>
+<LI>an initial population.
+</LI>
+</UL>
+
+The phenotype search space represents the 
+domain of the fitness function. The fitness function is the function to be optimized.
+While most of the modules provided with FrEAK are designed for
+maximization problems, this is not a
+fundamental restriction; you may write custom modules that work with
+minimization problems as well.
+
+The genotype-mapper is an optional component. If a genotype-mapper is specified, it is used to map an individual's phenotype to a corresponding genotype. The operators inside the operator graph then work on the individual's genotype. If no genotype-mapper is specified, the genotype search space equals the phenotype search space and the individuals's phenotype represents its genotype, too.
+
+To specify the algorithm graph, you may create your own algorithm with the
+graphical editor or load an algorithm. Several common algorithms are provided
+with FrEAK and can be picked from a ready-made list. 
+
+Stopping criteria
+tell the algorithm to stop the current run if a specified condition is fulfilled.
+The population model is an optional choice and allows you to maintain subdivisions inside
+the population. The last step here is to specify the initial population by choosing
+an <SPAN  CLASS="textit">initialization</SPAN><A NAME="188"></A> module that creates the individuals
+forming the first generation.
+If you want to write your own module, refer to the <SPAN  CLASS="textit">Module Developer's Guide</SPAN>.
+
+<H2><A NAME="SECTION00332000000000000000">
+<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">2</SPAN> Schedule Creation: Preparing the Simulation</A>
+</H2>
+
+Preparing the simulation covers the following two steps:
+
+<UL>
+<LI>add observers and views and
+</LI>
+<LI>create batches of runs.
+</LI>
+</UL>
+
+<SPAN  CLASS="textit">Observers</SPAN><A NAME="194"></A> are modules collecting and computing data that
+is then displayed by <SPAN  CLASS="textit">views</SPAN><A NAME="196"></A>. E.g., observers
+can compute measures like the fitness variance within the population or simply collect
+all individuals of the current population. A view displays the data observed
+by an observer if it is able to handle the type of data the observer
+provides. The two most commonly used data types
+are <SPAN  CLASS="textit">individuals</SPAN> and <SPAN  CLASS="textit">numbers</SPAN>. Observers may have an arbitrary number of views.
+
+Last but not least, you may create <SPAN  CLASS="textit">batches</SPAN><A NAME="200"></A> of runs.
+A batch is a collection of runs with own configurations for the phenotype search space, the
+fitness function and the initialization module. 
+The modules selected and configured in the previous steps form the first batch
+which is created by default.
+You may then eventually add other batches with different configurations, e.g., to vary the dimension of the search space or the population size.
+
+<H2><A NAME="SECTION00333000000000000000">
+<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">3</SPAN> Controlling Runs</A>
+</H2>
+
+When the schedule creation is finished, you see a control panel at the bottom, an information panel to the left and
+the created views to the right. For details, see
+Chapter&nbsp;<A HREF="node5.html#chapter3">3</A>: chapter3.
+
+Note that a speed limit of 10 generations per second is set by default in the control panel. 
+You can switch off the speed limit or alter its value by using either the text field or the slider to the right.
+
+Then hit the <SPAN  CLASS="textbf">Start</SPAN> button to start the simulation.
+When the stopping criterion is fulfilled, the run ends and the next run starts,
+if multiple runs or batches have been created.
+
+Please note that several options and commands are disabled when the algorithm
+is running. To pause the algorithm and enable editing commands, hit the
+<SPAN  CLASS="textbf">Suspend</SPAN> button to suspend the current run.
+For further information about editing the current schedule,
+see Section&nbsp;<A HREF="node5.html#EditingSchedule">3.3</A>: EditingSchedule.
+
+In the information panel, the current time index is shown.
+By entering a different time index or by using the navigation buttons in the control panel, you can skip back to past generations, runs, and batches to watch a replay of the simulation at that point of time.
+To continue the simulation, hit the <SPAN  CLASS="textbf">Skip to End</SPAN> button and FrEAK continues creating new generations.
+
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html171"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html165"
+  HREF="usersguide.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html159"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html167"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html169"
+  HREF="node7.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html172"
+  HREF="node4.html">2. Creating a Schedule</A>
+<B> Up:</B> <A NAME="tex2html166"
+  HREF="usersguide.html">FrEAK Free Evolutionary Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html160"
+  HREF="node2.html">List of Figures</A>
+ &nbsp <B>  <A NAME="tex2html168"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html170"
+  HREF="node7.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,1 @@
+java -ea -classpath $JANET -Xms1g -Xmx1G janet.applications.branchandbound.tsp.utilities.upperbounds.christofides.UpperBound $1 $2 $3 $4

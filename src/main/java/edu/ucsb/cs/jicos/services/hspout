@@ -1,0 +1,1373 @@
+java -ea -classpath /cs/faculty/cappello/z/jicos/framework/build/classes -Djava.security.policy=/cs/faculty/cappello/z/jicos/framework/policy/policy -Djicos.services.Host.displayDebug=no -Djicos.log.level=fine -Djicos.log.services.level=info edu.ucsb.cs.jicos.services.Hsp
+JicosRemoteExceptionHandler.constructed.
+JicosRemoteExceptionHandler.constructed.
+JicosRemoteExceptionHandler.constructed.
+JicosRemoteExceptionHandler.constructed.
+JicosRemoteExceptionHandler.constructed.
+Session.processResult: unassignedTasks.size: 1 tasks.size: 13
+Session.processResult: unassignedTasks.size: 2 tasks.size: 25
+Session.processResult: unassignedTasks.size: 3 tasks.size: 36
+Session.processResult: unassignedTasks.size: 3 tasks.size: 35
+Session.processResult: unassignedTasks.size: 3 tasks.size: 46
+Session.processResult: unassignedTasks.size: 3 tasks.size: 56
+Session.processResult: unassignedTasks.size: 3 tasks.size: 67
+Session.processResult: unassignedTasks.size: 3 tasks.size: 77
+Session.processResult: unassignedTasks.size: 3 tasks.size: 76
+Session.processResult: unassignedTasks.size: 3 tasks.size: 75
+Session.processResult: unassignedTasks.size: 3 tasks.size: 86
+Session.processResult: unassignedTasks.size: 3 tasks.size: 97
+Session.processResult: unassignedTasks.size: 3 tasks.size: 108
+Session.processResult: unassignedTasks.size: 3 tasks.size: 118
+Session.processResult: unassignedTasks.size: 3 tasks.size: 128
+Session.processResult: unassignedTasks.size: 3 tasks.size: 138
+Session.processResult: unassignedTasks.size: 3 tasks.size: 137
+Session.processResult: unassignedTasks.size: 2 tasks.size: 136
+Session.processResult: unassignedTasks.size: 2 tasks.size: 147
+Session.processResult: unassignedTasks.size: 2 tasks.size: 158
+Session.processResult: unassignedTasks.size: 2 tasks.size: 166
+Session.processResult: unassignedTasks.size: 2 tasks.size: 176
+Session.processResult: unassignedTasks.size: 2 tasks.size: 182
+Session.processResult: unassignedTasks.size: 2 tasks.size: 181
+Session.processResult: unassignedTasks.size: 2 tasks.size: 180
+Session.processResult: unassignedTasks.size: 2 tasks.size: 191
+Session.processResult: unassignedTasks.size: 2 tasks.size: 202
+Session.processResult: unassignedTasks.size: 2 tasks.size: 213
+Session.processResult: unassignedTasks.size: 2 tasks.size: 224
+Session.processResult: unassignedTasks.size: 2 tasks.size: 234
+Session.processResult: unassignedTasks.size: 2 tasks.size: 243
+Session.processResult: unassignedTasks.size: 2 tasks.size: 247
+Session.processResult: unassignedTasks.size: 2 tasks.size: 257
+Session.processResult: unassignedTasks.size: 2 tasks.size: 267
+Session.processResult: unassignedTasks.size: 2 tasks.size: 266
+Session.processResult: unassignedTasks.size: 2 tasks.size: 265
+Session.processResult: unassignedTasks.size: 2 tasks.size: 264
+Session.processResult: unassignedTasks.size: 2 tasks.size: 263
+Session.processResult: unassignedTasks.size: 2 tasks.size: 273
+Session.processResult: unassignedTasks.size: 2 tasks.size: 283
+Session.processResult: unassignedTasks.size: 2 tasks.size: 290
+Session.processResult: unassignedTasks.size: 2 tasks.size: 289
+Session.processResult: unassignedTasks.size: 2 tasks.size: 288
+Session.processResult: unassignedTasks.size: 2 tasks.size: 287
+Session.processResult: unassignedTasks.size: 2 tasks.size: 286
+Session.processResult: unassignedTasks.size: 2 tasks.size: 285
+Session.processResult: unassignedTasks.size: 2 tasks.size: 284
+Session.processResult: unassignedTasks.size: 2 tasks.size: 283
+Session.processResult: unassignedTasks.size: 2 tasks.size: 282
+Session.processResult: unassignedTasks.size: 2 tasks.size: 281
+Session.processResult: unassignedTasks.size: 2 tasks.size: 280
+Session.processResult: unassignedTasks.size: 2 tasks.size: 279
+Session.processResult: unassignedTasks.size: 2 tasks.size: 278
+Session.processResult: unassignedTasks.size: 2 tasks.size: 277
+Session.processResult: unassignedTasks.size: 2 tasks.size: 276
+Session.processResult: unassignedTasks.size: 2 tasks.size: 275
+Session.processResult: unassignedTasks.size: 2 tasks.size: 274
+Session.processResult: unassignedTasks.size: 2 tasks.size: 273
+Session.processResult: unassignedTasks.size: 2 tasks.size: 272
+Session.processResult: unassignedTasks.size: 2 tasks.size: 271
+Session.processResult: unassignedTasks.size: 2 tasks.size: 270
+Session.processResult: unassignedTasks.size: 2 tasks.size: 269
+Session.processResult: unassignedTasks.size: 2 tasks.size: 268
+Mailer: catching exception.Mail: toAddress: edu.ucsb.cs.jicos.services.Host_Stub[RemoteStub [ref: [endpoint:[128.111.40.22:55161](remote),objID:[1d4c61c:1036767508a:-8000, 0]]]]
+RemoteExceptionHandler.handle: fromAddress: edu.ucsb.cs.jicos.services.TaskServer[RemoteStub [ref: [endpoint:[128.111.40.22:55153](local),objID:[1]]]]
+RemoteExceptionHandler.handle: toAddress: edu.ucsb.cs.jicos.services.Host_Stub[RemoteStub [ref: [endpoint:[128.111.40.22:55161](remote),objID:[1d4c61c:1036767508a:-8000, 0]]]]
+RemoteExceptionHandler.handle: type:class edu.ucsb.cs.jicos.services.JicosRemoteExceptionHandler
+RemoteExceptionHandler.handle: 
+Connection refused to host: 128.111.40.22; nested exception is: 
+	java.net.ConnectException: Connection refused
+Session.processResult: unassignedTasks.size: 2 tasks.size: 267
+Session.processResult: unassignedTasks.size: 2 tasks.size: 266
+Session.processResult: unassignedTasks.size: 2 tasks.size: 265
+Session.processResult: unassignedTasks.size: 2 tasks.size: 264
+Session.processResult: unassignedTasks.size: 2 tasks.size: 263
+Session.processResult: unassignedTasks.size: 2 tasks.size: 262
+Session.processResult: unassignedTasks.size: 2 tasks.size: 261
+Session.processResult: unassignedTasks.size: 2 tasks.size: 260
+Session.processResult: unassignedTasks.size: 2 tasks.size: 259
+Session.processResult: unassignedTasks.size: 2 tasks.size: 258
+Session.processResult: unassignedTasks.size: 2 tasks.size: 257
+Session.processResult: unassignedTasks.size: 2 tasks.size: 256
+Session.processResult: unassignedTasks.size: 2 tasks.size: 255
+Session.processResult: unassignedTasks.size: 2 tasks.size: 254
+Session.processResult: unassignedTasks.size: 2 tasks.size: 253
+Session.processResult: unassignedTasks.size: 2 tasks.size: 252
+Session.processResult: unassignedTasks.size: 2 tasks.size: 251
+Session.processResult: unassignedTasks.size: 2 tasks.size: 250
+Session.processResult: unassignedTasks.size: 2 tasks.size: 249
+Session.processResult: unassignedTasks.size: 2 tasks.size: 248
+Session.processResult: unassignedTasks.size: 2 tasks.size: 247
+Session.processResult: unassignedTasks.size: 2 tasks.size: 246
+Session.processResult: unassignedTasks.size: 2 tasks.size: 245
+Session.processResult: unassignedTasks.size: 2 tasks.size: 244
+Session.processResult: unassignedTasks.size: 2 tasks.size: 243
+Session.processResult: unassignedTasks.size: 2 tasks.size: 242
+Session.processResult: unassignedTasks.size: 2 tasks.size: 241
+Session.processResult: unassignedTasks.size: 2 tasks.size: 240
+Session.processResult: unassignedTasks.size: 2 tasks.size: 239
+Session.processResult: unassignedTasks.size: 2 tasks.size: 238
+Session.processResult: unassignedTasks.size: 2 tasks.size: 237
+Session.processResult: unassignedTasks.size: 2 tasks.size: 236
+Session.processResult: unassignedTasks.size: 2 tasks.size: 235
+Session.processResult: unassignedTasks.size: 2 tasks.size: 234
+Session.processResult: unassignedTasks.size: 2 tasks.size: 239
+Session.processResult: unassignedTasks.size: 2 tasks.size: 246
+Session.processResult: unassignedTasks.size: 2 tasks.size: 252
+Session.processResult: unassignedTasks.size: 2 tasks.size: 262
+Session.processResult: unassignedTasks.size: 2 tasks.size: 264
+Session.processResult: unassignedTasks.size: 2 tasks.size: 271
+Session.processResult: unassignedTasks.size: 2 tasks.size: 272
+Session.processResult: unassignedTasks.size: 2 tasks.size: 281
+Session.processResult: unassignedTasks.size: 2 tasks.size: 290
+Session.processResult: unassignedTasks.size: 2 tasks.size: 294
+Session.processResult: unassignedTasks.size: 2 tasks.size: 301
+Session.processResult: unassignedTasks.size: 2 tasks.size: 311
+Session.processResult: unassignedTasks.size: 2 tasks.size: 314
+Session.processResult: unassignedTasks.size: 2 tasks.size: 324
+Session.processResult: unassignedTasks.size: 2 tasks.size: 330
+Session.processResult: unassignedTasks.size: 2 tasks.size: 340
+Session.processResult: unassignedTasks.size: 2 tasks.size: 348
+Session.processResult: unassignedTasks.size: 2 tasks.size: 356
+Session.processResult: unassignedTasks.size: 2 tasks.size: 365
+Session.processResult: unassignedTasks.size: 2 tasks.size: 368
+Session.processResult: unassignedTasks.size: 2 tasks.size: 375
+Session.processResult: unassignedTasks.size: 2 tasks.size: 383
+Session.processResult: unassignedTasks.size: 2 tasks.size: 389
+Session.processResult: unassignedTasks.size: 2 tasks.size: 392
+Session.processResult: unassignedTasks.size: 2 tasks.size: 391
+Session.processResult: unassignedTasks.size: 2 tasks.size: 395
+Session.processResult: unassignedTasks.size: 2 tasks.size: 400
+Session.processResult: unassignedTasks.size: 2 tasks.size: 407
+Session.processResult: unassignedTasks.size: 2 tasks.size: 415
+Session.processResult: unassignedTasks.size: 2 tasks.size: 421
+Session.processResult: unassignedTasks.size: 2 tasks.size: 431
+Session.processResult: unassignedTasks.size: 2 tasks.size: 439
+Session.processResult: unassignedTasks.size: 2 tasks.size: 449
+Session.processResult: unassignedTasks.size: 2 tasks.size: 459
+Session.processResult: unassignedTasks.size: 2 tasks.size: 469
+Session.processResult: unassignedTasks.size: 2 tasks.size: 479
+Session.processResult: unassignedTasks.size: 2 tasks.size: 486
+Session.processResult: unassignedTasks.size: 2 tasks.size: 493
+Session.processResult: unassignedTasks.size: 2 tasks.size: 502
+Session.processResult: unassignedTasks.size: 2 tasks.size: 512
+Session.processResult: unassignedTasks.size: 2 tasks.size: 522
+Session.processResult: unassignedTasks.size: 2 tasks.size: 532
+Session.processResult: unassignedTasks.size: 2 tasks.size: 542
+Session.processResult: unassignedTasks.size: 2 tasks.size: 553
+Session.processResult: unassignedTasks.size: 2 tasks.size: 563
+Session.processResult: unassignedTasks.size: 2 tasks.size: 573
+Session.processResult: unassignedTasks.size: 2 tasks.size: 579
+Session.processResult: unassignedTasks.size: 2 tasks.size: 589
+Session.processResult: unassignedTasks.size: 2 tasks.size: 599
+Session.processResult: unassignedTasks.size: 2 tasks.size: 610
+Session.processResult: unassignedTasks.size: 2 tasks.size: 620
+Session.processResult: unassignedTasks.size: 2 tasks.size: 624
+Session.processResult: unassignedTasks.size: 2 tasks.size: 623
+Session.processResult: unassignedTasks.size: 2 tasks.size: 622
+Session.processResult: unassignedTasks.size: 2 tasks.size: 621
+Session.processResult: unassignedTasks.size: 2 tasks.size: 620
+Session.processResult: unassignedTasks.size: 2 tasks.size: 619
+Session.processResult: unassignedTasks.size: 2 tasks.size: 618
+Session.processResult: unassignedTasks.size: 2 tasks.size: 617
+Session.processResult: unassignedTasks.size: 2 tasks.size: 616
+Session.processResult: unassignedTasks.size: 2 tasks.size: 615
+Session.processResult: unassignedTasks.size: 2 tasks.size: 614
+Session.processResult: unassignedTasks.size: 2 tasks.size: 613
+Session.processResult: unassignedTasks.size: 2 tasks.size: 612
+Session.processResult: unassignedTasks.size: 2 tasks.size: 611
+Session.processResult: unassignedTasks.size: 2 tasks.size: 610
+Session.processResult: unassignedTasks.size: 2 tasks.size: 609
+Session.processResult: unassignedTasks.size: 2 tasks.size: 608
+Session.processResult: unassignedTasks.size: 2 tasks.size: 607
+Session.processResult: unassignedTasks.size: 2 tasks.size: 606
+Session.processResult: unassignedTasks.size: 2 tasks.size: 605
+Session.processResult: unassignedTasks.size: 2 tasks.size: 604
+Session.processResult: unassignedTasks.size: 2 tasks.size: 603
+Session.processResult: unassignedTasks.size: 2 tasks.size: 602
+Session.processResult: unassignedTasks.size: 2 tasks.size: 601
+Session.processResult: unassignedTasks.size: 2 tasks.size: 600
+Session.processResult: unassignedTasks.size: 2 tasks.size: 599
+Session.processResult: unassignedTasks.size: 2 tasks.size: 598
+Session.processResult: unassignedTasks.size: 2 tasks.size: 597
+Session.processResult: unassignedTasks.size: 2 tasks.size: 596
+Session.processResult: unassignedTasks.size: 2 tasks.size: 595
+Session.processResult: unassignedTasks.size: 2 tasks.size: 594
+Session.processResult: unassignedTasks.size: 2 tasks.size: 593
+Session.processResult: unassignedTasks.size: 2 tasks.size: 592
+Session.processResult: unassignedTasks.size: 2 tasks.size: 591
+Session.processResult: unassignedTasks.size: 2 tasks.size: 590
+Session.processResult: unassignedTasks.size: 2 tasks.size: 589
+Session.processResult: unassignedTasks.size: 2 tasks.size: 588
+Session.processResult: unassignedTasks.size: 2 tasks.size: 587
+Session.processResult: unassignedTasks.size: 2 tasks.size: 586
+Session.processResult: unassignedTasks.size: 2 tasks.size: 585
+Session.processResult: unassignedTasks.size: 2 tasks.size: 584
+Session.processResult: unassignedTasks.size: 2 tasks.size: 583
+Session.processResult: unassignedTasks.size: 2 tasks.size: 582
+Session.processResult: unassignedTasks.size: 2 tasks.size: 581
+Session.processResult: unassignedTasks.size: 2 tasks.size: 580
+Session.processResult: unassignedTasks.size: 2 tasks.size: 579
+Session.processResult: unassignedTasks.size: 2 tasks.size: 578
+Session.processResult: unassignedTasks.size: 2 tasks.size: 577
+Session.processResult: unassignedTasks.size: 2 tasks.size: 576
+Session.processResult: unassignedTasks.size: 2 tasks.size: 575
+Session.processResult: unassignedTasks.size: 2 tasks.size: 574
+Session.processResult: unassignedTasks.size: 2 tasks.size: 573
+Session.processResult: unassignedTasks.size: 2 tasks.size: 572
+Session.processResult: unassignedTasks.size: 2 tasks.size: 571
+Session.processResult: unassignedTasks.size: 2 tasks.size: 570
+Session.processResult: unassignedTasks.size: 2 tasks.size: 569
+Session.processResult: unassignedTasks.size: 2 tasks.size: 568
+Session.processResult: unassignedTasks.size: 2 tasks.size: 567
+Session.processResult: unassignedTasks.size: 2 tasks.size: 566
+Session.processResult: unassignedTasks.size: 2 tasks.size: 565
+Session.processResult: unassignedTasks.size: 2 tasks.size: 564
+Session.processResult: unassignedTasks.size: 2 tasks.size: 563
+Session.processResult: unassignedTasks.size: 2 tasks.size: 562
+Session.processResult: unassignedTasks.size: 2 tasks.size: 561
+Session.processResult: unassignedTasks.size: 2 tasks.size: 560
+Session.processResult: unassignedTasks.size: 2 tasks.size: 559
+Session.processResult: unassignedTasks.size: 2 tasks.size: 558
+Session.processResult: unassignedTasks.size: 2 tasks.size: 557
+Session.processResult: unassignedTasks.size: 2 tasks.size: 556
+Session.processResult: unassignedTasks.size: 2 tasks.size: 555
+Session.processResult: unassignedTasks.size: 2 tasks.size: 554
+Session.processResult: unassignedTasks.size: 2 tasks.size: 553
+Session.processResult: unassignedTasks.size: 2 tasks.size: 552
+Session.processResult: unassignedTasks.size: 2 tasks.size: 551
+Session.processResult: unassignedTasks.size: 2 tasks.size: 550
+Session.processResult: unassignedTasks.size: 2 tasks.size: 549
+Session.processResult: unassignedTasks.size: 2 tasks.size: 548
+Session.processResult: unassignedTasks.size: 2 tasks.size: 547
+Session.processResult: unassignedTasks.size: 2 tasks.size: 546
+Session.processResult: unassignedTasks.size: 2 tasks.size: 545
+Session.processResult: unassignedTasks.size: 2 tasks.size: 544
+Session.processResult: unassignedTasks.size: 2 tasks.size: 543
+Session.processResult: unassignedTasks.size: 2 tasks.size: 542
+Session.processResult: unassignedTasks.size: 2 tasks.size: 541
+Session.processResult: unassignedTasks.size: 2 tasks.size: 540
+Session.processResult: unassignedTasks.size: 2 tasks.size: 539
+Session.processResult: unassignedTasks.size: 2 tasks.size: 538
+Session.processResult: unassignedTasks.size: 2 tasks.size: 537
+Session.processResult: unassignedTasks.size: 2 tasks.size: 536
+Session.processResult: unassignedTasks.size: 2 tasks.size: 535
+Session.processResult: unassignedTasks.size: 2 tasks.size: 534
+Session.processResult: unassignedTasks.size: 2 tasks.size: 533
+Session.processResult: unassignedTasks.size: 2 tasks.size: 532
+Session.processResult: unassignedTasks.size: 2 tasks.size: 531
+Session.processResult: unassignedTasks.size: 2 tasks.size: 530
+Session.processResult: unassignedTasks.size: 2 tasks.size: 529
+Session.processResult: unassignedTasks.size: 2 tasks.size: 528
+Session.processResult: unassignedTasks.size: 2 tasks.size: 527
+Session.processResult: unassignedTasks.size: 2 tasks.size: 526
+Session.processResult: unassignedTasks.size: 2 tasks.size: 525
+Session.processResult: unassignedTasks.size: 2 tasks.size: 524
+Session.processResult: unassignedTasks.size: 2 tasks.size: 523
+Session.processResult: unassignedTasks.size: 2 tasks.size: 522
+Session.processResult: unassignedTasks.size: 2 tasks.size: 521
+Session.processResult: unassignedTasks.size: 2 tasks.size: 520
+Session.processResult: unassignedTasks.size: 2 tasks.size: 519
+Session.processResult: unassignedTasks.size: 2 tasks.size: 518
+Session.processResult: unassignedTasks.size: 2 tasks.size: 517
+Session.processResult: unassignedTasks.size: 2 tasks.size: 516
+Session.processResult: unassignedTasks.size: 2 tasks.size: 515
+Session.processResult: unassignedTasks.size: 2 tasks.size: 514
+Session.processResult: unassignedTasks.size: 2 tasks.size: 513
+Session.processResult: unassignedTasks.size: 2 tasks.size: 512
+Session.processResult: unassignedTasks.size: 2 tasks.size: 511
+Session.processResult: unassignedTasks.size: 2 tasks.size: 510
+Session.processResult: unassignedTasks.size: 2 tasks.size: 509
+Session.processResult: unassignedTasks.size: 2 tasks.size: 508
+Session.processResult: unassignedTasks.size: 2 tasks.size: 507
+Session.processResult: unassignedTasks.size: 2 tasks.size: 506
+Session.processResult: unassignedTasks.size: 2 tasks.size: 505
+Session.processResult: unassignedTasks.size: 2 tasks.size: 504
+Session.processResult: unassignedTasks.size: 2 tasks.size: 503
+Session.processResult: unassignedTasks.size: 2 tasks.size: 502
+Session.processResult: unassignedTasks.size: 2 tasks.size: 501
+Session.processResult: unassignedTasks.size: 2 tasks.size: 500
+Session.processResult: unassignedTasks.size: 2 tasks.size: 499
+Session.processResult: unassignedTasks.size: 2 tasks.size: 498
+Session.processResult: unassignedTasks.size: 2 tasks.size: 497
+Session.processResult: unassignedTasks.size: 2 tasks.size: 496
+Mailer: catching exception.Mail: toAddress: edu.ucsb.cs.jicos.services.Host_Stub[RemoteStub [ref: [endpoint:[128.111.40.22:55161](remote),objID:[1d4c61c:1036767508a:-8000, 0]]]]
+RemoteExceptionHandler.handle: fromAddress: edu.ucsb.cs.jicos.services.TaskServer[RemoteStub [ref: [endpoint:[128.111.40.22:55153](local),objID:[1]]]]
+RemoteExceptionHandler.handle: toAddress: edu.ucsb.cs.jicos.services.Host_Stub[RemoteStub [ref: [endpoint:[128.111.40.22:55161](remote),objID:[1d4c61c:1036767508a:-8000, 0]]]]
+RemoteExceptionHandler.handle: type:class edu.ucsb.cs.jicos.services.JicosRemoteExceptionHandler
+RemoteExceptionHandler.handle: 
+Connection refused to host: 128.111.40.22; nested exception is: 
+	java.net.ConnectException: Connection refused
+Session.processResult: unassignedTasks.size: 2 tasks.size: 495
+Session.processResult: unassignedTasks.size: 2 tasks.size: 494
+Session.processResult: unassignedTasks.size: 2 tasks.size: 493
+Session.processResult: unassignedTasks.size: 2 tasks.size: 492
+Session.processResult: unassignedTasks.size: 2 tasks.size: 491
+Session.processResult: unassignedTasks.size: 2 tasks.size: 490
+Session.processResult: unassignedTasks.size: 2 tasks.size: 489
+Session.processResult: unassignedTasks.size: 2 tasks.size: 488
+Session.processResult: unassignedTasks.size: 2 tasks.size: 487
+Session.processResult: unassignedTasks.size: 2 tasks.size: 486
+Session.processResult: unassignedTasks.size: 2 tasks.size: 485
+Session.processResult: unassignedTasks.size: 2 tasks.size: 484
+Session.processResult: unassignedTasks.size: 2 tasks.size: 483
+Session.processResult: unassignedTasks.size: 2 tasks.size: 482
+Session.processResult: unassignedTasks.size: 2 tasks.size: 481
+Session.processResult: unassignedTasks.size: 2 tasks.size: 480
+Session.processResult: unassignedTasks.size: 2 tasks.size: 479
+Session.processResult: unassignedTasks.size: 2 tasks.size: 478
+Session.processResult: unassignedTasks.size: 2 tasks.size: 477
+Session.processResult: unassignedTasks.size: 2 tasks.size: 476
+Session.processResult: unassignedTasks.size: 2 tasks.size: 475
+Session.processResult: unassignedTasks.size: 2 tasks.size: 474
+Session.processResult: unassignedTasks.size: 2 tasks.size: 473
+Session.processResult: unassignedTasks.size: 2 tasks.size: 472
+Session.processResult: unassignedTasks.size: 2 tasks.size: 471
+Session.processResult: unassignedTasks.size: 2 tasks.size: 470
+Session.processResult: unassignedTasks.size: 2 tasks.size: 469
+Session.processResult: unassignedTasks.size: 2 tasks.size: 468
+Session.processResult: unassignedTasks.size: 2 tasks.size: 467
+Session.processResult: unassignedTasks.size: 2 tasks.size: 466
+Session.processResult: unassignedTasks.size: 2 tasks.size: 465
+Session.processResult: unassignedTasks.size: 2 tasks.size: 464
+Session.processResult: unassignedTasks.size: 2 tasks.size: 463
+Session.processResult: unassignedTasks.size: 2 tasks.size: 462
+Session.processResult: unassignedTasks.size: 2 tasks.size: 461
+Session.processResult: unassignedTasks.size: 2 tasks.size: 460
+Session.processResult: unassignedTasks.size: 2 tasks.size: 459
+Session.processResult: unassignedTasks.size: 2 tasks.size: 458
+Session.processResult: unassignedTasks.size: 2 tasks.size: 457
+Session.processResult: unassignedTasks.size: 2 tasks.size: 456
+Session.processResult: unassignedTasks.size: 2 tasks.size: 455
+Session.processResult: unassignedTasks.size: 2 tasks.size: 454
+Session.processResult: unassignedTasks.size: 2 tasks.size: 453
+Session.processResult: unassignedTasks.size: 2 tasks.size: 452
+Session.processResult: unassignedTasks.size: 2 tasks.size: 451
+Session.processResult: unassignedTasks.size: 2 tasks.size: 450
+Session.processResult: unassignedTasks.size: 2 tasks.size: 449
+Session.processResult: unassignedTasks.size: 2 tasks.size: 448
+Session.processResult: unassignedTasks.size: 2 tasks.size: 447
+Session.processResult: unassignedTasks.size: 2 tasks.size: 446
+Session.processResult: unassignedTasks.size: 2 tasks.size: 445
+Session.processResult: unassignedTasks.size: 2 tasks.size: 444
+Session.processResult: unassignedTasks.size: 2 tasks.size: 443
+Session.processResult: unassignedTasks.size: 2 tasks.size: 442
+Session.processResult: unassignedTasks.size: 2 tasks.size: 441
+Session.processResult: unassignedTasks.size: 2 tasks.size: 440
+Session.processResult: unassignedTasks.size: 2 tasks.size: 439
+Session.processResult: unassignedTasks.size: 2 tasks.size: 438
+Session.processResult: unassignedTasks.size: 2 tasks.size: 437
+Session.processResult: unassignedTasks.size: 2 tasks.size: 436
+Session.processResult: unassignedTasks.size: 2 tasks.size: 435
+Session.processResult: unassignedTasks.size: 1 tasks.size: 434
+Session.processResult: unassignedTasks.size: 1 tasks.size: 433
+Session.processResult: unassignedTasks.size: 1 tasks.size: 432
+Session.processResult: unassignedTasks.size: 1 tasks.size: 431
+Session.processResult: unassignedTasks.size: 1 tasks.size: 430
+Session.processResult: unassignedTasks.size: 1 tasks.size: 429
+Session.processResult: unassignedTasks.size: 1 tasks.size: 428
+Session.processResult: unassignedTasks.size: 1 tasks.size: 427
+Session.processResult: unassignedTasks.size: 1 tasks.size: 426
+Session.processResult: unassignedTasks.size: 1 tasks.size: 425
+Session.processResult: unassignedTasks.size: 1 tasks.size: 424
+Session.processResult: unassignedTasks.size: 1 tasks.size: 423
+Session.processResult: unassignedTasks.size: 1 tasks.size: 422
+Session.processResult: unassignedTasks.size: 1 tasks.size: 421
+Session.processResult: unassignedTasks.size: 1 tasks.size: 420
+Session.processResult: unassignedTasks.size: 1 tasks.size: 419
+Session.processResult: unassignedTasks.size: 1 tasks.size: 418
+Session.processResult: unassignedTasks.size: 1 tasks.size: 417
+Session.processResult: unassignedTasks.size: 1 tasks.size: 416
+Session.processResult: unassignedTasks.size: 1 tasks.size: 415
+Session.processResult: unassignedTasks.size: 1 tasks.size: 414
+Session.processResult: unassignedTasks.size: 1 tasks.size: 413
+Session.processResult: unassignedTasks.size: 1 tasks.size: 412
+Session.processResult: unassignedTasks.size: 1 tasks.size: 411
+Session.processResult: unassignedTasks.size: 1 tasks.size: 410
+HostProxy.evict: 128.111.40.22(lysander) 
+TaskServer.unregisterHost: edu.ucsb.cs.jicos.services.Host_Stub[RemoteStub [ref: [endpoint:[128.111.40.22:55161](remote),objID:[1d4c61c:1036767508a:-8000, 0]]]]
+HostProxyManager.remove: Thread[Jicos Proxy for 128.111.40.22(lysander) ,5,RMI Runtime]
+HostProxy.unregisterHost: taskIds.size: 7
+HostProxy.unregisterHost: unassigning: 1114131434855.0.2.1.4
+Session.unassign: 1114131434855.0.2.1.4
+Session.unassign: putting: 1114131434855.0.2.1.4
+PQTasks.zzz: 1114131434855.0.2.1.4
+HostProxy.unregisterHost: unassigning: 1114131434855.0.2.1.5
+Session.unassign: 1114131434855.0.2.1.5
+Session.unassign: putting: 1114131434855.0.2.1.5
+PQTasks.zzz: 1114131434855.0.2.1.5
+HostProxy.unregisterHost: unassigning: 1114131434855.0.2.1.6
+Session.unassign: 1114131434855.0.2.1.6
+Session.unassign: putting: 1114131434855.0.2.1.6
+PQTasks.zzz: 1114131434855.0.2.1.6
+HostProxy.unregisterHost: unassigning: 1114131434855.0.2.1.7
+Session.unassign: 1114131434855.0.2.1.7
+Session.unassign: putting: 1114131434855.0.2.1.7
+PQTasks.zzz: 1114131434855.0.2.1.7
+HostProxy.unregisterHost: unassigning: 1114131434855.0.2.1.10
+Session.unassign: 1114131434855.0.2.1.10
+Session.unassign: putting: 1114131434855.0.2.1.10
+PQTasks.zzz: 1114131434855.0.2.1.10
+HostProxy.unregisterHost: unassigning: 1114131434855.0.4.8.5
+Session.unassign: 1114131434855.0.4.8.5
+Session.unassign: putting: 1114131434855.0.4.8.5
+PQTasks.zzz: 1114131434855.0.4.8.5
+HostProxy.unregisterHost: unassigning: 1114131434855.0.4.8.6
+Session.unassign: 1114131434855.0.4.8.6
+Session.unassign: putting: 1114131434855.0.4.8.6
+PQTasks.zzz: 1114131434855.0.4.8.6
+PQTasks.dump: 1114131434855.0.1.1.2
+PQTasks.dump: 1114131434855.0.1.1.3
+PQTasks.dump: 1114131434855.0.1.1.4
+PQTasks.dump: 1114131434855.0.1.1.5
+PQTasks.dump: 1114131434855.0.1.1.6
+PQTasks.dump: 1114131434855.0.1.1.7
+PQTasks.dump: 1114131434855.0.1.1.8
+PQTasks.dump: 1114131434855.0.1.1.9
+PQTasks.dump: 1114131434855.0.1.1.10
+PQTasks.dump: 1114131434855.0.1.1.11
+PQTasks.dump: 1114131434855.0.11.1.2
+PQTasks.dump: 1114131434855.0.11.1.3
+PQTasks.dump: 1114131434855.0.11.1.4
+PQTasks.dump: 1114131434855.0.11.1.5
+PQTasks.dump: 1114131434855.0.11.1.6
+PQTasks.dump: 1114131434855.0.11.1.7
+PQTasks.dump: 1114131434855.0.11.1.8
+PQTasks.dump: 1114131434855.0.11.1.9
+PQTasks.dump: 1114131434855.0.11.1.10
+PQTasks.dump: 1114131434855.0.12.1.2
+PQTasks.dump: 1114131434855.0.12.1.3
+PQTasks.dump: 1114131434855.0.12.1.4
+PQTasks.dump: 1114131434855.0.12.1.5
+PQTasks.dump: 1114131434855.0.12.1.6
+PQTasks.dump: 1114131434855.0.12.1.7
+PQTasks.dump: 1114131434855.0.12.1.8
+PQTasks.dump: 1114131434855.0.12.1.9
+PQTasks.dump: 1114131434855.0.12.1.10
+PQTasks.dump: 1114131434855.0.10.1.2
+PQTasks.dump: 1114131434855.0.10.1.3
+PQTasks.dump: 1114131434855.0.10.1.4
+PQTasks.dump: 1114131434855.0.10.1.5
+PQTasks.dump: 1114131434855.0.10.1.6
+PQTasks.dump: 1114131434855.0.10.1.7
+PQTasks.dump: 1114131434855.0.10.1.8
+PQTasks.dump: 1114131434855.0.10.1.9
+PQTasks.dump: 1114131434855.0.10.1.10
+PQTasks.dump: 1114131434855.0.9.1.2
+PQTasks.dump: 1114131434855.0.9.1.3
+PQTasks.dump: 1114131434855.0.9.1.4
+PQTasks.dump: 1114131434855.0.9.1.5
+PQTasks.dump: 1114131434855.0.9.1.6
+PQTasks.dump: 1114131434855.0.9.1.7
+PQTasks.dump: 1114131434855.0.9.1.8
+PQTasks.dump: 1114131434855.0.9.1.9
+PQTasks.dump: 1114131434855.0.9.1.10
+PQTasks.dump: 1114131434855.0.8.1.2
+PQTasks.dump: 1114131434855.0.8.1.3
+PQTasks.dump: 1114131434855.0.8.1.4
+PQTasks.dump: 1114131434855.0.8.1.5
+PQTasks.dump: 1114131434855.0.8.1.6
+PQTasks.dump: 1114131434855.0.8.1.7
+PQTasks.dump: 1114131434855.0.8.1.8
+PQTasks.dump: 1114131434855.0.8.1.9
+PQTasks.dump: 1114131434855.0.8.1.10
+PQTasks.dump: 1114131434855.0.7.1.2
+PQTasks.dump: 1114131434855.0.7.1.3
+PQTasks.dump: 1114131434855.0.7.1.4
+PQTasks.dump: 1114131434855.0.7.1.5
+PQTasks.dump: 1114131434855.0.7.1.6
+PQTasks.dump: 1114131434855.0.7.1.7
+PQTasks.dump: 1114131434855.0.7.1.8
+PQTasks.dump: 1114131434855.0.4.1.2
+PQTasks.dump: 1114131434855.0.4.1.3
+PQTasks.dump: 1114131434855.0.4.1.4
+PQTasks.dump: 1114131434855.0.4.1.5
+PQTasks.dump: 1114131434855.0.4.1.6
+PQTasks.dump: 1114131434855.0.4.1.7
+PQTasks.dump: 1114131434855.0.4.1.8
+PQTasks.dump: 1114131434855.0.4.1.9
+PQTasks.dump: 1114131434855.0.4.1.10
+PQTasks.dump: 1114131434855.0.7.11.2
+PQTasks.dump: 1114131434855.0.7.11.3
+PQTasks.dump: 1114131434855.0.7.11.4
+PQTasks.dump: 1114131434855.0.7.11.5
+PQTasks.dump: 1114131434855.0.7.11.6
+PQTasks.dump: 1114131434855.0.4.10.2
+PQTasks.dump: 1114131434855.0.4.10.3
+PQTasks.dump: 1114131434855.0.4.10.4
+PQTasks.dump: 1114131434855.0.4.10.5
+PQTasks.dump: 1114131434855.0.4.10.6
+PQTasks.dump: 1114131434855.0.4.10.7
+PQTasks.dump: 1114131434855.0.4.10.8
+PQTasks.dump: 1114131434855.0.4.10.9
+PQTasks.dump: 1114131434855.0.2.10.2
+PQTasks.dump: 1114131434855.0.2.10.3
+PQTasks.dump: 1114131434855.0.2.10.4
+PQTasks.dump: 1114131434855.0.2.10.5
+PQTasks.dump: 1114131434855.0.2.9.2
+PQTasks.dump: 1114131434855.0.2.9.3
+PQTasks.dump: 1114131434855.0.2.9.4
+PQTasks.dump: 1114131434855.0.2.9.5
+PQTasks.dump: 1114131434855.0.2.9.6
+PQTasks.dump: 1114131434855.0.2.1.4
+PQTasks.dump: 1114131434855.0.2.1.5
+PQTasks.dump: 1114131434855.0.2.1.6
+PQTasks.dump: 1114131434855.0.2.1.7
+PQTasks.dump: 1114131434855.0.2.1.10
+PQTasks.dump: 1114131434855.0.4.8.5
+PQTasks.dump: 1114131434855.0.4.8.6
+Session.processResult: unassignedTasks.size: 1 tasks.size: 409
+PQTasks: 1114131434855.0.4.8.6 numAssignments: 2
+PQTasks: 1114131434855.0.4.8.5 numAssignments: 2
+Session.processResult: unassignedTasks.size: 1 tasks.size: 408
+PQTasks: 1114131434855.0.2.1.10 numAssignments: 2
+PQTasks: 1114131434855.0.2.1.7 numAssignments: 2
+Session.processResult: unassignedTasks.size: 1 tasks.size: 407
+PQTasks: 1114131434855.0.2.1.6 numAssignments: 2
+Session.processResult: unassignedTasks.size: 1 tasks.size: 406
+PQTasks: 1114131434855.0.2.1.5 numAssignments: 2
+Session.processResult: unassignedTasks.size: 1 tasks.size: 405
+PQTasks: 1114131434855.0.2.1.4 numAssignments: 2
+Session.processResult: unassignedTasks.size: 1 tasks.size: 404
+Session.processResult: unassignedTasks.size: 1 tasks.size: 403
+Session.processResult: unassignedTasks.size: 1 tasks.size: 402
+Session.processResult: unassignedTasks.size: 1 tasks.size: 401
+Session.processResult: unassignedTasks.size: 1 tasks.size: 400
+Session.processResult: unassignedTasks.size: 1 tasks.size: 399
+Session.processResult: unassignedTasks.size: 1 tasks.size: 398
+Session.processResult: unassignedTasks.size: 1 tasks.size: 397
+Session.processResult: unassignedTasks.size: 1 tasks.size: 396
+Session.processResult: unassignedTasks.size: 1 tasks.size: 395
+Session.processResult: unassignedTasks.size: 1 tasks.size: 394
+Session.processResult: unassignedTasks.size: 1 tasks.size: 393
+Session.processResult: unassignedTasks.size: 1 tasks.size: 392
+Session.processResult: unassignedTasks.size: 1 tasks.size: 391
+Session.processResult: unassignedTasks.size: 1 tasks.size: 390
+Session.processResult: unassignedTasks.size: 1 tasks.size: 389
+Session.processResult: unassignedTasks.size: 1 tasks.size: 388
+Session.processResult: unassignedTasks.size: 1 tasks.size: 387
+Session.processResult: unassignedTasks.size: 1 tasks.size: 386
+Session.processResult: unassignedTasks.size: 1 tasks.size: 385
+Session.processResult: unassignedTasks.size: 1 tasks.size: 384
+Session.processResult: unassignedTasks.size: 1 tasks.size: 383
+Session.processResult: unassignedTasks.size: 1 tasks.size: 382
+Session.processResult: unassignedTasks.size: 1 tasks.size: 381
+Session.processResult: unassignedTasks.size: 1 tasks.size: 380
+Session.processResult: unassignedTasks.size: 1 tasks.size: 379
+Session.processResult: unassignedTasks.size: 1 tasks.size: 378
+Session.processResult: unassignedTasks.size: 1 tasks.size: 377
+Session.processResult: unassignedTasks.size: 1 tasks.size: 376
+Session.processResult: unassignedTasks.size: 1 tasks.size: 375
+Session.processResult: unassignedTasks.size: 1 tasks.size: 374
+Session.processResult: unassignedTasks.size: 1 tasks.size: 373
+Session.processResult: unassignedTasks.size: 1 tasks.size: 372
+Session.processResult: unassignedTasks.size: 1 tasks.size: 371
+Session.processResult: unassignedTasks.size: 1 tasks.size: 370
+Session.processResult: unassignedTasks.size: 1 tasks.size: 369
+Session.processResult: unassignedTasks.size: 1 tasks.size: 368
+Session.processResult: unassignedTasks.size: 1 tasks.size: 367
+Session.processResult: unassignedTasks.size: 1 tasks.size: 366
+Session.processResult: unassignedTasks.size: 1 tasks.size: 365
+Session.processResult: unassignedTasks.size: 1 tasks.size: 364
+Session.processResult: unassignedTasks.size: 1 tasks.size: 363
+Session.processResult: unassignedTasks.size: 1 tasks.size: 362
+Session.processResult: unassignedTasks.size: 1 tasks.size: 361
+Session.processResult: unassignedTasks.size: 1 tasks.size: 360
+Session.processResult: unassignedTasks.size: 1 tasks.size: 359
+Session.processResult: unassignedTasks.size: 1 tasks.size: 358
+Session.processResult: unassignedTasks.size: 1 tasks.size: 357
+Session.processResult: unassignedTasks.size: 1 tasks.size: 356
+Session.processResult: unassignedTasks.size: 1 tasks.size: 355
+Session.processResult: unassignedTasks.size: 1 tasks.size: 354
+Session.processResult: unassignedTasks.size: 1 tasks.size: 353
+Session.processResult: unassignedTasks.size: 1 tasks.size: 352
+Session.processResult: unassignedTasks.size: 0 tasks.size: 351
+Session.processResult: unassignedTasks.size: 0 tasks.size: 350
+Session.processResult: unassignedTasks.size: 0 tasks.size: 349
+Session.processResult: unassignedTasks.size: 0 tasks.size: 348
+Session.processResult: unassignedTasks.size: 0 tasks.size: 347
+Session.processResult: unassignedTasks.size: 0 tasks.size: 346
+Session.processResult: unassignedTasks.size: 0 tasks.size: 345
+Session.processResult: unassignedTasks.size: 0 tasks.size: 344
+Session.processResult: unassignedTasks.size: 0 tasks.size: 343
+Session.processResult: unassignedTasks.size: 0 tasks.size: 342
+Session.processResult: unassignedTasks.size: 0 tasks.size: 341
+Session.processResult: unassignedTasks.size: 0 tasks.size: 340
+Session.processResult: unassignedTasks.size: 0 tasks.size: 339
+Session.processResult: unassignedTasks.size: 0 tasks.size: 338
+Session.processResult: unassignedTasks.size: 0 tasks.size: 337
+Session.processResult: unassignedTasks.size: 0 tasks.size: 336
+Session.processResult: unassignedTasks.size: 0 tasks.size: 335
+Session.processResult: unassignedTasks.size: 0 tasks.size: 334
+Session.processResult: unassignedTasks.size: 0 tasks.size: 333
+Session.processResult: unassignedTasks.size: 0 tasks.size: 332
+Session.processResult: unassignedTasks.size: 0 tasks.size: 331
+Session.processResult: unassignedTasks.size: 0 tasks.size: 330
+Session.processResult: unassignedTasks.size: 0 tasks.size: 329
+Session.processResult: unassignedTasks.size: 0 tasks.size: 328
+Session.processResult: unassignedTasks.size: 0 tasks.size: 327
+Session.processResult: unassignedTasks.size: 0 tasks.size: 326
+Session.processResult: unassignedTasks.size: 0 tasks.size: 325
+Session.processResult: unassignedTasks.size: 0 tasks.size: 324
+Session.processResult: unassignedTasks.size: 0 tasks.size: 323
+Session.processResult: unassignedTasks.size: 0 tasks.size: 322
+Session.processResult: unassignedTasks.size: 0 tasks.size: 321
+Session.processResult: unassignedTasks.size: 0 tasks.size: 320
+Session.processResult: unassignedTasks.size: 0 tasks.size: 319
+Session.processResult: unassignedTasks.size: 0 tasks.size: 318
+Session.processResult: unassignedTasks.size: 0 tasks.size: 317
+Session.processResult: unassignedTasks.size: 0 tasks.size: 316
+Session.processResult: unassignedTasks.size: 0 tasks.size: 315
+Session.processResult: unassignedTasks.size: 0 tasks.size: 314
+Session.processResult: unassignedTasks.size: 0 tasks.size: 313
+Session.processResult: unassignedTasks.size: 0 tasks.size: 312
+Session.processResult: unassignedTasks.size: 0 tasks.size: 311
+Session.processResult: unassignedTasks.size: 0 tasks.size: 310
+Session.processResult: unassignedTasks.size: 0 tasks.size: 309
+Session.processResult: unassignedTasks.size: 0 tasks.size: 308
+Session.processResult: unassignedTasks.size: 0 tasks.size: 307
+Session.processResult: unassignedTasks.size: 0 tasks.size: 306
+Session.processResult: unassignedTasks.size: 0 tasks.size: 305
+Session.processResult: unassignedTasks.size: 0 tasks.size: 304
+Session.processResult: unassignedTasks.size: 0 tasks.size: 303
+Session.processResult: unassignedTasks.size: 0 tasks.size: 302
+Session.processResult: unassignedTasks.size: 0 tasks.size: 301
+Session.processResult: unassignedTasks.size: 0 tasks.size: 300
+Session.processResult: unassignedTasks.size: 0 tasks.size: 299
+Session.processResult: unassignedTasks.size: 0 tasks.size: 298
+Session.processResult: unassignedTasks.size: 0 tasks.size: 297
+Session.processResult: unassignedTasks.size: 0 tasks.size: 296
+Session.processResult: unassignedTasks.size: 0 tasks.size: 295
+Session.processResult: unassignedTasks.size: 0 tasks.size: 294
+Session.processResult: unassignedTasks.size: 0 tasks.size: 293
+Session.processResult: unassignedTasks.size: 0 tasks.size: 292
+Session.processResult: unassignedTasks.size: 0 tasks.size: 291
+Session.processResult: unassignedTasks.size: 0 tasks.size: 290
+Session.processResult: unassignedTasks.size: 0 tasks.size: 289
+Session.processResult: unassignedTasks.size: 0 tasks.size: 288
+Session.processResult: unassignedTasks.size: 0 tasks.size: 287
+Session.processResult: unassignedTasks.size: 0 tasks.size: 286
+Session.processResult: unassignedTasks.size: 0 tasks.size: 285
+Session.processResult: unassignedTasks.size: 0 tasks.size: 284
+Session.processResult: unassignedTasks.size: 0 tasks.size: 283
+Session.processResult: unassignedTasks.size: 0 tasks.size: 282
+Session.processResult: unassignedTasks.size: 0 tasks.size: 281
+Session.processResult: unassignedTasks.size: 0 tasks.size: 280
+Session.processResult: unassignedTasks.size: 0 tasks.size: 279
+Session.processResult: unassignedTasks.size: 0 tasks.size: 278
+Session.processResult: unassignedTasks.size: 0 tasks.size: 277
+Session.processResult: unassignedTasks.size: 0 tasks.size: 276
+Session.processResult: unassignedTasks.size: 0 tasks.size: 275
+Session.processResult: unassignedTasks.size: 0 tasks.size: 274
+Session.processResult: unassignedTasks.size: 0 tasks.size: 273
+Session.processResult: unassignedTasks.size: 0 tasks.size: 272
+Session.processResult: unassignedTasks.size: 0 tasks.size: 271
+Session.processResult: unassignedTasks.size: 0 tasks.size: 270
+Session.processResult: unassignedTasks.size: 0 tasks.size: 269
+Session.processResult: unassignedTasks.size: 0 tasks.size: 268
+Session.processResult: unassignedTasks.size: 0 tasks.size: 267
+Session.processResult: unassignedTasks.size: 0 tasks.size: 266
+Session.processResult: unassignedTasks.size: 0 tasks.size: 265
+Session.processResult: unassignedTasks.size: 0 tasks.size: 264
+Session.processResult: unassignedTasks.size: 0 tasks.size: 263
+Session.processResult: unassignedTasks.size: 0 tasks.size: 262
+Session.processResult: unassignedTasks.size: 0 tasks.size: 261
+Session.processResult: unassignedTasks.size: 0 tasks.size: 260
+Session.processResult: unassignedTasks.size: 0 tasks.size: 259
+Session.processResult: unassignedTasks.size: 0 tasks.size: 258
+Session.processResult: unassignedTasks.size: 0 tasks.size: 257
+Session.processResult: unassignedTasks.size: 0 tasks.size: 256
+Session.processResult: unassignedTasks.size: 0 tasks.size: 255
+Session.processResult: unassignedTasks.size: 0 tasks.size: 254
+Session.processResult: unassignedTasks.size: 0 tasks.size: 253
+Session.processResult: unassignedTasks.size: 0 tasks.size: 252
+Session.processResult: unassignedTasks.size: 0 tasks.size: 251
+Session.processResult: unassignedTasks.size: 0 tasks.size: 250
+Session.processResult: unassignedTasks.size: 0 tasks.size: 249
+Session.processResult: unassignedTasks.size: 0 tasks.size: 248
+Session.processResult: unassignedTasks.size: 0 tasks.size: 247
+Session.processResult: unassignedTasks.size: 0 tasks.size: 246
+Session.processResult: unassignedTasks.size: 0 tasks.size: 245
+Session.processResult: unassignedTasks.size: 0 tasks.size: 244
+Session.processResult: unassignedTasks.size: 0 tasks.size: 243
+Session.processResult: unassignedTasks.size: 1 tasks.size: 253
+Session.processResult: unassignedTasks.size: 1 tasks.size: 262
+Session.processResult: unassignedTasks.size: 0 tasks.size: 261
+Session.processResult: unassignedTasks.size: 0 tasks.size: 260
+Session.processResult: unassignedTasks.size: 1 tasks.size: 267
+Session.processResult: unassignedTasks.size: 0 tasks.size: 268
+Session.processResult: unassignedTasks.size: 1 tasks.size: 274
+Session.processResult: unassignedTasks.size: 1 tasks.size: 279
+Session.processResult: unassignedTasks.size: 1 tasks.size: 288
+Session.processResult: unassignedTasks.size: 1 tasks.size: 296
+Session.processResult: unassignedTasks.size: 0 tasks.size: 295
+Session.processResult: unassignedTasks.size: 0 tasks.size: 294
+Session.processResult: unassignedTasks.size: 1 tasks.size: 303
+Session.processResult: unassignedTasks.size: 1 tasks.size: 306
+Session.processResult: unassignedTasks.size: 1 tasks.size: 316
+Session.processResult: unassignedTasks.size: 1 tasks.size: 326
+Session.processResult: unassignedTasks.size: 1 tasks.size: 333
+Session.processResult: unassignedTasks.size: 1 tasks.size: 336
+Session.processResult: unassignedTasks.size: 1 tasks.size: 346
+Session.processResult: unassignedTasks.size: 1 tasks.size: 356
+Session.processResult: unassignedTasks.size: 1 tasks.size: 365
+Session.processResult: unassignedTasks.size: 1 tasks.size: 375
+Session.processResult: unassignedTasks.size: 1 tasks.size: 379
+Session.processResult: unassignedTasks.size: 1 tasks.size: 386
+Session.processResult: unassignedTasks.size: 1 tasks.size: 394
+Session.processResult: unassignedTasks.size: 1 tasks.size: 404
+Session.processResult: unassignedTasks.size: 0 tasks.size: 415
+Session.processResult: unassignedTasks.size: 1 tasks.size: 425
+Session.processResult: unassignedTasks.size: 1 tasks.size: 435
+Session.processResult: unassignedTasks.size: 1 tasks.size: 443
+Session.processResult: unassignedTasks.size: 1 tasks.size: 453
+Session.processResult: unassignedTasks.size: 1 tasks.size: 463
+Session.processResult: unassignedTasks.size: 1 tasks.size: 468
+Session.processResult: unassignedTasks.size: 1 tasks.size: 470
+Session.processResult: unassignedTasks.size: 1 tasks.size: 478
+Session.processResult: unassignedTasks.size: 1 tasks.size: 479
+Session.processResult: unassignedTasks.size: 1 tasks.size: 482
+Session.processResult: unassignedTasks.size: 1 tasks.size: 485
+Session.processResult: unassignedTasks.size: 1 tasks.size: 492
+Session.processResult: unassignedTasks.size: 1 tasks.size: 499
+Session.processResult: unassignedTasks.size: 1 tasks.size: 507
+Session.processResult: unassignedTasks.size: 1 tasks.size: 513
+Session.processResult: unassignedTasks.size: 1 tasks.size: 512
+Session.processResult: unassignedTasks.size: 1 tasks.size: 520
+Session.processResult: unassignedTasks.size: 1 tasks.size: 522
+Session.processResult: unassignedTasks.size: 1 tasks.size: 527
+Session.processResult: unassignedTasks.size: 1 tasks.size: 534
+Session.processResult: unassignedTasks.size: 1 tasks.size: 542
+Session.processResult: unassignedTasks.size: 1 tasks.size: 552
+Session.processResult: unassignedTasks.size: 1 tasks.size: 562
+Session.processResult: unassignedTasks.size: 1 tasks.size: 572
+Session.processResult: unassignedTasks.size: 1 tasks.size: 581
+Session.processResult: unassignedTasks.size: 1 tasks.size: 580
+Session.processResult: unassignedTasks.size: 1 tasks.size: 582
+Session.processResult: unassignedTasks.size: 1 tasks.size: 584
+Session.processResult: unassignedTasks.size: 1 tasks.size: 588
+Session.processResult: unassignedTasks.size: 1 tasks.size: 595
+Session.processResult: unassignedTasks.size: 1 tasks.size: 601
+Session.processResult: unassignedTasks.size: 1 tasks.size: 608
+Session.processResult: unassignedTasks.size: 1 tasks.size: 611
+Session.processResult: unassignedTasks.size: 1 tasks.size: 619
+Session.processResult: unassignedTasks.size: 1 tasks.size: 622
+Session.processResult: unassignedTasks.size: 1 tasks.size: 628
+Session.processResult: unassignedTasks.size: 1 tasks.size: 627
+Session.processResult: unassignedTasks.size: 1 tasks.size: 626
+Session.processResult: unassignedTasks.size: 1 tasks.size: 625
+Session.processResult: unassignedTasks.size: 1 tasks.size: 624
+Session.processResult: unassignedTasks.size: 1 tasks.size: 623
+Session.processResult: unassignedTasks.size: 1 tasks.size: 622
+Session.processResult: unassignedTasks.size: 1 tasks.size: 621
+Session.processResult: unassignedTasks.size: 1 tasks.size: 620
+Session.processResult: unassignedTasks.size: 1 tasks.size: 619
+Session.processResult: unassignedTasks.size: 1 tasks.size: 618
+Session.processResult: unassignedTasks.size: 1 tasks.size: 617
+Session.processResult: unassignedTasks.size: 1 tasks.size: 616
+Session.processResult: unassignedTasks.size: 1 tasks.size: 615
+Session.processResult: unassignedTasks.size: 1 tasks.size: 614
+Session.processResult: unassignedTasks.size: 1 tasks.size: 613
+Session.processResult: unassignedTasks.size: 1 tasks.size: 612
+Session.processResult: unassignedTasks.size: 1 tasks.size: 611
+Session.processResult: unassignedTasks.size: 1 tasks.size: 610
+Session.processResult: unassignedTasks.size: 1 tasks.size: 609
+Session.processResult: unassignedTasks.size: 1 tasks.size: 608
+Session.processResult: unassignedTasks.size: 1 tasks.size: 607
+Session.processResult: unassignedTasks.size: 1 tasks.size: 606
+Session.processResult: unassignedTasks.size: 1 tasks.size: 605
+Session.processResult: unassignedTasks.size: 1 tasks.size: 604
+Session.processResult: unassignedTasks.size: 1 tasks.size: 603
+Session.processResult: unassignedTasks.size: 1 tasks.size: 602
+Session.processResult: unassignedTasks.size: 1 tasks.size: 601
+Session.processResult: unassignedTasks.size: 1 tasks.size: 600
+Session.processResult: unassignedTasks.size: 1 tasks.size: 599
+Session.processResult: unassignedTasks.size: 1 tasks.size: 598
+Session.processResult: unassignedTasks.size: 1 tasks.size: 597
+Session.processResult: unassignedTasks.size: 1 tasks.size: 596
+Session.processResult: unassignedTasks.size: 1 tasks.size: 595
+Session.processResult: unassignedTasks.size: 1 tasks.size: 594
+Session.processResult: unassignedTasks.size: 1 tasks.size: 593
+Session.processResult: unassignedTasks.size: 1 tasks.size: 592
+Session.processResult: unassignedTasks.size: 1 tasks.size: 591
+Session.processResult: unassignedTasks.size: 1 tasks.size: 590
+Session.processResult: unassignedTasks.size: 1 tasks.size: 589
+Session.processResult: unassignedTasks.size: 1 tasks.size: 588
+Session.processResult: unassignedTasks.size: 1 tasks.size: 587
+Session.processResult: unassignedTasks.size: 1 tasks.size: 586
+Session.processResult: unassignedTasks.size: 1 tasks.size: 585
+Session.processResult: unassignedTasks.size: 1 tasks.size: 584
+Session.processResult: unassignedTasks.size: 1 tasks.size: 583
+Session.processResult: unassignedTasks.size: 1 tasks.size: 582
+Session.processResult: unassignedTasks.size: 1 tasks.size: 581
+Session.processResult: unassignedTasks.size: 1 tasks.size: 580
+Session.processResult: unassignedTasks.size: 1 tasks.size: 579
+Session.processResult: unassignedTasks.size: 1 tasks.size: 578
+Session.processResult: unassignedTasks.size: 1 tasks.size: 577
+Session.processResult: unassignedTasks.size: 1 tasks.size: 576
+Session.processResult: unassignedTasks.size: 1 tasks.size: 575
+Session.processResult: unassignedTasks.size: 1 tasks.size: 574
+Session.processResult: unassignedTasks.size: 1 tasks.size: 573
+Session.processResult: unassignedTasks.size: 1 tasks.size: 572
+Session.processResult: unassignedTasks.size: 1 tasks.size: 571
+Session.processResult: unassignedTasks.size: 1 tasks.size: 570
+Session.processResult: unassignedTasks.size: 1 tasks.size: 569
+Session.processResult: unassignedTasks.size: 1 tasks.size: 568
+Session.processResult: unassignedTasks.size: 1 tasks.size: 567
+Session.processResult: unassignedTasks.size: 1 tasks.size: 566
+Session.processResult: unassignedTasks.size: 1 tasks.size: 565
+Session.processResult: unassignedTasks.size: 1 tasks.size: 564
+Session.processResult: unassignedTasks.size: 1 tasks.size: 563
+Session.processResult: unassignedTasks.size: 1 tasks.size: 562
+Session.processResult: unassignedTasks.size: 1 tasks.size: 561
+Session.processResult: unassignedTasks.size: 1 tasks.size: 560
+Session.processResult: unassignedTasks.size: 1 tasks.size: 559
+Session.processResult: unassignedTasks.size: 1 tasks.size: 558
+Session.processResult: unassignedTasks.size: 1 tasks.size: 557
+Session.processResult: unassignedTasks.size: 1 tasks.size: 556
+Session.processResult: unassignedTasks.size: 1 tasks.size: 555
+Session.processResult: unassignedTasks.size: 1 tasks.size: 554
+Session.processResult: unassignedTasks.size: 1 tasks.size: 553
+Session.processResult: unassignedTasks.size: 1 tasks.size: 552
+Session.processResult: unassignedTasks.size: 1 tasks.size: 551
+Session.processResult: unassignedTasks.size: 1 tasks.size: 550
+Session.processResult: unassignedTasks.size: 1 tasks.size: 549
+Session.processResult: unassignedTasks.size: 1 tasks.size: 548
+Session.processResult: unassignedTasks.size: 1 tasks.size: 547
+Session.processResult: unassignedTasks.size: 1 tasks.size: 546
+Session.processResult: unassignedTasks.size: 1 tasks.size: 545
+Session.processResult: unassignedTasks.size: 1 tasks.size: 544
+Session.processResult: unassignedTasks.size: 1 tasks.size: 543
+Session.processResult: unassignedTasks.size: 1 tasks.size: 542
+Session.processResult: unassignedTasks.size: 0 tasks.size: 541
+Session.processResult: unassignedTasks.size: 0 tasks.size: 540
+Session.processResult: unassignedTasks.size: 0 tasks.size: 539
+Session.processResult: unassignedTasks.size: 0 tasks.size: 538
+Session.processResult: unassignedTasks.size: 0 tasks.size: 537
+Session.processResult: unassignedTasks.size: 0 tasks.size: 536
+Session.processResult: unassignedTasks.size: 0 tasks.size: 535
+Session.processResult: unassignedTasks.size: 0 tasks.size: 534
+Session.processResult: unassignedTasks.size: 0 tasks.size: 533
+Session.processResult: unassignedTasks.size: 0 tasks.size: 532
+Session.processResult: unassignedTasks.size: 0 tasks.size: 531
+Session.processResult: unassignedTasks.size: 0 tasks.size: 530
+Session.processResult: unassignedTasks.size: 0 tasks.size: 529
+Session.processResult: unassignedTasks.size: 0 tasks.size: 528
+Session.processResult: unassignedTasks.size: 0 tasks.size: 527
+Session.processResult: unassignedTasks.size: 0 tasks.size: 526
+Session.processResult: unassignedTasks.size: 0 tasks.size: 525
+Session.processResult: unassignedTasks.size: 0 tasks.size: 524
+Session.processResult: unassignedTasks.size: 0 tasks.size: 523
+Session.processResult: unassignedTasks.size: 0 tasks.size: 522
+Session.processResult: unassignedTasks.size: 0 tasks.size: 521
+Session.processResult: unassignedTasks.size: 0 tasks.size: 520
+Session.processResult: unassignedTasks.size: 0 tasks.size: 519
+Session.processResult: unassignedTasks.size: 0 tasks.size: 518
+Session.processResult: unassignedTasks.size: 0 tasks.size: 517
+Session.processResult: unassignedTasks.size: 0 tasks.size: 516
+Session.processResult: unassignedTasks.size: 0 tasks.size: 515
+Session.processResult: unassignedTasks.size: 0 tasks.size: 514
+Session.processResult: unassignedTasks.size: 0 tasks.size: 513
+Session.processResult: unassignedTasks.size: 0 tasks.size: 512
+Session.processResult: unassignedTasks.size: 0 tasks.size: 511
+Session.processResult: unassignedTasks.size: 0 tasks.size: 510
+Session.processResult: unassignedTasks.size: 0 tasks.size: 509
+Session.processResult: unassignedTasks.size: 0 tasks.size: 508
+Session.processResult: unassignedTasks.size: 0 tasks.size: 507
+Session.processResult: unassignedTasks.size: 0 tasks.size: 506
+Session.processResult: unassignedTasks.size: 0 tasks.size: 505
+Session.processResult: unassignedTasks.size: 0 tasks.size: 504
+Session.processResult: unassignedTasks.size: 0 tasks.size: 503
+Session.processResult: unassignedTasks.size: 0 tasks.size: 502
+Session.processResult: unassignedTasks.size: 0 tasks.size: 501
+Session.processResult: unassignedTasks.size: 0 tasks.size: 500
+Session.processResult: unassignedTasks.size: 0 tasks.size: 499
+Session.processResult: unassignedTasks.size: 0 tasks.size: 498
+Session.processResult: unassignedTasks.size: 0 tasks.size: 497
+Session.processResult: unassignedTasks.size: 0 tasks.size: 496
+Session.processResult: unassignedTasks.size: 0 tasks.size: 495
+Session.processResult: unassignedTasks.size: 0 tasks.size: 494
+Session.processResult: unassignedTasks.size: 0 tasks.size: 493
+Session.processResult: unassignedTasks.size: 0 tasks.size: 492
+Session.processResult: unassignedTasks.size: 0 tasks.size: 491
+Session.processResult: unassignedTasks.size: 0 tasks.size: 490
+Session.processResult: unassignedTasks.size: 0 tasks.size: 489
+Session.processResult: unassignedTasks.size: 0 tasks.size: 488
+Session.processResult: unassignedTasks.size: 0 tasks.size: 487
+Session.processResult: unassignedTasks.size: 0 tasks.size: 486
+Session.processResult: unassignedTasks.size: 0 tasks.size: 485
+Session.processResult: unassignedTasks.size: 0 tasks.size: 484
+Session.processResult: unassignedTasks.size: 0 tasks.size: 483
+Session.processResult: unassignedTasks.size: 0 tasks.size: 482
+Session.processResult: unassignedTasks.size: 0 tasks.size: 481
+Session.processResult: unassignedTasks.size: 0 tasks.size: 480
+Session.processResult: unassignedTasks.size: 0 tasks.size: 479
+Session.processResult: unassignedTasks.size: 0 tasks.size: 478
+Session.processResult: unassignedTasks.size: 0 tasks.size: 477
+Session.processResult: unassignedTasks.size: 0 tasks.size: 476
+Session.processResult: unassignedTasks.size: 0 tasks.size: 475
+Session.processResult: unassignedTasks.size: 0 tasks.size: 474
+Session.processResult: unassignedTasks.size: 0 tasks.size: 473
+Session.processResult: unassignedTasks.size: 0 tasks.size: 472
+Session.processResult: unassignedTasks.size: 0 tasks.size: 471
+Session.processResult: unassignedTasks.size: 0 tasks.size: 470
+Session.processResult: unassignedTasks.size: 0 tasks.size: 469
+Session.processResult: unassignedTasks.size: 0 tasks.size: 468
+Session.processResult: unassignedTasks.size: 0 tasks.size: 467
+Session.processResult: unassignedTasks.size: 0 tasks.size: 466
+Session.processResult: unassignedTasks.size: 0 tasks.size: 465
+Session.processResult: unassignedTasks.size: 0 tasks.size: 464
+Session.processResult: unassignedTasks.size: 0 tasks.size: 463
+Session.processResult: unassignedTasks.size: 0 tasks.size: 462
+Session.processResult: unassignedTasks.size: 0 tasks.size: 461
+Session.processResult: unassignedTasks.size: 0 tasks.size: 460
+Session.processResult: unassignedTasks.size: 0 tasks.size: 459
+Session.processResult: unassignedTasks.size: 0 tasks.size: 458
+Session.processResult: unassignedTasks.size: 0 tasks.size: 457
+Session.processResult: unassignedTasks.size: 0 tasks.size: 456
+Session.processResult: unassignedTasks.size: 0 tasks.size: 455
+Session.processResult: unassignedTasks.size: 0 tasks.size: 454
+Session.processResult: unassignedTasks.size: 0 tasks.size: 453
+Session.processResult: unassignedTasks.size: 0 tasks.size: 452
+Session.processResult: unassignedTasks.size: 0 tasks.size: 451
+Session.processResult: unassignedTasks.size: 0 tasks.size: 450
+Session.processResult: unassignedTasks.size: 0 tasks.size: 449
+Session.processResult: unassignedTasks.size: 0 tasks.size: 448
+Session.processResult: unassignedTasks.size: 0 tasks.size: 447
+Session.processResult: unassignedTasks.size: 0 tasks.size: 446
+Session.processResult: unassignedTasks.size: 0 tasks.size: 445
+Session.processResult: unassignedTasks.size: 0 tasks.size: 444
+Session.processResult: unassignedTasks.size: 0 tasks.size: 443
+Session.processResult: unassignedTasks.size: 0 tasks.size: 442
+Session.processResult: unassignedTasks.size: 0 tasks.size: 441
+Session.processResult: unassignedTasks.size: 0 tasks.size: 440
+Session.processResult: unassignedTasks.size: 0 tasks.size: 439
+Session.processResult: unassignedTasks.size: 0 tasks.size: 438
+Session.processResult: unassignedTasks.size: 0 tasks.size: 437
+Session.processResult: unassignedTasks.size: 0 tasks.size: 436
+Session.processResult: unassignedTasks.size: 0 tasks.size: 435
+Session.processResult: unassignedTasks.size: 0 tasks.size: 434
+Session.processResult: unassignedTasks.size: 0 tasks.size: 433
+Session.processResult: unassignedTasks.size: 0 tasks.size: 432
+Session.processResult: unassignedTasks.size: 0 tasks.size: 431
+Session.processResult: unassignedTasks.size: 0 tasks.size: 430
+Session.processResult: unassignedTasks.size: 0 tasks.size: 429
+Session.processResult: unassignedTasks.size: 0 tasks.size: 428
+Session.processResult: unassignedTasks.size: 0 tasks.size: 427
+Session.processResult: unassignedTasks.size: 0 tasks.size: 426
+Session.processResult: unassignedTasks.size: 0 tasks.size: 425
+Session.processResult: unassignedTasks.size: 0 tasks.size: 424
+Session.processResult: unassignedTasks.size: 0 tasks.size: 423
+Session.processResult: unassignedTasks.size: 0 tasks.size: 422
+Session.processResult: unassignedTasks.size: 0 tasks.size: 421
+Session.processResult: unassignedTasks.size: 0 tasks.size: 420
+Session.processResult: unassignedTasks.size: 0 tasks.size: 419
+Session.processResult: unassignedTasks.size: 0 tasks.size: 418
+Session.processResult: unassignedTasks.size: 0 tasks.size: 417
+Session.processResult: unassignedTasks.size: 0 tasks.size: 416
+Session.processResult: unassignedTasks.size: 0 tasks.size: 415
+Session.processResult: unassignedTasks.size: 0 tasks.size: 414
+Session.processResult: unassignedTasks.size: 0 tasks.size: 413
+Session.processResult: unassignedTasks.size: 0 tasks.size: 412
+Session.processResult: unassignedTasks.size: 0 tasks.size: 411
+Session.processResult: unassignedTasks.size: 0 tasks.size: 410
+Session.processResult: unassignedTasks.size: 0 tasks.size: 409
+Session.processResult: unassignedTasks.size: 0 tasks.size: 408
+Session.processResult: unassignedTasks.size: 0 tasks.size: 407
+Session.processResult: unassignedTasks.size: 0 tasks.size: 406
+Session.processResult: unassignedTasks.size: 0 tasks.size: 405
+Session.processResult: unassignedTasks.size: 0 tasks.size: 404
+Session.processResult: unassignedTasks.size: 0 tasks.size: 403
+Session.processResult: unassignedTasks.size: 0 tasks.size: 402
+Session.processResult: unassignedTasks.size: 0 tasks.size: 401
+Session.processResult: unassignedTasks.size: 0 tasks.size: 400
+Session.processResult: unassignedTasks.size: 0 tasks.size: 399
+Session.processResult: unassignedTasks.size: 0 tasks.size: 398
+Session.processResult: unassignedTasks.size: 0 tasks.size: 397
+Session.processResult: unassignedTasks.size: 0 tasks.size: 396
+Session.processResult: unassignedTasks.size: 0 tasks.size: 395
+Session.processResult: unassignedTasks.size: 0 tasks.size: 394
+Session.processResult: unassignedTasks.size: 0 tasks.size: 393
+Session.processResult: unassignedTasks.size: 0 tasks.size: 392
+Session.processResult: unassignedTasks.size: 0 tasks.size: 391
+Session.processResult: unassignedTasks.size: 0 tasks.size: 390
+Session.processResult: unassignedTasks.size: 0 tasks.size: 389
+Session.processResult: unassignedTasks.size: 0 tasks.size: 388
+Session.processResult: unassignedTasks.size: 0 tasks.size: 387
+Session.processResult: unassignedTasks.size: 0 tasks.size: 386
+Session.processResult: unassignedTasks.size: 0 tasks.size: 385
+Session.processResult: unassignedTasks.size: 0 tasks.size: 384
+Session.processResult: unassignedTasks.size: 0 tasks.size: 383
+Session.processResult: unassignedTasks.size: 0 tasks.size: 382
+Session.processResult: unassignedTasks.size: 0 tasks.size: 381
+Session.processResult: unassignedTasks.size: 0 tasks.size: 380
+Session.processResult: unassignedTasks.size: 0 tasks.size: 379
+Session.processResult: unassignedTasks.size: 0 tasks.size: 378
+Session.processResult: unassignedTasks.size: 0 tasks.size: 377
+Session.processResult: unassignedTasks.size: 0 tasks.size: 376
+Session.processResult: unassignedTasks.size: 0 tasks.size: 375
+Session.processResult: unassignedTasks.size: 0 tasks.size: 374
+Session.processResult: unassignedTasks.size: 0 tasks.size: 373
+Session.processResult: unassignedTasks.size: 0 tasks.size: 372
+Session.processResult: unassignedTasks.size: 0 tasks.size: 371
+Session.processResult: unassignedTasks.size: 0 tasks.size: 370
+Session.processResult: unassignedTasks.size: 0 tasks.size: 369
+Session.processResult: unassignedTasks.size: 0 tasks.size: 368
+Session.processResult: unassignedTasks.size: 0 tasks.size: 367
+Session.processResult: unassignedTasks.size: 0 tasks.size: 366
+Session.processResult: unassignedTasks.size: 0 tasks.size: 365
+Session.processResult: unassignedTasks.size: 0 tasks.size: 364
+Session.processResult: unassignedTasks.size: 0 tasks.size: 363
+Session.processResult: unassignedTasks.size: 0 tasks.size: 362
+Session.processResult: unassignedTasks.size: 0 tasks.size: 361
+Session.processResult: unassignedTasks.size: 0 tasks.size: 360
+Session.processResult: unassignedTasks.size: 0 tasks.size: 359
+Session.processResult: unassignedTasks.size: 0 tasks.size: 358
+Session.processResult: unassignedTasks.size: 0 tasks.size: 357
+Session.processResult: unassignedTasks.size: 0 tasks.size: 356
+Session.processResult: unassignedTasks.size: 0 tasks.size: 355
+Session.processResult: unassignedTasks.size: 0 tasks.size: 354
+Session.processResult: unassignedTasks.size: 0 tasks.size: 353
+Session.processResult: unassignedTasks.size: 0 tasks.size: 352
+Session.processResult: unassignedTasks.size: 0 tasks.size: 351
+Session.processResult: unassignedTasks.size: 0 tasks.size: 350
+Session.processResult: unassignedTasks.size: 0 tasks.size: 349
+Session.processResult: unassignedTasks.size: 0 tasks.size: 348
+Session.processResult: unassignedTasks.size: 0 tasks.size: 347
+Session.processResult: unassignedTasks.size: 0 tasks.size: 346
+Session.processResult: unassignedTasks.size: 0 tasks.size: 345
+Session.processResult: unassignedTasks.size: 0 tasks.size: 344
+Session.processResult: unassignedTasks.size: 0 tasks.size: 343
+Session.processResult: unassignedTasks.size: 0 tasks.size: 342
+Session.processResult: unassignedTasks.size: 0 tasks.size: 341
+Session.processResult: unassignedTasks.size: 0 tasks.size: 340
+Session.processResult: unassignedTasks.size: 0 tasks.size: 339
+Session.processResult: unassignedTasks.size: 0 tasks.size: 338
+Session.processResult: unassignedTasks.size: 0 tasks.size: 337
+Session.processResult: unassignedTasks.size: 0 tasks.size: 336
+Session.processResult: unassignedTasks.size: 0 tasks.size: 335
+Session.processResult: unassignedTasks.size: 0 tasks.size: 334
+Session.processResult: unassignedTasks.size: 0 tasks.size: 333
+Session.processResult: unassignedTasks.size: 0 tasks.size: 332
+Session.processResult: unassignedTasks.size: 0 tasks.size: 331
+Session.processResult: unassignedTasks.size: 0 tasks.size: 330
+Session.processResult: unassignedTasks.size: 0 tasks.size: 329
+Session.processResult: unassignedTasks.size: 0 tasks.size: 328
+Session.processResult: unassignedTasks.size: 0 tasks.size: 327
+Session.processResult: unassignedTasks.size: 0 tasks.size: 326
+Session.processResult: unassignedTasks.size: 0 tasks.size: 325
+Session.processResult: unassignedTasks.size: 0 tasks.size: 324
+Session.processResult: unassignedTasks.size: 0 tasks.size: 323
+Session.processResult: unassignedTasks.size: 0 tasks.size: 322
+Session.processResult: unassignedTasks.size: 0 tasks.size: 321
+Session.processResult: unassignedTasks.size: 0 tasks.size: 320
+Session.processResult: unassignedTasks.size: 0 tasks.size: 319
+Session.processResult: unassignedTasks.size: 0 tasks.size: 318
+Session.processResult: unassignedTasks.size: 0 tasks.size: 317
+Session.processResult: unassignedTasks.size: 0 tasks.size: 316
+Session.processResult: unassignedTasks.size: 0 tasks.size: 315
+Session.processResult: unassignedTasks.size: 0 tasks.size: 314
+Session.processResult: unassignedTasks.size: 0 tasks.size: 313
+Session.processResult: unassignedTasks.size: 0 tasks.size: 312
+Session.processResult: unassignedTasks.size: 0 tasks.size: 311
+Session.processResult: unassignedTasks.size: 0 tasks.size: 310
+Session.processResult: unassignedTasks.size: 0 tasks.size: 309
+Session.processResult: unassignedTasks.size: 0 tasks.size: 308
+Session.processResult: unassignedTasks.size: 0 tasks.size: 307
+Session.processResult: unassignedTasks.size: 0 tasks.size: 306
+Session.processResult: unassignedTasks.size: 0 tasks.size: 305
+Session.processResult: unassignedTasks.size: 0 tasks.size: 304
+Session.processResult: unassignedTasks.size: 0 tasks.size: 303
+Session.processResult: unassignedTasks.size: 0 tasks.size: 302
+Session.processResult: unassignedTasks.size: 0 tasks.size: 301
+Session.processResult: unassignedTasks.size: 0 tasks.size: 300
+Session.processResult: unassignedTasks.size: 0 tasks.size: 299
+Session.processResult: unassignedTasks.size: 0 tasks.size: 298
+Session.processResult: unassignedTasks.size: 0 tasks.size: 297
+Session.processResult: unassignedTasks.size: 0 tasks.size: 296
+Session.processResult: unassignedTasks.size: 0 tasks.size: 295
+Session.processResult: unassignedTasks.size: 0 tasks.size: 294
+Session.processResult: unassignedTasks.size: 0 tasks.size: 293
+Session.processResult: unassignedTasks.size: 0 tasks.size: 292
+Session.processResult: unassignedTasks.size: 0 tasks.size: 291
+Session.processResult: unassignedTasks.size: 0 tasks.size: 290
+Session.processResult: unassignedTasks.size: 0 tasks.size: 289
+Session.processResult: unassignedTasks.size: 0 tasks.size: 288
+Session.processResult: unassignedTasks.size: 0 tasks.size: 287
+Session.processResult: unassignedTasks.size: 0 tasks.size: 286
+Session.processResult: unassignedTasks.size: 0 tasks.size: 285
+Session.processResult: unassignedTasks.size: 0 tasks.size: 284
+Session.processResult: unassignedTasks.size: 0 tasks.size: 283
+Session.processResult: unassignedTasks.size: 0 tasks.size: 282
+Session.processResult: unassignedTasks.size: 0 tasks.size: 281
+Session.processResult: unassignedTasks.size: 0 tasks.size: 280
+Session.processResult: unassignedTasks.size: 0 tasks.size: 279
+Session.processResult: unassignedTasks.size: 0 tasks.size: 278
+Session.processResult: unassignedTasks.size: 0 tasks.size: 277
+Session.processResult: unassignedTasks.size: 0 tasks.size: 276
+Session.processResult: unassignedTasks.size: 0 tasks.size: 275
+Session.processResult: unassignedTasks.size: 0 tasks.size: 274
+Session.processResult: unassignedTasks.size: 0 tasks.size: 273
+Session.processResult: unassignedTasks.size: 0 tasks.size: 272
+Session.processResult: unassignedTasks.size: 0 tasks.size: 271
+Session.processResult: unassignedTasks.size: 0 tasks.size: 270
+Session.processResult: unassignedTasks.size: 0 tasks.size: 269
+Session.processResult: unassignedTasks.size: 0 tasks.size: 268
+Session.processResult: unassignedTasks.size: 0 tasks.size: 267
+Session.processResult: unassignedTasks.size: 0 tasks.size: 266
+Session.processResult: unassignedTasks.size: 0 tasks.size: 265
+Session.processResult: unassignedTasks.size: 0 tasks.size: 264
+Session.processResult: unassignedTasks.size: 0 tasks.size: 263
+Session.processResult: unassignedTasks.size: 0 tasks.size: 262
+Session.processResult: unassignedTasks.size: 0 tasks.size: 261
+Session.processResult: unassignedTasks.size: 0 tasks.size: 260
+Session.processResult: unassignedTasks.size: 0 tasks.size: 259
+Session.processResult: unassignedTasks.size: 0 tasks.size: 258
+Session.processResult: unassignedTasks.size: 0 tasks.size: 257
+Session.processResult: unassignedTasks.size: 0 tasks.size: 256
+Session.processResult: unassignedTasks.size: 0 tasks.size: 255
+Session.processResult: unassignedTasks.size: 0 tasks.size: 254
+Session.processResult: unassignedTasks.size: 0 tasks.size: 253
+Session.processResult: unassignedTasks.size: 0 tasks.size: 252
+Session.processResult: unassignedTasks.size: 0 tasks.size: 251
+Session.processResult: unassignedTasks.size: 0 tasks.size: 250
+Session.processResult: unassignedTasks.size: 0 tasks.size: 249
+Session.processResult: unassignedTasks.size: 0 tasks.size: 248
+Session.processResult: unassignedTasks.size: 0 tasks.size: 247
+Session.processResult: unassignedTasks.size: 0 tasks.size: 246
+Session.processResult: unassignedTasks.size: 0 tasks.size: 245
+Session.processResult: unassignedTasks.size: 0 tasks.size: 244
+Session.processResult: unassignedTasks.size: 0 tasks.size: 243
+Session.processResult: unassignedTasks.size: 0 tasks.size: 242
+Session.processResult: unassignedTasks.size: 0 tasks.size: 241
+Session.processResult: unassignedTasks.size: 0 tasks.size: 240
+Session.processResult: unassignedTasks.size: 0 tasks.size: 239
+Session.processResult: unassignedTasks.size: 0 tasks.size: 238
+Session.processResult: unassignedTasks.size: 0 tasks.size: 237
+Session.processResult: unassignedTasks.size: 0 tasks.size: 236
+Session.processResult: unassignedTasks.size: 0 tasks.size: 235
+Session.processResult: unassignedTasks.size: 0 tasks.size: 234
+Session.processResult: unassignedTasks.size: 0 tasks.size: 233
+Session.processResult: unassignedTasks.size: 0 tasks.size: 232
+Session.processResult: unassignedTasks.size: 0 tasks.size: 231
+Session.processResult: unassignedTasks.size: 0 tasks.size: 230
+Session.processResult: unassignedTasks.size: 0 tasks.size: 229
+Session.processResult: unassignedTasks.size: 0 tasks.size: 228
+Session.processResult: unassignedTasks.size: 0 tasks.size: 227
+Session.processResult: unassignedTasks.size: 0 tasks.size: 226
+Session.processResult: unassignedTasks.size: 0 tasks.size: 225
+Session.processResult: unassignedTasks.size: 0 tasks.size: 224
+Session.processResult: unassignedTasks.size: 0 tasks.size: 223
+Session.processResult: unassignedTasks.size: 0 tasks.size: 222
+Session.processResult: unassignedTasks.size: 0 tasks.size: 221
+Session.processResult: unassignedTasks.size: 0 tasks.size: 220
+Session.processResult: unassignedTasks.size: 0 tasks.size: 219
+Session.processResult: unassignedTasks.size: 0 tasks.size: 218
+Session.processResult: unassignedTasks.size: 0 tasks.size: 217
+Session.processResult: unassignedTasks.size: 0 tasks.size: 216
+Session.processResult: unassignedTasks.size: 0 tasks.size: 215
+Session.processResult: unassignedTasks.size: 0 tasks.size: 214
+Session.processResult: unassignedTasks.size: 0 tasks.size: 213
+Session.processResult: unassignedTasks.size: 0 tasks.size: 212
+Session.processResult: unassignedTasks.size: 0 tasks.size: 211
+Session.processResult: unassignedTasks.size: 0 tasks.size: 210
+Session.processResult: unassignedTasks.size: 0 tasks.size: 209
+Session.processResult: unassignedTasks.size: 0 tasks.size: 208
+Session.processResult: unassignedTasks.size: 0 tasks.size: 207
+Session.processResult: unassignedTasks.size: 0 tasks.size: 206
+Session.processResult: unassignedTasks.size: 0 tasks.size: 205
+Session.processResult: unassignedTasks.size: 0 tasks.size: 204
+Session.processResult: unassignedTasks.size: 0 tasks.size: 203
+Session.processResult: unassignedTasks.size: 0 tasks.size: 202
+Session.processResult: unassignedTasks.size: 0 tasks.size: 201
+Session.processResult: unassignedTasks.size: 0 tasks.size: 200
+Session.processResult: unassignedTasks.size: 0 tasks.size: 199
+Session.processResult: unassignedTasks.size: 0 tasks.size: 198
+Session.processResult: unassignedTasks.size: 0 tasks.size: 197
+Session.processResult: unassignedTasks.size: 0 tasks.size: 196
+Session.processResult: unassignedTasks.size: 0 tasks.size: 195
+Session.processResult: unassignedTasks.size: 0 tasks.size: 194
+Session.processResult: unassignedTasks.size: 0 tasks.size: 193
+Session.processResult: unassignedTasks.size: 0 tasks.size: 192
+Session.processResult: unassignedTasks.size: 0 tasks.size: 191
+Session.processResult: unassignedTasks.size: 0 tasks.size: 190
+Session.processResult: unassignedTasks.size: 0 tasks.size: 189
+Session.processResult: unassignedTasks.size: 0 tasks.size: 188
+Session.processResult: unassignedTasks.size: 0 tasks.size: 187
+Session.processResult: unassignedTasks.size: 0 tasks.size: 186
+Session.processResult: unassignedTasks.size: 0 tasks.size: 185
+Session.processResult: unassignedTasks.size: 0 tasks.size: 184
+Session.processResult: unassignedTasks.size: 0 tasks.size: 183
+Session.processResult: unassignedTasks.size: 0 tasks.size: 182
+Session.processResult: unassignedTasks.size: 0 tasks.size: 181
+Session.processResult: unassignedTasks.size: 0 tasks.size: 180
+Session.processResult: unassignedTasks.size: 0 tasks.size: 179
+Session.processResult: unassignedTasks.size: 0 tasks.size: 178
+Session.processResult: unassignedTasks.size: 0 tasks.size: 177
+Session.processResult: unassignedTasks.size: 0 tasks.size: 176
+Session.processResult: unassignedTasks.size: 0 tasks.size: 175
+Session.processResult: unassignedTasks.size: 0 tasks.size: 174
+Session.processResult: unassignedTasks.size: 0 tasks.size: 173
+Session.processResult: unassignedTasks.size: 0 tasks.size: 172
+Session.processResult: unassignedTasks.size: 0 tasks.size: 171
+Session.processResult: unassignedTasks.size: 0 tasks.size: 170
+Session.processResult: unassignedTasks.size: 0 tasks.size: 169
+Session.processResult: unassignedTasks.size: 0 tasks.size: 168
+Session.processResult: unassignedTasks.size: 0 tasks.size: 167
+Session.processResult: unassignedTasks.size: 0 tasks.size: 166
+Session.processResult: unassignedTasks.size: 0 tasks.size: 165
+Session.processResult: unassignedTasks.size: 0 tasks.size: 164
+Session.processResult: unassignedTasks.size: 0 tasks.size: 163
+Session.processResult: unassignedTasks.size: 0 tasks.size: 162
+Session.processResult: unassignedTasks.size: 0 tasks.size: 161
+Session.processResult: unassignedTasks.size: 0 tasks.size: 160
+Session.processResult: unassignedTasks.size: 0 tasks.size: 159
+Session.processResult: unassignedTasks.size: 0 tasks.size: 158
+Session.processResult: unassignedTasks.size: 0 tasks.size: 157
+Session.processResult: unassignedTasks.size: 0 tasks.size: 156
+Session.processResult: unassignedTasks.size: 0 tasks.size: 155
+Session.processResult: unassignedTasks.size: 0 tasks.size: 154
+Session.processResult: unassignedTasks.size: 0 tasks.size: 153
+Session.processResult: unassignedTasks.size: 0 tasks.size: 152
+Session.processResult: unassignedTasks.size: 0 tasks.size: 151
+Session.processResult: unassignedTasks.size: 0 tasks.size: 150
+Session.processResult: unassignedTasks.size: 0 tasks.size: 149
+Session.processResult: unassignedTasks.size: 0 tasks.size: 148
+Session.processResult: unassignedTasks.size: 0 tasks.size: 147
+Session.processResult: unassignedTasks.size: 0 tasks.size: 146
+Session.processResult: unassignedTasks.size: 0 tasks.size: 145
+Session.processResult: unassignedTasks.size: 0 tasks.size: 144
+Session.processResult: unassignedTasks.size: 0 tasks.size: 143
+Session.processResult: unassignedTasks.size: 0 tasks.size: 142
+Session.processResult: unassignedTasks.size: 0 tasks.size: 141
+Session.processResult: unassignedTasks.size: 0 tasks.size: 140
+Session.processResult: unassignedTasks.size: 0 tasks.size: 139
+Session.processResult: unassignedTasks.size: 0 tasks.size: 138
+Session.processResult: unassignedTasks.size: 0 tasks.size: 137
+Session.processResult: unassignedTasks.size: 0 tasks.size: 136
+Session.processResult: unassignedTasks.size: 0 tasks.size: 135
+Session.processResult: unassignedTasks.size: 0 tasks.size: 134
+Session.processResult: unassignedTasks.size: 0 tasks.size: 133
+Session.processResult: unassignedTasks.size: 0 tasks.size: 132
+Session.processResult: unassignedTasks.size: 0 tasks.size: 131
+Session.processResult: unassignedTasks.size: 0 tasks.size: 130
+Session.processResult: unassignedTasks.size: 0 tasks.size: 129
+Session.processResult: unassignedTasks.size: 0 tasks.size: 128
+Session.processResult: unassignedTasks.size: 0 tasks.size: 127
+Session.processResult: unassignedTasks.size: 0 tasks.size: 126
+Session.processResult: unassignedTasks.size: 0 tasks.size: 125
+Session.processResult: unassignedTasks.size: 0 tasks.size: 124
+Session.processResult: unassignedTasks.size: 0 tasks.size: 123
+Session.processResult: unassignedTasks.size: 0 tasks.size: 122
+Session.processResult: unassignedTasks.size: 0 tasks.size: 121
+Session.processResult: unassignedTasks.size: 0 tasks.size: 120
+Session.processResult: unassignedTasks.size: 0 tasks.size: 119
+Session.processResult: unassignedTasks.size: 0 tasks.size: 118
+Session.processResult: unassignedTasks.size: 0 tasks.size: 117
+Session.processResult: unassignedTasks.size: 0 tasks.size: 116
+Session.processResult: unassignedTasks.size: 0 tasks.size: 115
+Session.processResult: unassignedTasks.size: 0 tasks.size: 114
+Session.processResult: unassignedTasks.size: 0 tasks.size: 113
+Session.processResult: unassignedTasks.size: 0 tasks.size: 112
+Session.processResult: unassignedTasks.size: 0 tasks.size: 111
+Session.processResult: unassignedTasks.size: 0 tasks.size: 110
+Session.processResult: unassignedTasks.size: 0 tasks.size: 109
+Session.processResult: unassignedTasks.size: 0 tasks.size: 108
+Session.processResult: unassignedTasks.size: 0 tasks.size: 107
+Session.processResult: unassignedTasks.size: 0 tasks.size: 106
+Session.processResult: unassignedTasks.size: 0 tasks.size: 105
+Session.processResult: unassignedTasks.size: 0 tasks.size: 104
+Session.processResult: unassignedTasks.size: 0 tasks.size: 103
+Session.processResult: unassignedTasks.size: 0 tasks.size: 102
+Session.processResult: unassignedTasks.size: 0 tasks.size: 101
+Session.processResult: unassignedTasks.size: 0 tasks.size: 100
+Session.processResult: unassignedTasks.size: 0 tasks.size: 99
+Session.processResult: unassignedTasks.size: 0 tasks.size: 98
+Session.processResult: unassignedTasks.size: 0 tasks.size: 97
+Session.processResult: unassignedTasks.size: 0 tasks.size: 96
+Session.processResult: unassignedTasks.size: 0 tasks.size: 95
+Session.processResult: unassignedTasks.size: 0 tasks.size: 94
+Session.processResult: unassignedTasks.size: 0 tasks.size: 93
+Session.processResult: unassignedTasks.size: 0 tasks.size: 92
+Session.processResult: unassignedTasks.size: 0 tasks.size: 91
+Session.processResult: unassignedTasks.size: 0 tasks.size: 90
+Session.processResult: unassignedTasks.size: 0 tasks.size: 89
+Session.processResult: unassignedTasks.size: 0 tasks.size: 88
+Session.processResult: unassignedTasks.size: 0 tasks.size: 87
+Session.processResult: unassignedTasks.size: 0 tasks.size: 86
+Session.processResult: unassignedTasks.size: 0 tasks.size: 85
+Session.processResult: unassignedTasks.size: 0 tasks.size: 84
+Session.processResult: unassignedTasks.size: 0 tasks.size: 83
+Session.processResult: unassignedTasks.size: 0 tasks.size: 82
+Session.processResult: unassignedTasks.size: 0 tasks.size: 81
+Session.processResult: unassignedTasks.size: 0 tasks.size: 80
+Session.processResult: unassignedTasks.size: 0 tasks.size: 79
+Session.processResult: unassignedTasks.size: 0 tasks.size: 78
+Session.processResult: unassignedTasks.size: 0 tasks.size: 77
+Session.processResult: unassignedTasks.size: 0 tasks.size: 76
+Session.processResult: unassignedTasks.size: 0 tasks.size: 75
+Session.processResult: unassignedTasks.size: 0 tasks.size: 74
+Session.processResult: unassignedTasks.size: 0 tasks.size: 73
+Session.processResult: unassignedTasks.size: 0 tasks.size: 72
+Session.processResult: unassignedTasks.size: 0 tasks.size: 71
+Session.processResult: unassignedTasks.size: 0 tasks.size: 70
+Session.processResult: unassignedTasks.size: 0 tasks.size: 69
+Session.processResult: unassignedTasks.size: 0 tasks.size: 68
+Session.processResult: unassignedTasks.size: 0 tasks.size: 67
+Session.processResult: unassignedTasks.size: 0 tasks.size: 66
+Session.processResult: unassignedTasks.size: 0 tasks.size: 65
+Session.processResult: unassignedTasks.size: 0 tasks.size: 64
+Session.processResult: unassignedTasks.size: 0 tasks.size: 63
+Session.processResult: unassignedTasks.size: 0 tasks.size: 62
+Session.processResult: unassignedTasks.size: 0 tasks.size: 61
+Session.processResult: unassignedTasks.size: 0 tasks.size: 60
+Session.processResult: unassignedTasks.size: 0 tasks.size: 59
+Session.processResult: unassignedTasks.size: 0 tasks.size: 58
+Session.processResult: unassignedTasks.size: 0 tasks.size: 57
+Session.processResult: unassignedTasks.size: 0 tasks.size: 56
+Session.processResult: unassignedTasks.size: 0 tasks.size: 55
+Session.processResult: unassignedTasks.size: 0 tasks.size: 54
+Session.processResult: unassignedTasks.size: 0 tasks.size: 53
+Session.processResult: unassignedTasks.size: 0 tasks.size: 52
+Session.processResult: unassignedTasks.size: 0 tasks.size: 51
+Session.processResult: unassignedTasks.size: 0 tasks.size: 50
+Session.processResult: unassignedTasks.size: 0 tasks.size: 49
+Session.processResult: unassignedTasks.size: 0 tasks.size: 48
+Session.processResult: unassignedTasks.size: 0 tasks.size: 47
+Session.processResult: unassignedTasks.size: 0 tasks.size: 46
+Session.processResult: unassignedTasks.size: 0 tasks.size: 45
+Session.processResult: unassignedTasks.size: 0 tasks.size: 44
+Session.processResult: unassignedTasks.size: 0 tasks.size: 43
+Session.processResult: unassignedTasks.size: 0 tasks.size: 42
+Session.processResult: unassignedTasks.size: 0 tasks.size: 41
+Session.processResult: unassignedTasks.size: 0 tasks.size: 40
+Session.processResult: unassignedTasks.size: 0 tasks.size: 39
+Session.processResult: unassignedTasks.size: 0 tasks.size: 38
+Session.processResult: unassignedTasks.size: 0 tasks.size: 37
+Session.processResult: unassignedTasks.size: 0 tasks.size: 36
+Session.processResult: unassignedTasks.size: 0 tasks.size: 35
+Session.processResult: unassignedTasks.size: 0 tasks.size: 34
+Session.processResult: unassignedTasks.size: 0 tasks.size: 33
+Session.processResult: unassignedTasks.size: 0 tasks.size: 32
+Session.processResult: unassignedTasks.size: 0 tasks.size: 31
+Session.processResult: unassignedTasks.size: 0 tasks.size: 30
+Session.processResult: unassignedTasks.size: 0 tasks.size: 29
+Session.processResult: unassignedTasks.size: 0 tasks.size: 28
+Session.processResult: unassignedTasks.size: 0 tasks.size: 27
+Session.processResult: unassignedTasks.size: 0 tasks.size: 26
+Session.processResult: unassignedTasks.size: 0 tasks.size: 25
+Session.processResult: unassignedTasks.size: 0 tasks.size: 24
+Session.processResult: unassignedTasks.size: 0 tasks.size: 23
+Session.processResult: unassignedTasks.size: 0 tasks.size: 22
+Session.processResult: unassignedTasks.size: 0 tasks.size: 21
+Session.processResult: unassignedTasks.size: 0 tasks.size: 20
+Session.processResult: unassignedTasks.size: 0 tasks.size: 19
+Session.processResult: unassignedTasks.size: 0 tasks.size: 18
+Session.processResult: unassignedTasks.size: 0 tasks.size: 17
+Session.processResult: unassignedTasks.size: 0 tasks.size: 16
+Session.processResult: unassignedTasks.size: 0 tasks.size: 15
+Session.processResult: unassignedTasks.size: 0 tasks.size: 14
+Session.processResult: unassignedTasks.size: 0 tasks.size: 13
+Session.processResult: unassignedTasks.size: 0 tasks.size: 12
+Session.processResult: unassignedTasks.size: 0 tasks.size: 11
+Session.processResult: unassignedTasks.size: 0 tasks.size: 10
+Session.processResult: unassignedTasks.size: 0 tasks.size: 9
+Session.processResult: unassignedTasks.size: 0 tasks.size: 8
+Session.processResult: unassignedTasks.size: 0 tasks.size: 7

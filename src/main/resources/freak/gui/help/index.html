@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.48)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>FrEAK Free Evolutionary Algorithm Kit User's Guide</TITLE>
+<META NAME="description" CONTENT="FrEAK Free Evolutionary Algorithm Kit User's Guide">
+<META NAME="keywords" CONTENT="usersguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="usersguide.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html33"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev_g.png"> 
+<A NAME="tex2html29"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html31"
+  HREF="node7.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html34"
+  HREF="node1.html">Contents</A>
+ &nbsp <B>  <A NAME="tex2html30"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html32"
+  HREF="node7.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1 ALIGN=CENTER><BIG CLASS="XHUGE"><SPAN  CLASS="textbf">FrEAK</SPAN> </BIG>
+<BIG CLASS="XHUGE">
+<BR><BIG CLASS="XLARGE"><center>Free Evolutionary Algorithm Kit</center></BIG></BIG>
+<BIG CLASS="XHUGE"><BIG CLASS="XLARGE">
+<BR><H1 align="center">User's Guide</H1>
+<h3><center>Version 0.2</center></h3>
+<center>February 9, 2004</center></P>
+<P ALIGN=CENTER></P>
+
+<p><STRONG>
+<P>
+<BR>
+<br>
+
+<p>
+<BR>
+<center>
+<h2>Project group 427</h2>
+<table align="center">
+<tr>
+<td align="center">Patrick Briest</td>
+<td align="center">Dimo Brockhoff</td>
+</tr>
+<tr>
+<td align="center">Bastian Degener</td>
+<td align="center">Matthias Englert</td>
+</tr>
+<tr>
+<td align="center">Christian Gunia</td>
+<td align="center">Oliver Heering</td>
+</tr>
+<tr>
+<td align="center">Michael Leifhelm</td>
+<td align="center">Kai Plociennik</td>
+</tr>
+<tr>
+<td align="center">Heiko R&#246;glin</td>
+<td align="center">Andrea Schweer</td>
+</tr>
+<tr>
+<td align="center">Dirk Sudholt</td>
+<td align="center">Stefan Tannenbaum </td>
+</tr>
+<BR>
+<tr>
+<td align="center">Thomas Jansen</td>
+<td align="center">Ingo Wegener</td>
+</tr>
+</table>
+</center><p><br>
+
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html35"
+  HREF="node1.html">Contents</A>
+<LI><A NAME="tex2html36"
+  HREF="node2.html">List of Figures</A>
+<LI><A NAME="tex2html37"
+  HREF="node3.html"><SPAN CLASS="arabic">1</SPAN>. Introduction</A>
+<UL>
+<LI><A NAME="tex2html38"
+  HREF="node3.html#SECTION00310000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN> What is FrEAK?</A>
+<LI><A NAME="tex2html39"
+  HREF="node3.html#SECTION00320000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN> Evolutionary Algorithms</A>
+<LI><A NAME="tex2html40"
+  HREF="node3.html#SECTION00330000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN> Overview</A>
+<UL>
+<LI><A NAME="tex2html41"
+  HREF="node3.html#SECTION00331000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN> Schedule Creation: Designing the Algorithm</A>
+<LI><A NAME="tex2html42"
+  HREF="node3.html#SECTION00332000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">2</SPAN> Schedule Creation: Preparing the Simulation</A>
+<LI><A NAME="tex2html43"
+  HREF="node3.html#SECTION00333000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">3</SPAN> Controlling Runs</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html44"
+  HREF="node4.html"><SPAN CLASS="arabic">2</SPAN>. Creating a Schedule</A>
+<UL>
+<LI><A NAME="tex2html45"
+  HREF="node4.html#SECTION00410000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN> Some Words about Schedules</A>
+<UL>
+<LI><A NAME="tex2html46"
+  HREF="node4.html#SECTION00411000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN> What is a Schedule?</A>
+<LI><A NAME="tex2html47"
+  HREF="node4.html#SECTION00412000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN> What is a Batch?</A>
+</UL>
+<LI><A NAME="tex2html48"
+  HREF="node4.html#SECTION00420000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">2</SPAN> Overview and Navigation</A>
+<LI><A NAME="tex2html49"
+  HREF="node4.html#SECTION00430000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">3</SPAN> General Notes</A>
+<LI><A NAME="tex2html50"
+  HREF="node4.html#SECTION00440000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN> Designing the Algorithm</A>
+<UL>
+<LI><A NAME="tex2html51"
+  HREF="node4.html#SECTION00441000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN> Step 1: Select a Search Space</A>
+<LI><A NAME="tex2html52"
+  HREF="node4.html#SECTION00442000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN> Step 2: Select a Fitness Function</A>
+<UL>
+<LI><A NAME="tex2html53"
+  HREF="node4.html#SECTION00442100000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN> Defining Fitness Transformers</A>
+</UL>
+<LI><A NAME="tex2html54"
+  HREF="node4.html#SECTION00443000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN> Step 3: Choosing a Genotype-Mapper</A>
+<LI><A NAME="tex2html55"
+  HREF="node4.html#SECTION00444000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">4</SPAN> Step 4: Create an Algorithm Graph</A>
+<LI><A NAME="tex2html56"
+  HREF="node4.html#SECTION00445000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">5</SPAN> Step 5: Select Stopping Criteria</A>
+<LI><A NAME="tex2html57"
+  HREF="node4.html#SECTION00446000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">6</SPAN> Step 6: Select Population Model and Initialization</A>
+</UL>
+<LI><A NAME="tex2html58"
+  HREF="node4.html#SECTION00450000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">5</SPAN> Preparing the Simulation</A>
+<UL>
+<LI><A NAME="tex2html59"
+  HREF="node4.html#SECTION00451000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">1</SPAN> Step 7: Add Observers and Views</A>
+<LI><A NAME="tex2html60"
+  HREF="node4.html#SECTION00452000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">2</SPAN> Step 8: Creating Batches of Runs</A>
+</UL>
+<LI><A NAME="tex2html61"
+  HREF="node4.html#SECTION00460000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">6</SPAN> Configuration of Modules</A>
+<UL>
+<LI><A NAME="tex2html62"
+  HREF="node4.html#SECTION00461000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">1</SPAN> Configuration of Properties</A>
+<LI><A NAME="tex2html63"
+  HREF="node4.html#SECTION00462000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">2</SPAN> Advanced Feature: Code Editing</A>
+<LI><A NAME="tex2html64"
+  HREF="node4.html#SECTION00463000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">3</SPAN> Configuration of Event Sources</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html65"
+  HREF="node5.html"><SPAN CLASS="arabic">3</SPAN>. Controlling Runs</A>
+<UL>
+<LI><A NAME="tex2html66"
+  HREF="node5.html#SECTION00510000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN> Getting Started</A>
+<LI><A NAME="tex2html67"
+  HREF="node5.html#SECTION00520000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">2</SPAN> Watching Replays</A>
+<LI><A NAME="tex2html68"
+  HREF="node5.html#SECTION00530000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">3</SPAN> Editing the Current Schedule</A>
+<LI><A NAME="tex2html69"
+  HREF="node5.html#SECTION00540000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN> Menu Items</A>
+<UL>
+<LI><A NAME="tex2html70"
+  HREF="node5.html#SECTION00541000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN> File Menu</A>
+<LI><A NAME="tex2html71"
+  HREF="node5.html#SECTION00542000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN> Edit Menu</A>
+<LI><A NAME="tex2html72"
+  HREF="node5.html#SECTION00543000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN> Control Menu</A>
+<LI><A NAME="tex2html73"
+  HREF="node5.html#SECTION00544000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">4</SPAN> Views Menu</A>
+<LI><A NAME="tex2html74"
+  HREF="node5.html#SECTION00545000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">5</SPAN> Help Menu</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html75"
+  HREF="node6.html"><SPAN CLASS="arabic">4</SPAN>. Designing Algorithms</A>
+<UL>
+<LI><A NAME="tex2html76"
+  HREF="node6.html#SECTION00610000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN> Operator Graphs: Concepts</A>
+<LI><A NAME="tex2html77"
+  HREF="node6.html#SECTION00620000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN> The Graph Editor</A>
+<UL>
+<LI><A NAME="tex2html78"
+  HREF="node6.html#SECTION00621000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN> Adding and Removing Nodes and Edges</A>
+<LI><A NAME="tex2html79"
+  HREF="node6.html#SECTION00622000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">2</SPAN> Changing Properties of Modules</A>
+</UL>
+<LI><A NAME="tex2html80"
+  HREF="node6.html#SECTION00630000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN> Parameter Controllers</A>
+<UL>
+<LI><A NAME="tex2html81"
+  HREF="node6.html#SECTION00631000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN> Adding Parameter Controllers</A>
+<LI><A NAME="tex2html82"
+  HREF="node6.html#SECTION00632000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">2</SPAN> Assigning Event Sources and Configuring Parameter Controllers</A>
+<LI><A NAME="tex2html83"
+  HREF="node6.html#SECTION00633000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">3</SPAN> Assigning properties to parameters</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html84"
+  HREF="node7.html">Index</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+
+</BODY>
+</HTML>

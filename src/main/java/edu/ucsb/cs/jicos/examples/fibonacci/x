@@ -1,0 +1,3 @@
+echo java -ea -classpath $JICOS/build/classes -Djava.rmi.server.codebase=http://www.cs.ucsb.edu/~cappello/classes/ -Djava.security.policy=policy edu.ucsb.cs.jicos.examples.fibonacci.Application $1 $2
+
+java -ea -classpath $JICOS/build/classes -Djava.rmi.server.codebase=http://www.cs.ucsb.edu/~cappello/classes/ -Djava.security.policy=policy edu.ucsb.cs.jicos.examples.fibonacci.Application $1 $2

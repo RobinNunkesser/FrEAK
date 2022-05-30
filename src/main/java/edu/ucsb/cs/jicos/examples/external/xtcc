@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+Test=tsp
+unset Number
+Host=localhost
+
+case $# in
+    0);;
+    1) Test=$1 ;;
+    2) Test=$1; Number=$2;;
+    *) Test=$1; Number=$2; Host=$3 ;;
+esac
+
+case "${Test}" in
+    [Ff][Ii][Bb]*)
+        [ "X${Number}" = "X" ] && Number="8"
+	;;
+    [Tt][Ss][Pp]*)
+        [ "X${Number}" = "X" ] && Number="4"
+	;;
+esac
+
+echo java -classpath ${JICOS}/build/classes  \
+    edu.ucsb.cs.jicos.examples.xml.TestCollectorClient ${Test} ${Number} ${Host}
+echo ""
+echo ""
+java -classpath ${JICOS}/build/classes  \
+    edu.ucsb.cs.jicos.examples.xml.TestCollectorClient ${Test} ${Number} ${Host}

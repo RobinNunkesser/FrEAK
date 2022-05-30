@@ -1,0 +1,1 @@
+java -ea -classpath .:$JANET:/cs/faculty/cappello/z/jicos/framework/build/ -Djava.security.policy=policy edu.ucsb.cs.jicos.examples.fastfibonacci.Application $1 $2

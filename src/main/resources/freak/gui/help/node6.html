@@ -1,0 +1,507 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.48)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>4. Designing Algorithms</TITLE>
+<META NAME="description" CONTENT="4. Designing Algorithms">
+<META NAME="keywords" CONTENT="usersguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="usersguide.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="usersguide.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html248"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html242"
+  HREF="usersguide.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html236"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html244"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html246"
+  HREF="node7.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html249"
+  HREF="node7.html">Index</A>
+<B> Up:</B> <A NAME="tex2html243"
+  HREF="usersguide.html">FrEAK Free Evolutionary Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html237"
+  HREF="node5.html">3. Controlling Runs</A>
+ &nbsp <B>  <A NAME="tex2html245"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html247"
+  HREF="node7.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html250"
+  HREF="#SECTION00610000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN> Operator Graphs: Concepts</A>
+<LI><A NAME="tex2html251"
+  HREF="#SECTION00620000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN> The Graph Editor</A>
+<UL>
+<LI><A NAME="tex2html252"
+  HREF="#SECTION00621000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN> Adding and Removing Nodes and Edges</A>
+<LI><A NAME="tex2html253"
+  HREF="#SECTION00622000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">2</SPAN> Changing Properties of Modules</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html254"
+  HREF="#SECTION00630000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN> Parameter Controllers</A>
+<UL>
+<LI><A NAME="tex2html255"
+  HREF="#SECTION00631000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN> Adding Parameter Controllers</A>
+<LI><A NAME="tex2html256"
+  HREF="#SECTION00632000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">2</SPAN> Assigning Event Sources and Configuring Parameter Controllers</A>
+<LI><A NAME="tex2html257"
+  HREF="#SECTION00633000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">3</SPAN> Assigning properties to parameters</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00600000000000000000"></A>
+<A NAME="chapter4"></A>
+<BR>
+<SPAN CLASS="arabic">4</SPAN>. Designing Algorithms with FrEAK
+</H1>
+
+As mentioned in Chapter&nbsp;<A HREF="node3.html#section1.2">1.2</A>:&nbsp;section1.2, FrEAK 
+visualizes the control flow of evolutionary algorithms as operator
+graphs. 
+
+This chapter explains the main concepts of FrEAK's operator graphs
+(Section&nbsp;<A HREF="node6.html#sec:op-graph-concept">4.1</A>: sec:op-graph-concept)
+and describes how to work with the graphical editor for these operator
+graphs (Sections&nbsp;<A HREF="node6.html#sec:graph-editor">4.2</A>: sec:graph-editor
+and <A HREF="node6.html#sec:param-control">4.3</A>: sec:param-control).
+
+<H1><A NAME="SECTION00610000000000000000"></A><A NAME="sec:op-graph-concept"></A>
+<BR>
+<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN> Operator Graphs: Concepts
+</H1>
+This section explains the main concepts of FrEAK's operator
+graphs. If you are impatient, you can skip this section and return to
+it if you are confused by anything in the following sections of this
+chapter. 
+
+An operator graph<A NAME="907"></A> visualizes how a given
+generation becomes the next generation. Operator graphs consist of
+<SPAN  CLASS="textit">nodes</SPAN><A NAME="909"></A> and <SPAN  CLASS="textit">edges</SPAN><A NAME="911"></A>. Each node
+defines an operator<A NAME="912"></A> that works on some of the
+individuals of the population. Nodes have <SPAN  CLASS="textit">ports</SPAN><A NAME="914"></A>
+where edges can connect to (see Figure&nbsp;<A HREF="node6.html#fig:op-ports">4.1</A>). 
+Edges define the flow of individuals.
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:op-ports"></A><A NAME="918"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.1:</STRONG>
+An Operators with Ports.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="145" HEIGHT="90" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch04-op-ports.png"
+ ALT="Image images/ch04-op-ports.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+The edges are directed, that means each edge has a source and a target
+port;
+those working as source port are called <SPAN  CLASS="textit">inports</SPAN><A NAME="922"></A>,
+those working as target port are called
+<SPAN  CLASS="textit">outports</SPAN><A NAME="924"></A>.
+
+Most kinds of operators have a fixed number of inports and outports.
+But some kinds of operators, like some split operators, can have
+any number of incoming or outgoing connections. In FrEAK, these
+operators are said to have <SPAN  CLASS="textit">floating inports</SPAN><A NAME="926"></A> or <SPAN  CLASS="textit">floating outports</SPAN>, respectively.
+
+For instructions how to work with nodes and edges in operator graphs,
+please refer to Section&nbsp;<A HREF="node6.html#sec:adding-remov-nodes">4.2.1</A>,
+sec:adding-remov-nodes. 
+
+Another important concept in FrEAK is that of
+<SPAN  CLASS="textit">properties</SPAN><A NAME="931"></A>. Many operators can be configured to
+some extent, a mutation operator for example may let you specify the
+mutation probability. Each attribute of an operator that is
+configurable is called a property. For instructions how to change
+properties of operators, please refer to
+Section&nbsp;<A HREF="node6.html#sec:module-property">4.2.2</A>, sec:module-property.
+
+<H1><A NAME="SECTION00620000000000000000"></A><A NAME="sec:graph-editor"></A>
+<BR>
+<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN> The Graph Editor
+</H1>
+The graph editor is divided into three areas (see
+Figure&nbsp;<A HREF="node6.html#fig:grapheditor">4.2</A>). 
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:grapheditor"></A><A NAME="939"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.2:</STRONG>
+The Graph Editor Dialog.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="880" HEIGHT="584" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch04-dialog.png"
+ ALT="Image images/ch04-dialog.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+The editor itself is found in the middle.  To the left, there is a
+tree of operators that can be inserted into the graph, and to the
+right, information about the currently selected module is displayed.
+You can also edit properties of some of the operators here, see
+Section&nbsp;<A HREF="node6.html#sec:module-property">4.2.2</A>.
+
+The menu and the tool bar provide standard editor commands like
+creating a new, empty operator graph, opening and saving operator
+graphs as well as zooming the graph display.
+
+<IMG
+ WIDTH="705" HEIGHT="80" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="\fbox{\parbox{15.3cm}{{\bf Note:} \newline It is only necessary to save the graph if you
+plan to reuse it later when creating other schedules.}}">
+<P>
+In addition to these commands, you can open the Parameter Controller
+Setup with the appropriate tool bar button or by selecting <SPAN  CLASS="textbf">Edit
+Parameter Controllers</SPAN> from the <SPAN  CLASS="textbf">Edit</SPAN>
+menu. Section&nbsp;<A HREF="node6.html#sec:param-control">4.3</A>: sec:param-control
+describes how to work with parameter controllers.
+
+When you have finished creating the operator graph, close the editor
+dialog by using the file menu's <SPAN  CLASS="textbf">Close</SPAN> item. If your operator
+graph contains syntax errors, you will see a warning message (see
+Figure&nbsp;<A HREF="node6.html#fig:syntax-error">4.3</A>).
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:syntax-error"></A><A NAME="952"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.3:</STRONG>
+Error Message: Graph has Syntax Errors.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="327" HEIGHT="118" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch04-syntax-error.png"
+ ALT="Image images/ch04-syntax-error.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+Selecting <SPAN  CLASS="textbf">Close</SPAN> and
+trying to run the resulting schedule will most likely produce
+errors, so you should select <SPAN  CLASS="textbf">Cancel</SPAN> and try to
+correct the error. Make sure there are no operators that have
+unconnected, non-floating inports and that the graph contains no
+cycles.
+
+If the graph doesn't have errors or you have selected <SPAN  CLASS="textbf">Close</SPAN> on the warning message dialog, the editor dialog is closed
+and you return to the schedule editor.
+
+<H2><A NAME="SECTION00621000000000000000"></A>
+<A NAME="sec:adding-remov-nodes"></A>
+<BR>
+<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN> Adding and Removing Nodes and Edges
+</H2>
+To add an operator<A NAME="960"></A> to the graph, simply select
+it from the operator tree. You can insert the operator by double
+clicking or by using the <SPAN  CLASS="textbf">Insert Selected</SPAN> button.
+
+To connect two operators<A NAME="962"></A>, select an outport of the source node. Hold and drag the mouse to an inport
+of the target node and release the mouse to establish the connection.
+
+<IMG
+ WIDTH="705" HEIGHT="105" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="\fbox{\parbox{15.3cm}{{\bf Note:} \newline The mouse cursor changes to a hand wh...
+...ntain cycles. You are not allowed to draw edges that
+would result in a cycle.}}">
+<P>
+It is possible to connect multiple outports to one inport or one outport to multiple inports.
+If multiple outports are connected to the same inport, all individuals reaching the inport are merged together before being processed by the operator. In case an outport is connected to multiple inports, the outgoing individuals are duplicated for all associated inports.
+
+As explained in Section&nbsp;<A HREF="node6.html#sec:op-graph-concept">4.1</A>:
+sec:op-graph-concept, some operators have a floating number
+of inports or outports. The graph editor automatically inserts a new,
+unconnected port whenever a floating port is connected, so you don't
+have to take care about that. The graph editor also removes the
+disconnected port when an edge is removed. In other words, operators
+with floating ports always have an unconnected port.
+
+<IMG
+ WIDTH="705" HEIGHT="84" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="\fbox{\parbox{15.3cm}{{\bf Note:} \newline While \lq\lq normal'' ports are drawn in blue, floating ports are
+drawn in red so you can recognize them easily.}}">
+<P>
+
+<A NAME="967"></A>To remove an element of the graph, select it
+with the mouse and press D<SMALL>EL</SMALL> or use the appropriate item from
+the tool bar or the menu. You can also click and drag the mouse to
+select multiple elements.
+
+<IMG
+ WIDTH="705" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="\fbox{\parbox{15.3cm}{{\bf Note:} \newline You cannot delete the Start or Finish operators.}}">
+<P>
+
+<H2><A NAME="SECTION00622000000000000000"></A>
+<A NAME="sec:module-property"></A>
+<BR>
+<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">2</SPAN> Changing Properties of Modules
+</H2>
+
+To the right of the graph editor itself is the property inspector of
+the operator that is currently selected in the operator graph (see
+Figure&nbsp;<A HREF="node6.html#fig:prop-inspector">4.4</A>).
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:prop-inspector"></A><A NAME="975"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.4:</STRONG>
+The Property Inspector</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="296" HEIGHT="485" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch04-properties.png"
+ ALT="Image images/ch04-properties.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+This inspector displays some information of the operator, such as its
+name, its description, and the description of its ports.
+
+Underneath the description of the ports, you can see and edit the
+current values of the operator's properties<A NAME="978"></A>. To edit a numeric or textual property, just doubleclick
+into the appropriate cell in the table and type the new value. Confirm
+your changes by pressing E<SMALL>NTER</SMALL>.  Values that can only be either
+<SPAN  CLASS="textsl">true</SPAN> or <SPAN  CLASS="textsl">false</SPAN> can be set by checking or unchecking
+the checkbox.
+
+At the bottom of the property inspector, the description of the
+selected property is displayed.
+
+<IMG
+ WIDTH="705" HEIGHT="188" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="\fbox{\parbox{15.3cm}{{\bf Note:} \newline In most cases, if you enter invalid p...
+...d properties have been corrected, even if you select another module meanwhile.}}">
+<P>
+
+<H1><A NAME="SECTION00630000000000000000"></A><A NAME="sec:param-control"></A>
+<BR>
+<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN> Using Parameter Controllers
+</H1>
+
+The concept of parameter controllers has been added to FrEAK to
+account for adaption.  A parameter controller contains some attributes
+which in this context are called <SPAN  CLASS="textit">parameters</SPAN><A NAME="986"></A>.
+A parameter controller can listen for some events, and during the
+handling of an event it can modify its parameters.
+
+What is important is that the changes in the parameters are reflected
+in properties of operators in the graph. To be more precise, an
+operator and one of its properties can be assigned to a parameter.
+When the value of a parameter changes, the associated property
+is set to the same value.
+
+<H2><A NAME="SECTION00631000000000000000">
+<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN> Adding Parameter Controllers</A>
+</H2>
+
+You can open the parameter controller setup dialog from the graph editor
+dialog with the appropriate tool bar button or by selecting
+<SPAN  CLASS="textbf">Edit Parameter Controllers</SPAN> from the <SPAN  CLASS="textbf">Edit</SPAN> menu.
+In the left part of this dialog, you can see the interface for adding and
+removing parameter controllers (see
+Figure&nbsp;<A HREF="node6.html#fig:paracontrolhauptlinks">4.5</A>).
+
+You can add parameter controllers from the available list to the
+active list (by double clicking on them or by selecting and clicking
+the button between the two lists), and also select parameter
+controllers from the latter list and remove them by clicking the
+button labeled <SPAN  CLASS="textbf">Remove</SPAN>.
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:paracontrolhauptlinks"></A><A NAME="994"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.5:</STRONG>
+Adding parameter controllers.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="637" HEIGHT="511" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch04-parametercontrolhauptlinks.png"
+ ALT="Image images/ch04-parametercontrolhauptlinks.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+Once you have added a parameter controller, you can configure it. This
+means mainly setting the sources for the events it can listen to and
+assigning operators with their properties to the parameters. Furthermore,
+the functionality of the parameter controller may be parametrized; in
+this case, you can modify some properties.
+
+<H2><A NAME="SECTION00632000000000000000">
+<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">2</SPAN> Assigning Event Sources and Configuring Parameter Controllers</A>
+</H2>
+
+If you click on a parameter controller in the active list, its
+properties and events will be displayed in the module information
+panel at the right of the parameter controller setup dialog (See
+Figure&nbsp;<A HREF="node6.html#fig:paracontroleventandstuff">4.6</A>). In the subpanel labeled
+<SPAN  CLASS="textbf">Events</SPAN> you find a table with one line for each event the
+parameter controller can handle, containing the description or name of
+the handled event and a drop down box which can be used for setting
+the event source for the event.
+Section&nbsp;<A HREF="node4.html#ConfigurationOfEventSources">2.6.3</A>:
+ConfigurationOfEventSources describes in detail how to specify
+event sources.
+
+Above, you find the subpanel labeled <SPAN  CLASS="textbf">Properties</SPAN> in which
+another table containing the properties of the parameter controller is
+located. Here you can set these properties and thus modify the
+parameter controller's behaviour.
+
+<IMG
+ WIDTH="705" HEIGHT="80" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="\fbox{\parbox{15.3cm}{{\bf Note:} \newline The \textbf{Properties} subpanel is only available if the
+selected parameter controller is configurable.}}">
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:paracontroleventandstuff"></A><A NAME="1006"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.6:</STRONG>
+The information panel for the selected parameter controller.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="312" HEIGHT="512" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch04-paracontroleventandstuff.png"
+ ALT="Image images/ch04-paracontroleventandstuff.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<H2><A NAME="SECTION00633000000000000000">
+<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">3</SPAN> Assigning properties to parameters</A>
+</H2>
+
+If a parameter controller is selected in the active list, a table
+containing its parameters is displayed at the right of the parameter
+controller main panel (see
+Figure&nbsp;<A HREF="node6.html#fig:parametercontrolhauptrechts">4.7</A>).  To assign a property
+to a parameter, you must select the parameter in the table and click
+the button <SPAN  CLASS="textbf">Choose Property</SPAN>.
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:parametercontrolhauptrechts"></A><A NAME="1014"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.7:</STRONG>
+Setting up properties.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="344" HEIGHT="254" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch04-parametercontrolhauptrechts.png"
+ ALT="Image images/ch04-parametercontrolhauptrechts.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+After doing this, you will see a window like the one in
+Figure&nbsp;<A HREF="node6.html#fig:paracontrolproperty">4.8</A>.  There is a list of all operators in
+the graph which contain properties compatible with the parameter you
+have selected. You can open the list of properties for each operator by
+clicking on the symbol left to an operator's name. After this, select the
+property you want and click <SPAN  CLASS="textbf">OK</SPAN> to make the selection take
+effect.
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:paracontrolproperty"></A><A NAME="1021"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.8:</STRONG>
+Selecting properties to control.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="260" HEIGHT="451" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch04-paracontrolproperty.png"
+ ALT="Image images/ch04-paracontrolproperty.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html248"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html242"
+  HREF="usersguide.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html236"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html244"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html246"
+  HREF="node7.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html249"
+  HREF="node7.html">Index</A>
+<B> Up:</B> <A NAME="tex2html243"
+  HREF="usersguide.html">FrEAK Free Evolutionary Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html237"
+  HREF="node5.html">3. Controlling Runs</A>
+ &nbsp <B>  <A NAME="tex2html245"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html247"
+  HREF="node7.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

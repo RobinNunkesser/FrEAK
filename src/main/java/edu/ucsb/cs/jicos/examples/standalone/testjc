@@ -1,0 +1,2 @@
+echo /usr/pubsw/java/bin/javac -d . -classpath .:$JICOS/lib/janet-system.jar *.java
+/usr/pubsw/java/bin/javac -d . -classpath .:$JICOS/lib/janet-system.jar *.java

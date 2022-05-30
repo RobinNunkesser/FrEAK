@@ -1,0 +1,2 @@
+echo java -ea -classpath $JICOS/build/classes -Djava.security.policy=$JICOS/policy/policy edu.ucsb.cs.jicos.examples.pieceworkmatrixproduct.Application $1 $2 $3
+java -ea -classpath $JICOS/build/classes -Djava.security.policy=$JICOS/policy/policy edu.ucsb.cs.jicos.examples.pieceworkmatrixproduct.Application $1 $2 $3

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build" name="RFrEAK">
+
+	<property name="version" value="0.2"/>
+	<property name="src" value="src"/>
+	<property name="test" value="test"/>
+	<property name="build" value="bin"/>
+	<property name="lib" value="lib"/>
+	<property name="javadocs" value="doc/javadocs"/>
+	<property name="resource" value="resource"/>
+	<property name="release" value="release"/>
+
+	<target name="init">
+		<tstamp/>
+		<mkdir dir="${build}"/>
+		<mkdir dir="${release}"/>
+		<mkdir dir="${javadocs}"/>
+	</target>
+
+	<target depends="init" name="build">
+		<javac debug="true" destdir="${build}" extdirs="${lib}" optimize="false" source="1.5">
+			<src path="${src}"/>
+		</javac>			
+	</target>
+
+	<target depends="init" name="testbuild">
+		<javac debug="true" destdir="${build}" extdirs="${lib}" failonerror="false" optimize="false" source="1.5">
+			<src path="${src}"/>
+			<src path="${test}"/>
+		</javac>
+	</target>
+
+	<target depends="build" name="jar">
+		<jar destfile="rfreak-${version}.jar">
+			<fileset dir="${build}"/>
+			<manifest>
+				<attribute name="Built-By" value="${user.name}"/>
+				<attribute name="Main-Class" value="freak.Freak"/>
+				<attribute name="Class-Path" value="${lib}/colt.jar ${lib}/jdom.jar ${lib}/jgraph.jar ${lib}/jlfgr-1_0.jar ${lib}/bsh-2.0b1.jar ${lib}/jargs.jar ${lib}/jicos-system.jar ${lib}/ostermillerutils_1_04_03_for_kaffe.jar ${resource}/"/>
+			</manifest>
+		</jar>
+	</target>
+
+	<target depends="jar" name="bin-zip">
+		<zip destfile="${release}/rfreak-${version}-bin.zip" excludes="**/CVS">
+			<zipfileset dir="." includes="rfreak-${version}.jar"/>
+			<zipfileset dir="." filemode="755" includes="run.*"/>
+			<zipfileset dir="." includes="COPYING"/>
+			<zipfileset dir="." includes="README"/>
+			<zipfileset dir="${lib}" excludes="junit.jar jgraphpad.jar" prefix="lib/"/>
+			<zipfileset dir="${resource}" prefix="resource/"/>
+			<zipfileset dir="data" prefix="data/"/>
+		</zip>
+	</target>
+	
+	<target depends="jar" name="all-zip">
+		<zip destfile="${release}/rfreak-${version}-all.zip" excludes="**/CVS">
+			<zipfileset dir="." includes="rfreak-${version}.jar"/>
+			<zipfileset dir="${src}" excludes="**/CVS" prefix="src/"/>
+			<zipfileset dir="." filemode="755" includes="run.*"/>
+			<zipfileset dir="." includes="COPYING"/>
+			<zipfileset dir="." includes="README"/>
+			<zipfileset dir="." includes="build.xml"/>
+			<zipfileset dir="${lib}" excludes="junit.jar jgraphpad.jar" prefix="lib/"/>
+			<zipfileset dir="${resource}" prefix="resource/"/>
+			<zipfileset dir="data" prefix="data/"/>
+		</zip>
+	</target>
+														
+	<target depends="init" name="docs">
+		<javadoc author="true" destdir="${javadocs}" extdirs="${lib}" failonerror="true" private="true" source="1.5" sourcepath="${src}">
+			<packageset dir="${src}">
+				<include name="freak/**"/>
+			</packageset>
+		</javadoc>
+	</target>
+
+	<target depends="build" name="run">
+		<java classname="freak.Freak" classpath="${build}" fork="true">
+			<classpath>
+				<fileset dir="${lib}">
+					<include name="**/*.jar"/>
+				</fileset>
+				<pathelement location="${resource}"/>
+			</classpath>
+<!--			<jvmarg value="-Xdock:name=FrEAK"/>-->
+		</java>
+	</target>
+
+	<target depends="build" name="profile">
+		<java classname="freak.Freak" classpath="${build}" fork="true">
+			<classpath>
+				<fileset dir="${lib}">
+					<include name="**/*.jar"/>
+				</fileset>
+			</classpath>			
+			<jvmarg value="-Xrunhprof:cpu=samples"/>
+		</java>
+	</target>
+
+	<target name="clean">
+		<delete dir="${build}"/>
+		<delete dir="${javadocs}"/>
+		<delete file="freak-${version}.jar"/>
+	</target>
+
+	<target depends="clean" name="veryclean">
+		<delete dir="${release}"/>
+	</target>
+</project>

@@ -1,0 +1,1 @@
+/usr/pubsw/bin/java -classpath /cs/faculty/cappello/r/p/janet/source/ -Djava.rmi.server.codebase=http://www.cs.ucsb.edu/~cappello/classes/ -Djava.security.policy=policy examples.input.Application lysander 2345 $1 $2

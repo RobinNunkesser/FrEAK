@@ -1,0 +1,2 @@
+/usr/pubsw/java/bin/javac -classpath .:$JICOS *.java
+

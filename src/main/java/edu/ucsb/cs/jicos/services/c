@@ -1,0 +1,334 @@
+/* ************************************************************************* *
+ *                                                                           *
+ *        Copyright (c) 2004 Peter Cappello  <cappello@cs.ucsb.edu>          *
+ *                                                                           *
+ *    Permission is hereby granted, free of charge, to any person obtaining  *
+ *  a copy of this software and associated documentation files (the          *
+ *  "Software"), to deal in the Software without restriction, including      *
+ *  without limitation the rights to use, copy, modify, merge, publish,      *
+ *  distribute, sublicense, and/or sell copies of the Software, and to       *
+ *  permit persons to whom the Software is furnished to do so, subject to    *
+ *  the following conditions:                                                *
+ *                                                                           *
+ *    The above copyright notice and this permission notice shall be         *
+ *  included in all copies or substantial portions of the Software.          *
+ *                                                                           *
+ *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,        *
+ *  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF       *
+ *  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.   *
+ *  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY     *
+ *  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,     *
+ *  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE        *
+ *  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                   *
+ *                                                                           *
+ * ************************************************************************* */
+
+/**
+ *  Base class for collectors.
+ *
+ *      Created on:  July 13, 2004
+ *
+ * @author   Andy Pippin
+ */
+
+package edu.ucsb.cs.jicos.services;
+
+import edu.ucsb.cs.jicos.services.xml.XmlDocument;
+import edu.ucsb.cs.jicos.services.ExternalRequest;
+
+import java.net.Socket;
+
+public abstract class Collector extends Thread {
+
+	//
+	//-- Variables -----------------------------------------------------------
+
+	protected ClientToHsp hsp;
+
+	protected int port;
+
+	protected String host;
+
+	//
+	//-- Constructors --------------------------------------------------------
+
+	public Collector() {
+		this.Initialize();
+	}
+
+	public Collector(ClientToHsp hsp) {
+		this.Initialize();
+		this.hsp = hsp;
+	}
+
+	public Collector(ClientToHsp hsp, int port) {
+		this.Initialize();
+		this.hsp = hsp;
+		this.port = port;
+	}
+
+	private void Initialize() {
+		this.hsp = null;
+		this.port = 0;
+
+		// Get the host name.
+		//
+		this.host = "localhost";
+		try {
+			host = java.net.InetAddress.getLocalHost().getCanonicalHostName();
+		} catch (java.net.UnknownHostException ignoreUnknownHostException) {
+		}
+	}
+
+	//
+	//-- Accessors -----------------------------------------------------------
+
+	public ClientToHsp getHsp() {
+		return (this.hsp);
+	}
+
+	public int getPort() {
+		return (this.port);
+	}
+
+	public String getHost() {
+		return (this.host);
+	}
+
+	public String getHostPort() {
+		String hostPort = new String();
+
+		if( null != this.host ) {
+			hostPort += this.host;
+		}
+		
+		if (0 < this.port) {
+			hostPort += ':' + String.valueOf(this.port);
+		}
+
+		return (hostPort);
+	}
+
+	//
+	//-- Mutators ------------------------------------------------------------
+
+	public void setHsp(ClientToHsp hsp) {
+		this.hsp = hsp;
+	}
+
+	public void setPort(int port) {
+		this.port = port;
+	}
+
+	public void setHost(String host) {
+		this.host = host;
+	}
+
+	//
+	//-- Methods -------------------------------------------------------------
+
+	public abstract void run();
+
+	protected XmlDocument immediateResult(Socket socket, ExternalData externalData ) {
+		XmlDocument xmlResult = null;
+		ExternalRequestProcessor externalRequestProcessor = null;
+		
+		
+		return( xmlResult );
+	}
+
+	protected ExternalRequestId delayedResult(OnResponse onResponse, ExternalData externalData) {
+		ExternalRequestId externalRequestId = null;
+		return( externalRequestId );
+	}
+
+/*
+		// Determine response method.
+		ResponseMethod responseMethod = new ResponseMethod( externalData );
+
+		// -- Perform the request. --
+		switch (responseMethod.getResponseActionId()) {
+
+		case ExternalRequest.RESPONDITEM_Immediate:
+		ExternalResult externalResult = this.externalRequestProcessor
+		.performRequest(variableList);
+if (null == externalResult)
+	throw new NullPointerException(
+			"Received a null from the translator");
+txtResponse = toHtml(externalResult);
+			break;
+
+		case ExternalRequest.RESPONDITEM_ByWeb:
+		case ExternalRequest.RESPONDITEM_ByEMail:
+			ExternalRequest externalRequest = this.externalRequestProcessor
+					.makeRequest(variableList);
+		    externalRequest.setCollectorResponse( this );
+			ExternalRequestId externalRequestId = this.externalRequestProcessor
+					.submitRequest(externalRequest);
+			txtResponse = toHtml( externalRequestId );
+		    break;
+
+		default:
+			throw new Exception("Unknown response method: \""
+					+ responseMethod.getResponseAction() + "\"");
+		}
+
+		// TODO  implement this.
+
+		return (success);
+	}
+
+	/**
+	 * Handle actions to be taken upon response.
+	 */
+	public class ResponseMethod {
+		private int notifyActionId;
+
+		private String notifyAction;
+
+		private String notifyArgument;
+
+		private int respondActionId;
+
+		private String respondAction;
+
+		private String respondArgument;
+
+		//
+		//-- Constructors ------------------------------------------------
+
+		public ResponseMethod() {
+			this.Initialize();
+		}
+
+		public ResponseMethod(ExternalData externalData) {
+			this.Initialize();
+
+			// For clarity
+			final String Notify_None = ExternalRequest.RESPONSE_NotifyList[ExternalRequest.NOTIFYITEM_None];
+			final String Notify_ByEMail = ExternalRequest.RESPONSE_NotifyList[ExternalRequest.NOTIFYITEM_EMail];
+		}
+
+		private void Initialize() {
+			this.notifyActionId = ExternalRequest.ITEM_Unknown;
+			this.notifyAction = null;
+			this.notifyArgument = null;
+			this.respondActionId = ExternalRequest.ITEM_Unknown;
+			this.respondAction = null;
+			this.respondArgument = null;
+		}
+
+		//
+		//-- Accessors ---------------------------------------------------
+
+		public int getNotifyActionId() {
+			return (this.notifyActionId);
+		}
+
+		public String getNotifyAction() {
+			return (this.notifyAction);
+		}
+
+		public String getNotifyArgument() {
+			return (this.notifyArgument);
+		}
+
+		public int getResponseActionId() {
+			return (this.respondActionId);
+		}
+
+		public String getResponseAction() {
+			return (this.respondAction);
+		}
+
+		public String getResponseArgument() {
+			return (this.respondArgument);
+		}
+
+		public String toString() {
+			String string = new String(this.getClass().getName() + "[");
+
+			string += "notifyActionId=" + this.notifyActionId + ",";
+			string += "notifyAction=" + this.notifyAction + ",";
+			string += "notifyArgument=" + this.notifyArgument + ",";
+			//
+			string += "respondActionId=" + this.respondActionId + ",";
+			string += "respondAction=" + this.respondAction + ",";
+			string += "respondArgument=" + this.respondArgument + "]";
+
+			return (string);
+		}
+
+		//
+		//-- Mutators ----------------------------------------------------
+
+		public void setNotifyActionId(int notifyActionId) {
+			this.notifyActionId = notifyActionId;
+		}
+
+		public void setNotifyAction(String notifyAction) {
+			this.notifyAction = notifyAction;
+		}
+
+		public void setNotifyArgument(String notifyEMail) {
+			this.notifyArgument = notifyEMail;
+		}
+
+		public void setResponseActionId(int responseActionId) {
+			this.respondActionId = responseActionId;
+		}
+
+		public void setResponseAction(String responseAction) {
+			this.respondAction = responseAction;
+		}
+
+		public void setResponseArgument(String responseEMail) {
+			this.respondArgument = responseEMail;
+		}
+	}
+
+	
+	
+	protected class OnResponse {
+		private int action;
+		private String emailAddress;
+		
+		private OnResponse() {
+			action = ExternalRequest.RESPONSEITEM_Immediate;
+			emailAddress = null;
+		}
+		
+		public OnResponse(int action, String emailAddress) {
+			this.action = action;
+			this.emailAddress = emailAddress;
+		}
+		
+		public OnResponse( ExternalData externalData ) {
+			this.action = ExternalRequest.RESPONSEITEM_Immediate;
+			this.emailAddress = null;
+			
+			// Get response action, and (if necessary) e-mail address.
+			String respondAction = externalData
+					.getValue(ExternalRequest.RESPONSE_RespondAction);
+			String emailAddr = externalData
+					.getValue(ExternalRequest.RESPONSE_RespondArgument);
+			//
+			if (null == respondAction) {
+			} else if (respondAction.equals(ExternalRequest.RESPONSENAME_Immediate)) {
+				this.action = ExternalRequest.RESPONSEITEM_Immediate;
+			} else if (respondAction.equals(ExternalRequest.RESPONSENAME_ByWeb)) {
+				this.action = ExternalRequest.RESPONSEITEM_ByWeb;
+			} else if (respondAction.equals(ExternalRequest.RESPONSENAME_ByEMail)) {
+				this.action = ExternalRequest.RESPONSEITEM_ByEMail;
+			}
+		}
+		
+		public int getAction() {
+			return( this.action );
+		}
+		
+		public String getEmailAddress() {
+			return( this.emailAddress );
+		}
+	}
+}

@@ -1,0 +1,1 @@
+/fs.real/cappello/j2sdk1.4.1/bin/java -ea -classpath $JICOS -Djava.rmi.server.codebase=http://www.cs.ucsb.edu/~cappello/classes/ -Djava.security.policy=policy janet.examples.fastfibonacci.Application lysander $1

@@ -1,0 +1,2 @@
+cp *.class /cs/faculty/cappello/public_html/classes/janet/examples/helloworld
+chmod 755 /cs/faculty/cappello/public_html/classes/janet/examples/helloworld/*.class

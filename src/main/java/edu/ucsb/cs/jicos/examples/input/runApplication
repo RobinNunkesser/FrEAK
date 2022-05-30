@@ -1,0 +1,1 @@
+/usr/pubsw/bin/java -classpath $JICOS -Djava.rmi.server.codebase=http://www.cs.ucsb.edu/~cappello/classes/ -Djava.security.policy=policy janet.examples.input.Application lysander 5 500

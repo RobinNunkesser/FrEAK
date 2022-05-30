@@ -1,0 +1,1 @@
+java -classpath $JICOS -Djava.rmi.server.codebase=http://www.cs.ucsb.edu/~cappello/classes/ -Djava.security.policy=policy janet.examples.nfibonacci.Application test $1 $2

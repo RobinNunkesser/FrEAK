@@ -1,0 +1,1 @@
+/fs.real/cappello/j2sdk1.4.1/bin/java -ea -classpath /cs/faculty/cappello/r/p/janet/ -Djava.security.policy=/cs/faculty/cappello/r/p/janet/policy/policy janet.services.Hsp

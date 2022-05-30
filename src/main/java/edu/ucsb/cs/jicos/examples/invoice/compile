@@ -1,0 +1,3 @@
+/usr/pubsw/java/bin/javac -classpath .:/cs/faculty/cappello/r/janet/ *.java
+cp *.class /cs/faculty/cappello/public_html/classes/examples/invoice
+chmod 744 /cs/faculty/cappello/public_html/classes/applications/invoice/*

@@ -1,0 +1,66 @@
+echo rm -fr $JICOS/build
+rm -fr $JICOS/build
+
+echo
+echo mkdir $JICOS/build
+mkdir $JICOS/build
+
+echo
+echo javac -source 1.4 -classpath $JICOS/lib/jicos-system.jar -d $JICOS/build ../applications/branchandbound/*.java ../applications/branchandbound/tsp/*.java \
+      ../applications/branchandbound/tsp/HeldKarpChristofides/*.java \
+      ../applications/branchandbound/tsp/constant/*.java \
+      ../applications/branchandbound/tsp/demo/*.java ../applications/branchandbound/tsp/pete/*.java \
+      ../applications/branchandbound/tsp/utilities/*.java \
+      ../applications/raytrace/*.java \
+      ../applications/utilities/graph/*.java \
+      ../applications/utilities/serializer/*.java \
+      ../applications/utilities/set/*.java \
+      ../foundation/*.java *.java commands/*.java tasks/*.java shared/*.java external/*.java \
+      external/services/*.java external/services/matlab/*.java ../utilities/*.java \
+      ../admin/*.java ../admin/common/*.java ../admin/chameleon/*.java
+
+javac -source 1.4 -classpath $JICOS/lib/jicos-system.jar -d $JICOS/build ../applications/branchandbound/*.java ../applications/branchandbound/tsp/*.java \
+      ../applications/branchandbound/tsp/HeldKarpChristofides/*.java \
+      ../applications/branchandbound/tsp/constant/*.java \
+      ../applications/branchandbound/tsp/demo/*.java ../applications/branchandbound/tsp/pete/*.java \
+      ../applications/branchandbound/tsp/utilities/*.java \
+      ../applications/raytrace/*.java \
+      ../applications/utilities/graph/*.java \
+      ../applications/utilities/serializer/*.java \
+      ../applications/utilities/set/*.java \
+      ../foundation/*.java *.java commands/*.java tasks/*.java shared/*.java external/*.java \
+      external/services/*.java external/services/matlab/*.java ../utilities/*.java \
+      ../admin/*.java ../admin/common/*.java ../admin/chameleon/*.java
+
+cd $JICOS/build
+
+echo
+echo rmic -classpath . edu.ucsb.cs.jicos.foundation.ServiceImpl \
+     edu.ucsb.cs.jicos.services.Hsp \
+     edu.ucsb.cs.jicos.services.TaskServer \
+     edu.ucsb.cs.jicos.services.Host \
+     edu.ucsb.cs.jicos.services.external.services.matlab.TaskServerMatlab \
+     edu.ucsb.cs.jicos.services.external.services.matlab.HostMatlab \
+     edu.ucsb.cs.jicos.admin.ConsoleImpl \
+     edu.ucsb.cs.jicos.admin.chameleon.ChameleonImpl
+
+rmic -classpath . edu.ucsb.cs.jicos.foundation.ServiceImpl \
+     edu.ucsb.cs.jicos.services.Hsp \
+     edu.ucsb.cs.jicos.services.TaskServer \
+     edu.ucsb.cs.jicos.services.Host \
+     edu.ucsb.cs.jicos.services.external.services.matlab.TaskServerMatlab \
+     edu.ucsb.cs.jicos.services.external.services.matlab.HostMatlab \
+     edu.ucsb.cs.jicos.admin.ConsoleImpl \
+     edu.ucsb.cs.jicos.admin.chameleon.ChameleonImpl
+
+echo 
+echo jar cvf jicos-system.jar *
+jar cvf jicos-system.jar *
+
+cp jicos-system.jar ../lib
+      
+cd $JICOS
+
+echo
+echo jar cfv hw6.jar source lib policy build.xml readme.html
+jar cfv hw6.jar source lib policy build.xml readme.html

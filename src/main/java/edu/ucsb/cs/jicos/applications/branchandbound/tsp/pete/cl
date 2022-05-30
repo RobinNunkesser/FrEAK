@@ -1,0 +1,6 @@
+echo \rm *.class
+
+\rm *.class
+
+echo javac -source 1.4 -classpath $JICOS *.java
+javac -source 1.4 -classpath $JICOS *.java

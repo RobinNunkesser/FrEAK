@@ -1,0 +1,1 @@
+java -ea -classpath $JICOS/build/classes -Djava.security.policy=$JICOS/policy/policy edu.ucsb.cs.jicos.applications.branchandbound.tsp.utilities.upperbounds.matching.Matching $1 $2 $3

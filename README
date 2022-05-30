@@ -1,0 +1,18 @@
+RFrEAK -- The Free Evolutionary Algorithm Kit with R interface
+Version 0.2
+
+RFrEAK is a modification of FrEAK (http://sourceforge.net/projects/freak427/), the 
+Free Evolutionary Algorithm Kit, which is a toolkit for the creation, simulation,
+and analysis of evolutionary algorithms within a graphical interface. RFrEAK is 
+released under the GNU General Public License.
+
+Contact
+-------
+
+e-mail: robin.nunkesser@hshl.de
+ 
+Hamm-Lippstadt University of Applied Sciences
+Marker Allee 76-78
+59063 Hamm, Germany 
+
+See file COPYING for copyright and license information.

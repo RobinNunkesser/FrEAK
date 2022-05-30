@@ -1,0 +1,4 @@
+\rm *.class
+
+javac -source 1.4 -classpath $JICOS GraphEuclidean.java
+

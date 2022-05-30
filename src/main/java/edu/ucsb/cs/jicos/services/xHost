@@ -1,0 +1,13 @@
+echo java -ea -classpath $JICOS/build/classes \
+          -Djava.security.policy=$JICOS/policy/policy \
+	  -Djicos.services.Host.displayDebug=no \
+          -Djicos.log.level=info \
+          -Djicos.log.services.level=info \
+          edu.ucsb.cs.jicos.services.Host $1
+
+java -ea -classpath $JICOS/build/classes \
+          -Djava.security.policy=$JICOS/policy/policy \
+	  -Djicos.services.Host.displayDebug=no \
+          -Djicos.log.level=info \
+          -Djicos.log.services.level=info \
+          edu.ucsb.cs.jicos.services.Host $1

@@ -1,0 +1,2 @@
+echo /usr/pubsw/bin/java -classpath .:$JICOS/lib/janet-system.jar -Djava.rmi.server.codebase=http://www.cs.ucsb.edu/~cappello/classes/ -Djava.security.policy=$JICOS/policy/policy janet.examples.fibonacci.Application lysander $1
+/usr/pubsw/bin/java -classpath .:$JICOS/lib/janet-system.jar -Djava.rmi.server.codebase=http://www.cs.ucsb.edu/~cappello/classes/ -Djava.security.policy=$JICOS/policy/policy janet.examples.fibonacci.Application lysander $1

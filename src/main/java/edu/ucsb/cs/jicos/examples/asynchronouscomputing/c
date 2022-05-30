@@ -1,0 +1,3 @@
+echo javac -source 1.4 -classpath .:$JANET *.java
+
+javac -source 1.4 -classpath .:$JANET *.java

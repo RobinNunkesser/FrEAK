@@ -1,0 +1,2 @@
+chmod 755 *
+cp *.class /cs/faculty/cappello/public_html/classes/janet/examples/input

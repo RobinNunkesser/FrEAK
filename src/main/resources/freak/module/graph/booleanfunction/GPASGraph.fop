@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FreakPersistence>
+  <handler>
+    <String>freak.core.modulesupport.PersistenceManager$StringPersistenceHandler</String>
+    <Property>freak.core.modulesupport.Configuration$PropertyWrapperPersistenceHandler</Property>
+    <Color>freak.core.modulesupport.PersistenceManager$ColorPersistenceHandler</Color>
+    <List>freak.core.modulesupport.PersistenceManager$ListPersistenceHandler</List>
+    <Edge>freak.gui.graph.OperatorGraphFile$Edge$EdgePersistenceHandler</Edge>
+    <OperatorGraphFile>freak.gui.graph.OperatorGraphFile$OperatorGraphFilePersistenceHandler</OperatorGraphFile>
+    <Map>freak.core.modulesupport.PersistenceManager$MapPersistenceHandler</Map>
+    <Integer>freak.core.modulesupport.PersistenceManager$IntegerPersistenceHandler</Integer>
+    <Node>freak.gui.graph.OperatorGraphFile$Node$NodePersistenceHandler</Node>
+    <Boolean>freak.core.modulesupport.PersistenceManager$BooleanPersistenceHandler</Boolean>
+    <Configuration>freak.core.modulesupport.Configuration$ConfigurationPersistenceHandler</Configuration>
+    <BevelBorder>freak.core.modulesupport.PersistenceManager$BevelBorderPersistenceHandler</BevelBorder>
+    <Rectangle>freak.core.modulesupport.PersistenceManager$RectanglePersistenceHandler</Rectangle>
+  </handler>
+  <OperatorGraphFile>
+    <List type="java.util.ArrayList">
+      <Edge source="4" sourcePort="0" target="6" targetPort="1" />
+      <Edge source="6" sourcePort="0" target="7" targetPort="0" />
+      <Edge source="12" sourcePort="0" target="11" targetPort="1" />
+      <Edge source="0" sourcePort="0" target="2" targetPort="0" />
+      <Edge source="0" sourcePort="0" target="8" targetPort="0" />
+      <Edge source="0" sourcePort="0" target="13" targetPort="0" />
+      <Edge source="0" sourcePort="0" target="14" targetPort="0" />
+      <Edge source="0" sourcePort="0" target="15" targetPort="0" />
+      <Edge source="0" sourcePort="0" target="16" targetPort="0" />
+      <Edge source="9" sourcePort="0" target="10" targetPort="1" />
+      <Edge source="16" sourcePort="0" target="4" targetPort="0" />
+      <Edge source="15" sourcePort="0" target="5" targetPort="0" />
+      <Edge source="2" sourcePort="0" target="6" targetPort="0" />
+      <Edge source="14" sourcePort="0" target="9" targetPort="0" />
+      <Edge source="13" sourcePort="0" target="12" targetPort="0" />
+      <Edge source="7" sourcePort="0" target="10" targetPort="0" />
+      <Edge source="5" sourcePort="0" target="7" targetPort="1" />
+      <Edge source="10" sourcePort="0" target="11" targetPort="0" />
+      <Edge source="3" sourcePort="0" target="2" targetPort="1" />
+      <Edge source="8" sourcePort="0" target="3" targetPort="0" />
+      <Edge source="18" sourcePort="0" target="17" targetPort="0" />
+      <Edge source="0" sourcePort="0" target="18" targetPort="0" />
+      <Edge source="19" sourcePort="0" target="1" targetPort="0" />
+      <Edge source="20" sourcePort="0" target="17" targetPort="1" />
+      <Edge source="0" sourcePort="0" target="20" targetPort="0" />
+      <Edge source="11" sourcePort="0" target="19" targetPort="0" />
+      <Edge source="17" sourcePort="0" target="19" targetPort="1" />
+    </List>
+    <List type="java.util.ArrayList">
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="192" green="255" blue="255" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="20" width="100" x="9" y="22" />
+          <String>opaque</String>
+          <Boolean id="35">true</Boolean>
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>Start</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.core.graph.Start</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="192" green="255" blue="255" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="20" width="100" x="833" y="650" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>Finish</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.core.graph.Finish</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="128" x="55" y="254" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>Domination Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.DominationSelection</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="192" blue="192" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="93" x="95" y="176" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>InsertCompare</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.mutation.booleanfunction.InsertCompare</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="192" blue="192" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="98" x="216" y="176" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>DeleteCompare</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.mutation.booleanfunction.DeleteCompare</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="192" blue="192" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="62" x="361" y="177" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>InsertAnd</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.mutation.booleanfunction.InsertAnd</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="128" x="177" y="312" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>Domination Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.DominationSelection</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="128" x="305" y="373" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>Domination Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.DominationSelection</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="108" x="87" y="109" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>NoOfIndividualsToSelect</String>
+            <Property description="Selected individuals">
+              <Integer>1</Integer>
+            </Property>
+            <String>Name</String>
+            <Property description="Name">
+              <String>Uniform Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.UniformSelection</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="192" blue="192" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="98" x="468" y="176" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>SwitchCompare</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.mutation.booleanfunction.SwitchCompare</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="128" x="422" y="450" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>Domination Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.DominationSelection</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="128" x="556" y="517" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>Domination Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.DominationSelection</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="192" blue="192" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="67" x="613" y="176" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>DeleteAnd</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.mutation.booleanfunction.DeleteAnd</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="108" x="592" y="111" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>NoOfIndividualsToSelect</String>
+            <Property description="Selected individuals">
+              <Integer>1</Integer>
+            </Property>
+            <String>Name</String>
+            <Property description="Name">
+              <String>Uniform Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.UniformSelection</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="108" x="463" y="110" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>NoOfIndividualsToSelect</String>
+            <Property description="Selected individuals">
+              <Integer>1</Integer>
+            </Property>
+            <String>Name</String>
+            <Property description="Name">
+              <String>Uniform Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.UniformSelection</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="108" x="338" y="109" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>NoOfIndividualsToSelect</String>
+            <Property description="Selected individuals">
+              <Integer>1</Integer>
+            </Property>
+            <String>Name</String>
+            <Property description="Name">
+              <String>Uniform Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.UniformSelection</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="24" width="108" x="211" y="109" />
+          <String>opaque</String>
+          <ref id="35" />
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>NoOfIndividualsToSelect</String>
+            <Property description="Selected individuals">
+              <Integer>1</Integer>
+            </Property>
+            <String>Name</String>
+            <Property description="Name">
+              <String>Uniform Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.UniformSelection</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="192" green="255" blue="192" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="23" width="97" x="797" y="177" />
+          <String>opaque</String>
+          <Boolean>true</Boolean>
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>TheftCrossover</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.crossover.common.TheftCrossover</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="23" width="109" x="724" y="112" />
+          <String>opaque</String>
+          <Boolean>true</Boolean>
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>NoOfIndividualsToSelect</String>
+            <Property description="Selected individuals">
+              <Integer>1</Integer>
+            </Property>
+            <String>Name</String>
+            <Property description="Name">
+              <String>Uniform Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.UniformSelection</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="23" width="129" x="757" y="591" />
+          <String>opaque</String>
+          <Boolean>true</Boolean>
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>Name</String>
+            <Property description="Name">
+              <String>Domination Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.DominationSelection</String>
+      </Node>
+      <Node>
+        <Map type="java.util.Hashtable">
+          <String>backgroundColor</String>
+          <Color red="255" green="220" blue="168" />
+          <String>border</String>
+          <BevelBorder bevelType="0" />
+          <String>bounds</String>
+          <Rectangle height="23" width="109" x="858" y="112" />
+          <String>opaque</String>
+          <Boolean>true</Boolean>
+        </Map>
+        <Configuration descriptionOfAdditional="">
+          <Map type="java.util.HashMap">
+            <String>NoOfIndividualsToSelect</String>
+            <Property description="Selected individuals">
+              <Integer>1</Integer>
+            </Property>
+            <String>Name</String>
+            <Property description="Name">
+              <String>Uniform Selection</String>
+            </Property>
+          </Map>
+          <null />
+        </Configuration>
+        <List type="java.util.ArrayList" />
+        <String>freak.module.operator.selection.UniformSelection</String>
+      </Node>
+    </List>
+    <List type="java.util.ArrayList" />
+  </OperatorGraphFile>
+</FreakPersistence>
+

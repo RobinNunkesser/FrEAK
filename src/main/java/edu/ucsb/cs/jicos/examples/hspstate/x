@@ -1,0 +1,2 @@
+echo java -ea -classpath $JANET -Djava.security.policy=policy edu.ucsb.cs.jicos.examples.hspstate.Application $1
+java -ea -classpath .:$JANET:/cs/faculty/cappello/z/jicos/framework/build/ -Djava.security.policy=policy edu.ucsb.cs.jicos.examples.hspstate.Application $1

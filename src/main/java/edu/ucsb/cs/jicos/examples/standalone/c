@@ -1,0 +1,1 @@
+/fs.real/cappello/j2sdk1.4.1/bin/javac -source 1.4 -classpath .:$JICOS *.java

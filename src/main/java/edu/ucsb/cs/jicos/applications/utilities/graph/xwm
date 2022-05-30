@@ -1,0 +1,2 @@
+java -ea -classpath $JICOS janet.applications.utilities.graph.WeightedMatch $1
+

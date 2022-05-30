@@ -1,0 +1,401 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.48)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>3. Controlling Runs</TITLE>
+<META NAME="description" CONTENT="3. Controlling Runs">
+<META NAME="keywords" CONTENT="usersguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="usersguide.css">
+
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="usersguide.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html225"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html219"
+  HREF="usersguide.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html213"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html221"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html223"
+  HREF="node7.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html226"
+  HREF="node6.html">4. Designing Algorithms</A>
+<B> Up:</B> <A NAME="tex2html220"
+  HREF="usersguide.html">FrEAK Free Evolutionary Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html214"
+  HREF="node4.html">2. Creating a Schedule</A>
+ &nbsp <B>  <A NAME="tex2html222"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html224"
+  HREF="node7.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html227"
+  HREF="#SECTION00510000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN> Getting Started</A>
+<LI><A NAME="tex2html228"
+  HREF="#SECTION00520000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">2</SPAN> Watching Replays</A>
+<LI><A NAME="tex2html229"
+  HREF="#SECTION00530000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">3</SPAN> Editing the Current Schedule</A>
+<LI><A NAME="tex2html230"
+  HREF="#SECTION00540000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN> Menu Items</A>
+<UL>
+<LI><A NAME="tex2html231"
+  HREF="#SECTION00541000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN> File Menu</A>
+<LI><A NAME="tex2html232"
+  HREF="#SECTION00542000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN> Edit Menu</A>
+<LI><A NAME="tex2html233"
+  HREF="#SECTION00543000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN> Control Menu</A>
+<LI><A NAME="tex2html234"
+  HREF="#SECTION00544000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">4</SPAN> Views Menu</A>
+<LI><A NAME="tex2html235"
+  HREF="#SECTION00545000000000000000"><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">5</SPAN> Help Menu</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00500000000000000000"></A>
+<A NAME="chapter3"></A>
+<BR>
+<SPAN CLASS="arabic">3</SPAN>. Controlling Runs of Evolutionary Algorithms
+</H1>
+
+<H1><A NAME="SECTION00510000000000000000">
+<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN> Getting Started</A>
+</H1>
+
+When starting FrEAK, you see a window as shown in Figure&nbsp;<A HREF="node5.html#fig:start">3.1</A>.
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:start"></A><A NAME="709"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.1:</STRONG>
+The window after starting FrEAK.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="859" HEIGHT="603" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch03-start.png"
+ ALT="Image images/ch03-start.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+You see an information panel on the left side, a control panel at the bottom, and a desktop with the selected views on the right side. The information panel to the left displays the current phenotype search space and the current fitness function. Below, you see the current time index consisting of the current batch, the current run and the current generation.
+
+Note that almost all menu items are disabled at the beginning. The first step to take is to create a new schedule by choosing <SPAN  CLASS="textbf">New</SPAN> from the <SPAN  CLASS="textbf">File</SPAN> menu. The creation of new schedules is described in Chapter&nbsp;<A HREF="node4.html#chapter2">2</A>: chapter2. Alternatively, you may open an existing schedule by choosing <SPAN  CLASS="textbf">Open</SPAN> from the <SPAN  CLASS="textbf">File</SPAN> menu.
+
+The <SPAN  CLASS="textbf">Help</SPAN> menu provides further information. You can open this document there or take a look at the <SPAN  CLASS="textbf">About</SPAN> dialog.
+
+Figure&nbsp;<A HREF="node5.html#fig:runframe">3.2</A> shows the FrEAK window after creating or loading a schedule.
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:runframe"></A><A NAME="723"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.2:</STRONG>
+The FrEAK window after creating a schedule.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+ WIDTH="859" HEIGHT="603" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/ch03-runframe.png"
+ ALT="Image images/ch03-runframe.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+In the control panel, you find several buttons used to navigate through the already simulated batches, runs, and generations. These buttons will be explained in the following section. The big slider at the top of the control panel indicates the current generation measured according to all generations that have already been simulated in this run. 
+
+When running the simulation you can choose if you want to set a speed limit for the simulation. The speed limit represents the maximal number of generations per seconds and can be enabled and disabled using the corresponding check box in the control panel. The limit itself can be adjusted by using either the text field or the slider to the right.
+
+With a click on the <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/Play16.png"
+ ALT="Image images/Play16.png"><SPAN  CLASS="textbf">Start</SPAN> button you start the first run.
+
+The simulation can always paused by using the <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/Pause16.png"
+ ALT="Image images/Pause16.png"><SPAN  CLASS="textbf">Suspend</SPAN> button. Some operations are only available while the run is suspended, such as editing the current schedule, modifying the speed limit, current run and current generation, or configuring views.
+
+Press the <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/Play16.png"
+ ALT="Image images/Play16.png"><SPAN  CLASS="textbf">Start</SPAN> button again and the simulation is continued.
+
+<H1><A NAME="SECTION00520000000000000000"></A>
+<A NAME="modes"></A>
+<BR>
+<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">2</SPAN> Watching Replays
+</H1>
+
+FrEAK provides a replay mode to watch past batches, runs, and generations. To step back to an earlier time index, use the navigation buttons in the control panel or enter the desired time index in the information panel on the left. FrEAK automatically switches to replay mode and looks for the specified time index. This may eventually take some time because some runs and generations have to be simulated in the background to reach the desired time index.
+
+The <SPAN  CLASS="textbf">Control</SPAN> menu as well as the navigation bar inside the control panel contain the following navigation commands.
+<DL COMPACT>
+<DT><IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/StepBackFar.png"
+ ALT="Image images/StepBackFar.png"></DT>
+<DD><SPAN  CLASS="textbf">Go to Start</SPAN> go back to the start of the simulation.
+</DD>
+<DT><IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/StepBack16.png"
+ ALT="Image images/StepBack16.png"></DT>
+<DD><SPAN  CLASS="textbf">Step Back</SPAN> go back to the last start of a run.
+</DD>
+<DT><IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/Pause16.png"
+ ALT="Image images/Pause16.png"></DT>
+<DD><SPAN  CLASS="textbf">Suspend</SPAN> pause the current Schedule.
+</DD>
+<DT><IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/Play16.png"
+ ALT="Image images/Play16.png"></DT>
+<DD><SPAN  CLASS="textbf">Start</SPAN> start or continue the current Schedule.
+</DD>
+<DT><IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/StepForward16.png"
+ ALT="Image images/StepForward16.png"></DT>
+<DD><SPAN  CLASS="textbf">Skip Run</SPAN> jump to the start of the next run.
+</DD>
+<DT><IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/StepForwardFar.png"
+ ALT="Image images/StepForwardFar.png"></DT>
+<DD><SPAN  CLASS="textbf">Go to End</SPAN> jump forward to the last known generation.
+</DD>
+</DL>
+
+You can also use the generation slider to quickly jump between generations. 
+
+When replay is finished and the last simulated generation is reached, FrEAK automatically turns back to running mode and continues simulating new generations.
+
+<IMG
+ WIDTH="705" HEIGHT="148" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="\fbox{\parbox{15.3cm}{{\bf Note:} \newline \textup{FrEAK}\xspace uses a determin...
+...e pseudo-random numbers as before. Thus, all the simulation can be reproduced.}}">
+<P>
+
+<H1><A NAME="SECTION00530000000000000000"></A>
+<A NAME="EditingSchedule"></A>
+<BR>
+<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">3</SPAN> Editing the Current Schedule
+</H1>
+
+You can modify the setup of the current schedule to a certain degree depending on the progress of it. This is done via the same dialog that was used to create a new schedule. To open this dialog, select <SPAN  CLASS="textbf">Edit Schedule...</SPAN> from the <SPAN  CLASS="textbf">Control</SPAN> menu. The handling of this dialog is explained in detail in Chapter <A HREF="node4.html#chapter2">2</A>: chapter2 with the difference that several options are not available and you start with CreateBatches if your schedule was already started. 
+
+<IMG
+ WIDTH="705" HEIGHT="84" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="% latex2html id marker 891
+\fbox{\parbox{15.3cm}{{\bf Note:} \newline If you edi...
+...ref{chapter2}. If it was already started, several components will be disabled.}}">
+<P>
+Please refer to Chapter <A HREF="node4.html#chapter2">2</A>: chapter2 on how to work with the schedule editor.
+
+<H1><A NAME="SECTION00540000000000000000"></A><A NAME="menu"></A>
+<BR>
+<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN> Menu Items
+</H1>
+
+The menu provides several functions which are described in detail here.
+Note that there are shortcuts for the most important functions.
+
+<H2><A NAME="SECTION00541000000000000000">
+<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN> File Menu</A>
+</H2>
+
+This menu is used for schedule management and to exit FrEAK.
+
+<DL>
+<DT><STRONG><SPAN  CLASS="textbf">New</SPAN></STRONG></DT>
+<DD>Create a new schedule with the Schedule Editor<A NAME="766"></A>.
+For details see Chapter&nbsp;<A HREF="node4.html#chapter2">2</A>: chapter2.
+</DD>
+<DT><STRONG><SPAN  CLASS="textbf">Open</SPAN></STRONG></DT>
+<DD>Open an existing schedule.
+</DD>
+<DT><STRONG><SPAN  CLASS="textbf">Save</SPAN></STRONG></DT>
+<DD>Save the current schedule.
+</DD>
+<DT><STRONG><SPAN  CLASS="textbf">Save as</SPAN></STRONG></DT>
+<DD>Save the current schedule requesting a file name.
+</DD>
+<DT><STRONG><SPAN  CLASS="textbf">Exit</SPAN></STRONG></DT>
+<DD>Exit FrEAK.
+</DD>
+</DL>
+<H2><A NAME="SECTION00542000000000000000">
+<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN> Edit Menu</A>
+</H2>
+
+Contains several operations from the control panel.
+
+<DL>
+<DT><STRONG><SPAN  CLASS="textbf">Edit</SPAN></STRONG></DT>
+<DD>Edit the current schedule. For details see Section&nbsp;<A HREF="node5.html#EditingSchedule">3.3</A>: EditingSchedule.
+</DD>
+<DT><STRONG><SPAN  CLASS="textbf">Configure Selected View</SPAN></STRONG></DT>
+<DD>If the currently selected view is configurable and the current run is suspended,
+you can configure the view in the configuration dialog by choosing
+this menu item. For help on the configuration dialog see
+Section&nbsp;<A HREF="node4.html#configurationOfModules">2.6</A>: configurationOfModules.
+</DD>
+</DL>
+<H2><A NAME="SECTION00543000000000000000">
+<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN> Control Menu</A>
+</H2>
+
+Contains several operations from the control panel. Most of them were already explained in Section&nbsp;modes.
+
+<DL>
+<DT><STRONG><IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/Play16.png"
+ ALT="Image images/Play16.png"> <SPAN  CLASS="textbf">Start</SPAN></STRONG></DT>
+<DD>start or continue the current Schedule.
+</DD>
+<DT><STRONG><IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/Pause16.png"
+ ALT="Image images/Pause16.png"> <SPAN  CLASS="textbf">Suspend</SPAN></STRONG></DT>
+<DD>pause the current Schedule.
+</DD>
+<DT><STRONG><IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/StepBack16.png"
+ ALT="Image images/StepBack16.png"> <SPAN  CLASS="textbf">Step Back</SPAN></STRONG></DT>
+<DD>go back to the last start of a run.
+</DD>
+<DT><STRONG><IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/StepForward16.png"
+ ALT="Image images/StepForward16.png"> <SPAN  CLASS="textbf">Skip Run</SPAN></STRONG></DT>
+<DD>jump to the start of the next run.
+</DD>
+<DT><STRONG><IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/StepBackFar.png"
+ ALT="Image images/StepBackFar.png"> <SPAN  CLASS="textbf">Go to Start</SPAN></STRONG></DT>
+<DD>go back to the start of the simulation.
+</DD>
+<DT><STRONG><IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="images/StepForwardFar.png"
+ ALT="Image images/StepForwardFar.png"> <SPAN  CLASS="textbf">Go to End</SPAN></STRONG></DT>
+<DD>jump forward to the last known generation.
+</DD>
+<DT><STRONG><SPAN  CLASS="textbf">Go to ...</SPAN></STRONG></DT>
+<DD>jump to a specified generation.
+</DD>
+</DL>
+<H2><A NAME="SECTION00544000000000000000">
+<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">4</SPAN> Views Menu</A>
+</H2>
+
+This menu is used to manage the current views. If a schedule containing views is active, all views are listed in the upper part of the menu and can be activated by choosing the corresponding menu item. 
+The lower part of the menu contains general window management functions for the views. 
+
+<DL>
+<DT><STRONG><SPAN  CLASS="textbf">Tile</SPAN></STRONG></DT>
+<DD>Tile the views on the desktop. Minimized and closed views are not considered.
+</DD>
+<DT><STRONG><SPAN  CLASS="textbf">Cascade</SPAN></STRONG></DT>
+<DD>Reorder the views on the desktop in form of a cascade. Minimized and closed views are not considered.
+</DD>
+<DT><STRONG><SPAN  CLASS="textbf">Minimize All</SPAN></STRONG></DT>
+<DD>Minimize all visible views.
+</DD>
+<DT><STRONG><SPAN  CLASS="textbf">Restore All</SPAN></STRONG></DT>
+<DD>Restore all closed and minimized views.
+</DD>
+<DT><STRONG><SPAN  CLASS="textbf">Close All</SPAN></STRONG></DT>
+<DD>Close all opened views. You can restore all view windows with the
+menu item <SPAN  CLASS="textbf">Restore All</SPAN> or simply click on the menu item
+corresponding to the view you want to restore.
+</DD>
+</DL>
+<H2><A NAME="SECTION00545000000000000000">
+<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">5</SPAN> Help Menu</A>
+</H2>
+
+The <SPAN  CLASS="textbf">Help</SPAN> menu offers you a global help.
+
+<DL>
+<DT><STRONG><SPAN  CLASS="textbf">Help</SPAN></STRONG></DT>
+<DD>opens a HTML version of this document.
+</DD>
+<DT><STRONG><SPAN  CLASS="textbf">About</SPAN></STRONG></DT>
+<DD>opens the about dialog where you can learn more about the current version and the developer team of FrEAK.
+</DD>
+</DL>
+
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html225"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html219"
+  HREF="usersguide.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html213"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html221"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html223"
+  HREF="node7.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html226"
+  HREF="node6.html">4. Designing Algorithms</A>
+<B> Up:</B> <A NAME="tex2html220"
+  HREF="usersguide.html">FrEAK Free Evolutionary Algorithm</A>
+<B> Previous:</B> <A NAME="tex2html214"
+  HREF="node4.html">2. Creating a Schedule</A>
+ &nbsp <B>  <A NAME="tex2html222"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp <B>  <A NAME="tex2html224"
+  HREF="node7.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>
