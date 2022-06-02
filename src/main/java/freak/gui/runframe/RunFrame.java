@@ -13,17 +13,28 @@ package freak.gui.runframe;
 import freak.core.control.*;
 import freak.core.modulesupport.*;
 import freak.core.observer.Observer;
-import freak.core.view.*;
+import freak.core.view.View;
 import freak.core.view.swingsupport.*;
-import freak.gui.*;
+import freak.gui.HelpWindow;
+import freak.gui.PropertyDialog;
 import freak.gui.gpas.GPASDialog;
-import freak.gui.scheduleeditor.*;
-import java.awt.event.*;
-import java.lang.reflect.*;
-import java.text.*;
-import java.util.*;
+import freak.gui.scheduleeditor.ScheduleEditor;
+
 import javax.swing.*;
-import javax.swing.event.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.InternalFrameAdapter;
+import javax.swing.event.InternalFrameEvent;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.lang.reflect.InvocationTargetException;
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 
 /**
  * @author  Stefan, Matthias
@@ -38,7 +49,7 @@ public class RunFrame extends RunFrameUI implements StateListener {
 	private LoadSaveManager loadSaveManager = new LoadSaveManager(this);
 		
 	private Actions.Action lastSent;
-	private Schedule displayedSchedule;
+	private ScheduleInterface displayedSchedule;
 	
 	private InfoPanelSpinnerModel batchSpinnerModel = new InfoPanelSpinnerModel();
 	private InfoPanelSpinnerModel runSpinnerModel = new InfoPanelSpinnerModel();
@@ -396,7 +407,7 @@ public class RunFrame extends RunFrameUI implements StateListener {
 	}
 	
 	public void editorClosed() {
-		Schedule schedule = scheduleEditor.getSchedule();
+		ScheduleInterface schedule = scheduleEditor.getSchedule();
 		scheduleEditor = null;
 		if (schedule != null) {
 			schedule.modulesEdited(); 
@@ -630,7 +641,7 @@ public class RunFrame extends RunFrameUI implements StateListener {
 	public void terminated(Actions.Action lastProcessedBeforeTermination) {
 	}
 
-	public void synchroneousFeedback(Schedule activeSchedule, Replay replay) {
+	public void synchroneousFeedback(ScheduleInterface activeSchedule, Replay replay) {
 		if (activeSchedule != displayedSchedule) {
 			createInternalFrames(activeSchedule);
 			updateLabels(activeSchedule);
@@ -651,7 +662,7 @@ public class RunFrame extends RunFrameUI implements StateListener {
 	}
 
 
-	public void asynchroneousFeedback(Schedule activeSchedule, Replay replay) {
+	public void asynchroneousFeedback(ScheduleInterface activeSchedule, Replay replay) {
 		if (activeSchedule != displayedSchedule) {
 			invokeAndWaitCreateInternalFrames(activeSchedule);
 			updateLabels(activeSchedule);
@@ -663,12 +674,12 @@ public class RunFrame extends RunFrameUI implements StateListener {
 		updateTimeIndexComponents(activeSchedule, replay);
 	}
 	
-	private boolean isReplayMode(Schedule schedule, Replay replay) {
+	private boolean isReplayMode(ScheduleInterface schedule, Replay replay) {
 		if (schedule == null) return false;
 		return schedule.getCurrentTimeIndex().isBefore(replay.getLastPoint());
 	}
 	
-	private void updateLabels(Schedule schedule) {
+	private void updateLabels(ScheduleInterface schedule) {
 		if (schedule == null) return;
 		
 		synchronized(searchSpaceModel) {
@@ -682,7 +693,7 @@ public class RunFrame extends RunFrameUI implements StateListener {
 		UpdateManager.markDirty(fitnessFunctionModel);
 	}
 	
-	private void updateTimeIndexComponents(Schedule schedule, Replay replay) {
+	private void updateTimeIndexComponents(ScheduleInterface schedule, Replay replay) {
 		if (schedule == null) return;
 		
 		synchronized (batchSpinnerModel) {
@@ -765,7 +776,7 @@ public class RunFrame extends RunFrameUI implements StateListener {
 		desktop.closeAll();
 	}		
 	
-	private void invokeAndWaitCreateInternalFrames(final Schedule schedule) {
+	private void invokeAndWaitCreateInternalFrames(final ScheduleInterface schedule) {
 		try {
 			SwingUtilities.invokeAndWait(new Runnable() {
 				public void run() {
@@ -779,7 +790,7 @@ public class RunFrame extends RunFrameUI implements StateListener {
 		}
 	}
 	
-	private void createInternalFrames(Schedule newSchedule) {
+	private void createInternalFrames(ScheduleInterface newSchedule) {
 		if (newSchedule == null) {
 			desktop.getDelegate().removeAll();
 			desktop.getDelegate().repaint(); //swing bug
@@ -933,7 +944,7 @@ public class RunFrame extends RunFrameUI implements StateListener {
 		}
 	
 		/**
-		 * @param enabledFromRunControl  the enabledFromRunControl to set
+		 * @param enabled  the enabledFromRunControl to set
 		 * @uml.property  name="enabledFromRunControl"
 		 */
 		public void setEnabledFromRunControl(boolean enabled) {
@@ -942,7 +953,7 @@ public class RunFrame extends RunFrameUI implements StateListener {
 		}
 	
 		/**
-		 * @param activeView  the activeView to set
+		 * @param frame  the activeView to set
 		 * @uml.property  name="activeView"
 		 */
 		public void setActiveView(FreakInternalFrame frame) {

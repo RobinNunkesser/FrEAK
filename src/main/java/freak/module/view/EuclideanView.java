@@ -13,11 +13,12 @@ package freak.module.view;
 import freak.core.control.*;
 import freak.core.modulesupport.*;
 import freak.core.population.*;
-import freak.core.view.*;
+import freak.core.view.SingleIndividualView;
 import freak.core.view.swingsupport.*;
-import freak.module.searchspace.*;
-import java.awt.*;
+import freak.module.searchspace.PermutationGenotype;
+
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * @author Michael

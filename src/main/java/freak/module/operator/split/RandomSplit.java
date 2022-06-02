@@ -9,12 +9,13 @@
 
 package freak.module.operator.split;
 
-import java.util.*;
-
-import edu.cornell.lassp.houle.RngPack.*;
+import edu.cornell.lassp.houle.RngPack.RandomElement;
 import freak.core.graph.*;
 import freak.core.modulesupport.*;
+import freak.core.modulesupport.Module;
 import freak.core.population.*;
+
+import java.util.Iterator;
 
 /**
  * This class implements the splitting of a <code>IndividualList</code>. One
@@ -26,7 +27,8 @@ import freak.core.population.*;
  *
  * @author Christian, Heiko, Michael
  */
-public class RandomSplit extends Split implements HasFloatingNumberOfOutPorts, Module, CompatibleWithDifferentSearchSpaces {
+public class RandomSplit extends Split implements HasFloatingNumberOfOutPorts,
+		Module, CompatibleWithDifferentSearchSpaces {
 
 	/**
 	 * The constructor of the class <code>RandomSplit</code>.

@@ -6,7 +6,7 @@
 
 package freak.module.searchspace.logictree;
 
-import freak.core.control.Schedule;
+import freak.core.control.ScheduleInterface;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -18,10 +18,10 @@ import java.util.Iterator;
  */
 public class DNFTree implements Serializable {
 
-    // maximaler Wert, den die Variablen annehmen können
+    // maximaler Wert, den die Variablen annehmen kï¿½nnen
 	private final int xyRange;
 	
-	// Parameter für Zufallsentscheidungen 
+	// Parameter fï¿½r Zufallsentscheidungen 
     private final int maxPercent;
 	private boolean emptyAndsForbidden; // wenn true, dann darf es keine AndNode ohne Kinder geben (sind immer true)
 	private boolean emptyTreeForbidden; // wenn true, dann darf es keine OrNode ohne Kinder geben (sind immer false)
@@ -31,7 +31,7 @@ public class DNFTree implements Serializable {
 //	private static boolean isread = false;
 	private static int currentBatch;
 	
-	private Schedule schedule;
+	private ScheduleInterface schedule;
 	
 	private OrNode root;
 	
@@ -49,7 +49,7 @@ public class DNFTree implements Serializable {
 	 * Creates a new DNF-Tree with one orNode as root.
 	 * Sets default parameters.
 	 **/
-	public DNFTree(String inputFilePath, Schedule schedule, int population, boolean neuLaden) {
+	public DNFTree(String inputFilePath, ScheduleInterface schedule, int population, boolean neuLaden) {
 		this(new short[0],(short)0,(short)0,new OrNode(),3,100,true,true,inputFilePath, schedule, population,neuLaden);	
 		if (emptyTreeForbidden) {
 			insertAndWithCompare();
@@ -64,7 +64,7 @@ public class DNFTree implements Serializable {
 	 * @parma andORCompare Probability that a andNode is created instead of a compareNode (in the creating operator) 
 	 **/
 	public DNFTree(short[] count, short noFulfilledLines, short noFulfilled1Lines, OrNode o, int xyRange, int maxPercent, //int opDelValue, int andORCompare, 
-			boolean emptyAndsForbidden, boolean emptyTreeForbidden, String inputFilePath, Schedule schedule, int population, boolean neuLaden) {
+			boolean emptyAndsForbidden, boolean emptyTreeForbidden, String inputFilePath, ScheduleInterface schedule, int population, boolean neuLaden) {
 		root = o;
 		this.xyRange=xyRange;
 		this.maxPercent=maxPercent;
@@ -181,7 +181,7 @@ public class DNFTree implements Serializable {
 		for (int i = 0; i < test.length(); i++)
 		 if (test.get(i)) counteri++;
 	    System.out.println(counteri+" "+noFulfilledLines);
-	    if (counteri!= noFulfilledLines) throw new RuntimeException("Wert stimmt nicht überein!");*/
+	    if (counteri!= noFulfilledLines) throw new RuntimeException("Wert stimmt nicht ï¿½berein!");*/
 		return noFulfilledLines;
 	}	
 
@@ -331,7 +331,7 @@ public class DNFTree implements Serializable {
 	 * Gives the root of this DNFTree.
 	 * @uml.property  name="root"
 	 */
-	// für die equals methode
+	// fï¿½r die equals methode
 	public MultipleOperatorNode getRoot(){
 		return root;
 	}
@@ -684,7 +684,7 @@ public class DNFTree implements Serializable {
 		return (StaticCompareNode)v.get(zz);
 	}
 
-// für mergen
+// fï¿½r mergen
 	private OperatorNodeVector getCopyOfChildren(){
 		return root.getCopyOfChildren();
 	}
@@ -720,8 +720,8 @@ public class DNFTree implements Serializable {
 		root.addChild(an);
     	StaticCompareNode cn = getRandomCompareNode();
 		an.addChild(cn);
-//	        System.out.println("andNode hinzugefügt.");
-//	        System.out.println("compareNode hinzugefügt.");	
+//	        System.out.println("andNode hinzugefï¿½gt.");
+//	        System.out.println("compareNode hinzugefï¿½gt.");	
 	}
 	*/
 	/**
@@ -768,10 +768,10 @@ public class DNFTree implements Serializable {
 //		if (decision < andORCompare || root.getNumberOfChildren() == 0) {
 		if (decision < 100*probAnd || root.getNumberOfChildren() == 0) {
 			insertAndWithCompare();
-//	        System.out.println("andNode hinzugefügt.");
+//	        System.out.println("andNode hinzugefï¿½gt.");
 		} else {
 			insertCompare();
-//	        System.out.println("compareNode hinzugefügt.");
+//	        System.out.println("compareNode hinzugefï¿½gt.");
 		}
 	}*/
 	
@@ -782,7 +782,7 @@ public class DNFTree implements Serializable {
 		if ( (! (emptyTreeForbidden)) || (root.getNumberOfChildren()>1)) {
 			root.deleteRandomChild();		
 		}
-//		System.out.println("AndNode gelöscht");
+//		System.out.println("AndNode gelï¿½scht");
     }*/
 
 /*	/**
@@ -834,7 +834,7 @@ public class DNFTree implements Serializable {
 	            		root.deleteChild(an);
 	            	}
 	            }
-//	            System.out.println("CompareNode gelöscht.");
+//	            System.out.println("CompareNode gelï¿½scht.");
 			}					
 		}
 	}
@@ -849,19 +849,19 @@ public class DNFTree implements Serializable {
 		// wurzel = orNode
 		// hat mehrere kinder, alle andNode
 		// diese haben jeweils compareNodes als Kinder
-		// => operator löschen heißt hier speziell,
-		// eine AndNode oder eine CompareNode zu löschen.
+		// => operator lï¿½schen heiï¿½t hier speziell,
+		// eine AndNode oder eine CompareNode zu lï¿½schen.
 		int decision = nextIntFromRand(maxPercent);
 				
 		if (root.getNumberOfChildren()==0) return;
 		
-		// AndNode löschen
+		// AndNode lï¿½schen
 //		if (decision < opDelValue && root.getNumberOfChildren() > 0) {
 		if (decision < 100*probAnd && root.getNumberOfChildren() > 0) {
 			
             deleteAnd();
 			
-		} else // CompareNode löschen
+		} else // CompareNode lï¿½schen
 		{
 			
             deleteCompare();

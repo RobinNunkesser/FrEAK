@@ -12,8 +12,10 @@ package freak.gui.scheduleeditor;
 
 import freak.core.control.*;
 import freak.core.modulesupport.*;
-import java.util.*;
-import javax.swing.table.*;
+import freak.core.modulesupport.Module;
+
+import javax.swing.table.AbstractTableModel;
+import java.util.NoSuchElementException;
 
 /**
  * @author  Oliver, Dirk
@@ -21,10 +23,10 @@ import javax.swing.table.*;
 public class BatchTableModel extends AbstractTableModel {
 
 	final String[] columnNames = { "Runs", "Search Space", "Fitness", "Population", "Status" };
-	private Schedule schedule;
+	private ScheduleInterface schedule;
 	private BatchList batchList;
 
-	public BatchTableModel(Schedule schedule) {
+	public BatchTableModel(ScheduleInterface schedule) {
 		super();
 		this.schedule = schedule;
 		batchList = schedule.getBatchList();

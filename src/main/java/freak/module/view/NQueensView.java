@@ -16,12 +16,11 @@ import freak.core.population.Individual;
 import freak.core.view.SingleIndividualView;
 import freak.core.view.swingsupport.FreakSwingModel;
 import freak.module.fitness.permutation.NQueensProblem;
-import freak.module.searchspace.*;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Insets;
-import java.awt.Rectangle;
-import javax.swing.JPanel;
+import freak.module.searchspace.Permutation;
+import freak.module.searchspace.PermutationGenotype;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * Draws a chess board with N queens.

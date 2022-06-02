@@ -10,8 +10,8 @@
 
 package freak.gui.runframe;
 
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
 
 public class ROverlayPane extends JLayeredPane {
 	public ROverlayPane(JDesktopPane desktopPane, ReplayPanel replayPanel) {

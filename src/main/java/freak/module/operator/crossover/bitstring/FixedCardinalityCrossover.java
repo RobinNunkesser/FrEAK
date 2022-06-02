@@ -6,8 +6,6 @@
 
 package freak.module.operator.crossover.bitstring;
 
-import java.util.BitSet;
-
 import freak.core.graph.OperatorGraph;
 import freak.core.population.Individual;
 import freak.core.searchspace.HasDimension;
@@ -15,6 +13,8 @@ import freak.core.searchspace.SearchSpace;
 import freak.core.util.FreakMath;
 import freak.module.operator.crossover.MultiPairwiseCrossover;
 import freak.module.searchspace.BitStringGenotype;
+
+import java.util.BitSet;
 
 /**
  * This crossover preserves the number of set bits by choosing 

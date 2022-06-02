@@ -19,11 +19,9 @@ import freak.core.view.swingsupport.FreakSwingModel;
 import freak.core.view.swingsupport.UpdateManager;
 import freak.module.fitness.generalstring.IsingModelTorus;
 import freak.module.searchspace.GeneralString;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Insets;
-import java.awt.Rectangle;
-import javax.swing.JPanel;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * Draws the Ising Model torus.

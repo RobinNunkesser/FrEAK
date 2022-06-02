@@ -6,13 +6,8 @@
 
 package freak.module.observer;
 
-import java.io.IOException;
-import java.io.Serializable;
-import java.util.Iterator;
-import java.util.Vector;
-
 import freak.Freak;
-import freak.core.control.Schedule;
+import freak.core.control.ScheduleInterface;
 import freak.core.event.RunEvent;
 import freak.core.event.RunEventListener;
 import freak.core.fitness.FitnessFunction;
@@ -32,6 +27,11 @@ import freak.module.searchspace.BooleanFunctionGenotype;
 import freak.module.searchspace.logictree.Data;
 import freak.rinterface.model.IndividualSummary;
 import freak.rinterface.model.RReturns;
+
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.Iterator;
+import java.util.Vector;
 
 /**
  * Gives the final individuals of all runs.
@@ -66,7 +66,7 @@ public class ResultObserver extends AbstractObserver implements RunEventListener
      * 
      * @param schedule a link back to the current schedule.
      */
-    public ResultObserver(Schedule schedule) {
+    public ResultObserver(ScheduleInterface schedule) {
         super(schedule);
         ModuleCollector moduleCollector = new ModuleCollector(schedule);
         postprocessors = moduleCollector.getPostprocessors(schedule.getGenotypeSearchSpace());
@@ -181,7 +181,7 @@ public class ResultObserver extends AbstractObserver implements RunEventListener
         }
 
         /**
-         * @param numberOfGenerations  the numberOfGenerations to set
+         * @param i  the numberOfGenerations to set
          * @uml.property  name="numberOfGenerations"
          */
         public void setNumberOfGenerations(int i) {
@@ -197,7 +197,7 @@ public class ResultObserver extends AbstractObserver implements RunEventListener
         }
 
         /**
-         * @param bestIndividuals  the bestIndividuals to set
+         * @param individuals  the bestIndividuals to set
          * @uml.property  name="bestIndividuals"
          */
         public void setBestIndividuals(IndividualList individuals) {
@@ -379,7 +379,7 @@ public class ResultObserver extends AbstractObserver implements RunEventListener
         }
 
         /**
-         * @param runNumber  the runNumber to set
+         * @param i  the runNumber to set
          * @uml.property  name="runNumber"
          */
         public void setRunNumber(int i) {

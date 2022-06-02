@@ -9,7 +9,7 @@
 
 package freak.gui.scheduleeditor;
 
-import freak.gui.*;
+import freak.gui.JButtonFactory;
 
 /**
  * @author Oliver

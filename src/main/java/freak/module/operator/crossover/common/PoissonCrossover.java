@@ -9,8 +9,6 @@
 
 package freak.module.operator.crossover.common;
 
-import java.util.BitSet;
-
 import edu.cornell.lassp.houle.RngPack.RandomElement;
 import freak.core.control.Schedule;
 import freak.core.graph.CompatibleWithDifferentSearchSpaces;
@@ -25,6 +23,8 @@ import freak.module.searchspace.BitString;
 import freak.module.searchspace.BitStringGenotype;
 import freak.module.searchspace.GeneralString;
 import freak.module.searchspace.GeneralStringGenotype;
+
+import java.util.BitSet;
 
 /**
  * Each position becomes a crossing point with probability prob. So the distance

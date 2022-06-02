@@ -10,15 +10,12 @@
 
 package freak.module.mapper.bitstring;
 
-import java.util.BitSet;
-
-import javax.swing.JTable;
-
 import freak.core.control.Schedule;
 import freak.core.event.BatchEvent;
 import freak.core.event.BatchEventListener;
 import freak.core.mapper.AbstractMapper;
 import freak.core.modulesupport.Configurable;
+import freak.core.modulesupport.inspector.CustomInspectable;
 import freak.core.modulesupport.inspector.CustomizableInspector;
 import freak.core.modulesupport.inspector.Inspector;
 import freak.core.modulesupport.inspector.StandardInspectorFactory;
@@ -28,6 +25,9 @@ import freak.module.searchspace.BitString;
 import freak.module.searchspace.BitStringGenotype;
 import freak.module.searchspace.BitStringGenotypeEditor;
 
+import javax.swing.*;
+import java.util.BitSet;
+
 /**
  * This transformer performs an xor operation on the genotype before the fitness
  * is evaluated. The shift with which the xor is performed can either be given
@@ -35,7 +35,8 @@ import freak.module.searchspace.BitStringGenotypeEditor;
  *
  * @author Heiko, Michael
  */
-public class XOR_Mapper extends AbstractMapper implements BatchEventListener, Configurable {
+public class XOR_Mapper extends AbstractMapper implements BatchEventListener, Configurable,
+		CustomInspectable {
 	
 	private BitSet shift;
 	

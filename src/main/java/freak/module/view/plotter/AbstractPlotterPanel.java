@@ -10,8 +10,8 @@
 
 package freak.module.view.plotter;
 
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * An abstract super class for the plotter's panels.

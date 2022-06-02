@@ -14,6 +14,7 @@ import freak.core.control.Schedule;
 import freak.core.event.BatchEvent;
 import freak.core.fitness.AbstractStaticSingleObjectiveFitnessFunction;
 import freak.core.modulesupport.Configurable;
+import freak.core.modulesupport.inspector.CustomInspectable;
 import freak.core.modulesupport.inspector.Inspector;
 import freak.core.population.Genotype;
 import freak.core.searchspace.HasDimension;
@@ -40,7 +41,8 @@ import freak.module.searchspace.GeneralStringGenotype;
  * @author Christian, Stefan
  */
 
-public class Champ extends AbstractStaticSingleObjectiveFitnessFunction implements Configurable {
+public class Champ extends AbstractStaticSingleObjectiveFitnessFunction implements Configurable,
+		CustomInspectable {
 
 	private int rule[];
 	private int[][] match;

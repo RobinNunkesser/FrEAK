@@ -9,16 +9,10 @@
 
 package freak.module.view.plotter;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Rectangle;
-
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.Scrollable;
-
 import freak.core.view.swingsupport.FreakScrollBarAdjustmentListener;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * A panel for the plotter that expands in x direction automatically
@@ -83,7 +77,7 @@ public class ExpandingPlotterPanel extends AbstractPlotterPanel {
 		}
 	}
 
-	class ExpandingXAxis extends AbstractPlotterPanel.XAxis {
+	class ExpandingXAxis extends XAxis {
 
 		void computeVisibleBounds() {
 			Rectangle visibleBounds = graphics.getClipBounds();
@@ -97,7 +91,7 @@ public class ExpandingPlotterPanel extends AbstractPlotterPanel {
 
 	}
 
-	class ExpandingPlotArea extends AbstractPlotterPanel.PlotArea {
+	class ExpandingPlotArea extends PlotArea {
 
 		public ExpandingPlotArea(XAxis xAxis, YAxis yAxis) {
 			super(xAxis, yAxis);

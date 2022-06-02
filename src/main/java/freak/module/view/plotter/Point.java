@@ -9,7 +9,7 @@
 
 package freak.module.view.plotter;
 
-import java.io.*;
+import java.io.Serializable;
 
 /**
  * A class for simple two-dimensional points that can be compared by 

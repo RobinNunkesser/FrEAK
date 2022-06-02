@@ -11,9 +11,13 @@
 package freak.gui.graph;
 
 import freak.core.graph.*;
+import org.jgraph.JGraph;
+import org.jgraph.graph.CellMapper;
+import org.jgraph.graph.CellViewRenderer;
+import org.jgraph.graph.PortRenderer;
+import org.jgraph.graph.PortView;
+
 import java.awt.*;
-import org.jgraph.*;
-import org.jgraph.graph.*;
 
 /**
  * @author  Matthias

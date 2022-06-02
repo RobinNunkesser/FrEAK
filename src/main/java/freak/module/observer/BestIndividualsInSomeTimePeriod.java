@@ -20,6 +20,7 @@ import freak.core.observer.AbstractObserver;
 import freak.core.population.Individual;
 import freak.core.population.IndividualList;
 import freak.core.population.Population;
+
 import java.util.HashMap;
 import java.util.Iterator;
 

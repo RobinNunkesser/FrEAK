@@ -6,11 +6,8 @@
 
 package freak.module.operator.mutation.common;
 
-import java.util.Arrays;
-import java.util.Comparator;
-
 import edu.cornell.lassp.houle.RngPack.RandomElement;
-import freak.core.control.Schedule;
+import freak.core.control.ScheduleInterface;
 import freak.core.graph.CompatibleWithDifferentSearchSpaces;
 import freak.core.graph.Mutation;
 import freak.core.graph.OperatorGraph;
@@ -18,13 +15,13 @@ import freak.core.modulesupport.Configurable;
 import freak.core.modulesupport.UnsupportedEnvironmentException;
 import freak.core.population.Individual;
 import freak.module.fitness.pointset.AbstractRobustRegressionFitness;
-import freak.module.fitness.pointset.LtSOptimization;
 import freak.module.fitness.pointset.util.ResidualContainer;
 import freak.module.searchspace.BitString;
 import freak.module.searchspace.BitStringGenotype;
-import freak.module.searchspace.PermutationGenotype;
 import freak.module.searchspace.PointSet;
-import freak.module.searchspace.PointSetGenotype;
+
+import java.util.Arrays;
+import java.util.Comparator;
 
 
 class vglSignedResiduals implements Comparator<ResidualContainer> {
@@ -108,7 +105,7 @@ public class LTSMutation extends Mutation implements CompatibleWithDifferentSear
 	}
 
 	@Override
-	public void testSchedule(Schedule schedule) throws UnsupportedEnvironmentException {
+	public void testSchedule(ScheduleInterface schedule) throws UnsupportedEnvironmentException {
 		// TODO Auto-generated method stub
 		super.testSchedule(schedule);
 		if (!((schedule.getRealFitnessFunction() instanceof AbstractRobustRegressionFitness) 

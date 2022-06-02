@@ -16,10 +16,8 @@ import freak.core.modulesupport.UnsupportedEnvironmentException;
 import freak.core.population.Individual;
 import freak.core.population.IndividualList;
 import freak.core.population.Population;
-import freak.core.searchspace.SearchSpace;
 import freak.module.searchspace.BitString;
 import freak.module.searchspace.BitStringGenotype;
-import freak.module.searchspace.PointSet;
 
 public class KBitInitialization extends Initialization implements Configurable {
 

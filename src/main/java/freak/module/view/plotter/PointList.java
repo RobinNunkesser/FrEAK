@@ -10,7 +10,7 @@
 
 package freak.module.view.plotter;
 
-import java.io.*;
+import java.io.Serializable;
 
 /**
  * Contains all individuals with the same x coordinate.  Two <code>PointList</code>s can be compared by their x values.

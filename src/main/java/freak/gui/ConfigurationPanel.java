@@ -20,22 +20,25 @@ import freak.core.graph.Port;
 import freak.core.modulesupport.Configurable;
 import freak.core.modulesupport.Module;
 import freak.core.modulesupport.PropertyManager;
+import freak.core.modulesupport.inspector.CustomInspectable;
 import freak.core.modulesupport.inspector.Inspector;
 import freak.core.modulesupport.inspector.InspectorVetoException;
+import freak.core.modulesupport.inspector.StandardInspectorFactory;
 import freak.gui.scheduleeditor.Util;
-import java.awt.Color;
-import javax.swing.JPanel;
+
+import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
+import java.awt.*;
 
 /**
  * @author  Oliver, Matthias
  */
-public class ConfigurationPanel extends javax.swing.JPanel {
+public class ConfigurationPanel extends JPanel {
 
 	private Module activeModule;
 	private EventController eventController;
@@ -111,7 +114,13 @@ public class ConfigurationPanel extends javax.swing.JPanel {
 			// -- show property panel if module is configurable
 			// -- a StandardPropertyPanel is always instant
 			if (activeModule instanceof Configurable) {
-				propertyPanel = ((Configurable)activeModule).getInspector();
+				if (activeModule instanceof CustomInspectable) {
+					propertyPanel =
+							(JPanel) ((CustomInspectable)activeModule).getInspector();
+				} else {
+					propertyPanel =
+							(JPanel) StandardInspectorFactory.getStandardInspectorFor(activeModule);
+				}
 				scrollProperties.setViewportView(propertyPanel);
 			} else
 				scrollProperties.setVisible(false);
@@ -304,7 +313,7 @@ public class ConfigurationPanel extends javax.swing.JPanel {
         java.awt.GridBagConstraints gridBagConstraints;
 
         scrollEvents = new javax.swing.JScrollPane();
-        panelModule = new javax.swing.JPanel();
+        panelModule = new JPanel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         taDescription = new javax.swing.JTextArea();
@@ -313,7 +322,7 @@ public class ConfigurationPanel extends javax.swing.JPanel {
         tablePorts = new javax.swing.JTable();
         editingType = new javax.swing.JTabbedPane();
         scrollProperties = new javax.swing.JScrollPane();
-        panelCodeEditing = new javax.swing.JPanel();
+        panelCodeEditing = new JPanel();
         scrollCode = new javax.swing.JScrollPane();
         propertyGenerationCode = new javax.swing.JTextArea();
         scrollErrorMsg = new javax.swing.JScrollPane();
@@ -391,7 +400,7 @@ public class ConfigurationPanel extends javax.swing.JPanel {
 
         panelCodeEditing.add(scrollCode, java.awt.BorderLayout.CENTER);
 
-        scrollErrorMsg.setBorder(new javax.swing.border.TitledBorder(null, "Error compiling Code", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), java.awt.Color.red));
+        scrollErrorMsg.setBorder(new javax.swing.border.TitledBorder(null, "Error compiling Code", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), Color.red));
         taErrorMsg.setWrapStyleWord(true);
         taErrorMsg.setLineWrap(true);
         taErrorMsg.setEditable(false);
@@ -417,8 +426,8 @@ public class ConfigurationPanel extends javax.swing.JPanel {
     private javax.swing.JTabbedPane editingType;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JPanel panelCodeEditing;
-    private javax.swing.JPanel panelModule;
+    private JPanel panelCodeEditing;
+    private JPanel panelModule;
     private javax.swing.JTextArea propertyGenerationCode;
     private javax.swing.JScrollPane scrollCode;
     private javax.swing.JScrollPane scrollErrorMsg;

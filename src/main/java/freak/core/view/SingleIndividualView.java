@@ -17,7 +17,8 @@ import freak.core.population.Individual;
 import freak.core.population.IndividualList;
 import freak.core.view.swingsupport.FreakSwingModel;
 import freak.core.view.swingsupport.UpdateManager;
-import javax.swing.JPanel;
+
+import javax.swing.*;
 
 /**
  * An abstract superclass for views displaying a single individual. Common methods for maintaining the panel and receiving individuals via  updates are provided. Subclasses must implement  <code>createIndividualPanel</code> to provide the panel displaying an  individual and they may access the individual to display by calling <code>getIndividualToDisplay</code>. 

@@ -10,7 +10,7 @@
 
 package freak.module.searchspace;
 
-import edu.cornell.lassp.houle.RngPack.*;
+import edu.cornell.lassp.houle.RngPack.RandomElement;
 import freak.core.control.*;
 import freak.core.modulesupport.Configurable;
 import freak.core.population.*;

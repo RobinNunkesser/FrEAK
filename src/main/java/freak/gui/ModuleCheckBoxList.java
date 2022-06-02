@@ -9,11 +9,11 @@
 
 package freak.gui;
 
-import java.awt.*;
+import freak.core.modulesupport.*;
+import freak.core.modulesupport.Module;
 
 import javax.swing.*;
-
-import freak.core.modulesupport.*;
+import java.awt.*;
 
 /**
  * An extension of the ModuleList providing JCheckBoxes for all entries.

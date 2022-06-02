@@ -11,21 +11,25 @@
 package freak.gui.scheduleeditor;
 
 import freak.core.modulesupport.*;
+import freak.core.modulesupport.Module;
 import freak.core.observer.*;
-import freak.core.observer.Observer;
-import freak.core.view.*;
-import freak.gui.*;
-import java.lang.reflect.*;
-import java.util.*;
+import freak.core.view.View;
+import freak.gui.JButtonFactory;
+import freak.gui.ModuleList;
+
 import javax.swing.*;
 import javax.swing.tree.*;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author  Oliver, Michael
  */
 public class PanelObservers extends ScheduleEditorPanel {
 
-	private ObserverManager observerManager;
+	private ObserverManagerInterface observerManager;
 	/**
 	 * @uml.property  name="observers"
 	 * @uml.associationEnd  multiplicity="(0 -1)"
@@ -227,27 +231,27 @@ public class PanelObservers extends ScheduleEditorPanel {
 	private void initComponents() { //GEN-BEGIN:initComponents
 		java.awt.GridBagConstraints gridBagConstraints;
 
-		jPanel7 = new javax.swing.JPanel();
-		jScrollPane4 = new javax.swing.JScrollPane();
-		treeObsItems = new javax.swing.JTree();
-		jPanel12 = new javax.swing.JPanel();
-		tfOptionsObserver = new javax.swing.JTextField();
+		jPanel7 = new JPanel();
+		jScrollPane4 = new JScrollPane();
+		treeObsItems = new JTree();
+		jPanel12 = new JPanel();
+		tfOptionsObserver = new JTextField();
 		buObsItemConfig = JButtonFactory.newButton();
-		jLabel1 = new javax.swing.JLabel();
+		jLabel1 = new JLabel();
 		buObsItemDelete = JButtonFactory.newButton();
-		jPanel9 = new javax.swing.JPanel();
-		jLabel13 = new javax.swing.JLabel();
+		jPanel9 = new JPanel();
+		jLabel13 = new JLabel();
 		buAddObserver = JButtonFactory.newButton();
-		jLabel14 = new javax.swing.JLabel();
-		jScrollPane2 = new javax.swing.JScrollPane();
+		jLabel14 = new JLabel();
+		jScrollPane2 = new JScrollPane();
 		listObservers = new ModuleList();
-		jScrollPane3 = new javax.swing.JScrollPane();
+		jScrollPane3 = new JScrollPane();
 		listViews = new ModuleList();
 		buAddView = JButtonFactory.newButton();
-		jScrollPane15 = new javax.swing.JScrollPane();
-		taDescrObserver = new javax.swing.JTextArea();
-		jScrollPane16 = new javax.swing.JScrollPane();
-		taDescrView = new javax.swing.JTextArea();
+		jScrollPane15 = new JScrollPane();
+		taDescrObserver = new JTextArea();
+		jScrollPane16 = new JScrollPane();
+		taDescrView = new JTextArea();
 
 		setLayout(new java.awt.GridBagLayout());
 
@@ -286,7 +290,7 @@ public class PanelObservers extends ScheduleEditorPanel {
 		gridBagConstraints.weightx = 0.1;
 		jPanel12.add(tfOptionsObserver, gridBagConstraints);
 
-		buObsItemConfig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Preferences16.gif")));
+		buObsItemConfig.setIcon(new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Preferences16.gif")));
 		buObsItemConfig.setMnemonic('o');
 		buObsItemConfig.setText("Configure...");
 		buObsItemConfig.setEnabled(false);
@@ -312,7 +316,7 @@ public class PanelObservers extends ScheduleEditorPanel {
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		jPanel12.add(jLabel1, gridBagConstraints);
 
-		buObsItemDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Delete16.gif")));
+		buObsItemDelete.setIcon(new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Delete16.gif")));
 		buObsItemDelete.setEnabled(false);
 		buObsItemDelete.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -354,7 +358,7 @@ public class PanelObservers extends ScheduleEditorPanel {
 		jPanel9.add(jLabel13, gridBagConstraints);
 
 		buAddObserver.setFont(new java.awt.Font("Dialog", 0, 12));
-		buAddObserver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Find16.gif")));
+		buAddObserver.setIcon(new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Find16.gif")));
 		buAddObserver.setMnemonic('a');
 		buAddObserver.setText("Add Observer");
 		buAddObserver.setEnabled(false);
@@ -379,7 +383,7 @@ public class PanelObservers extends ScheduleEditorPanel {
 		gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
 		jPanel9.add(jLabel14, gridBagConstraints);
 
-		listObservers.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+		listObservers.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		listObservers.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
 			public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
 				listObserversValueChanged(evt);
@@ -425,7 +429,7 @@ public class PanelObservers extends ScheduleEditorPanel {
 		jPanel9.add(jScrollPane3, gridBagConstraints);
 
 		buAddView.setFont(new java.awt.Font("Dialog", 0, 12));
-		buAddView.setIcon(new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/PrintPreview16.gif")));
+		buAddView.setIcon(new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/PrintPreview16.gif")));
 		buAddView.setMnemonic('u');
 		buAddView.setText("Add View");
 		buAddView.setEnabled(false);
@@ -605,27 +609,27 @@ public class PanelObservers extends ScheduleEditorPanel {
 	} //GEN-LAST:event_listObserversValueChanged
 
 	// Variables declaration - do not modify//GEN-BEGIN:variables
-	private javax.swing.JButton buAddObserver;
-	private javax.swing.JButton buAddView;
-	private javax.swing.JButton buObsItemConfig;
-	private javax.swing.JButton buObsItemDelete;
-	private javax.swing.JLabel jLabel1;
-	private javax.swing.JLabel jLabel13;
-	private javax.swing.JLabel jLabel14;
-	private javax.swing.JPanel jPanel12;
-	private javax.swing.JPanel jPanel7;
-	private javax.swing.JPanel jPanel9;
-	private javax.swing.JScrollPane jScrollPane15;
-	private javax.swing.JScrollPane jScrollPane16;
-	private javax.swing.JScrollPane jScrollPane2;
-	private javax.swing.JScrollPane jScrollPane3;
-	private javax.swing.JScrollPane jScrollPane4;
-	private javax.swing.JList listObservers;
-	private javax.swing.JList listViews;
-	private javax.swing.JTextArea taDescrObserver;
-	private javax.swing.JTextArea taDescrView;
-	private javax.swing.JTextField tfOptionsObserver;
-	private javax.swing.JTree treeObsItems;
+	private JButton buAddObserver;
+	private JButton buAddView;
+	private JButton buObsItemConfig;
+	private JButton buObsItemDelete;
+	private JLabel jLabel1;
+	private JLabel jLabel13;
+	private JLabel jLabel14;
+	private JPanel jPanel12;
+	private JPanel jPanel7;
+	private JPanel jPanel9;
+	private JScrollPane jScrollPane15;
+	private JScrollPane jScrollPane16;
+	private JScrollPane jScrollPane2;
+	private JScrollPane jScrollPane3;
+	private JScrollPane jScrollPane4;
+	private JList listObservers;
+	private JList listViews;
+	private JTextArea taDescrObserver;
+	private JTextArea taDescrView;
+	private JTextField tfOptionsObserver;
+	private JTree treeObsItems;
 	// End of variables declaration//GEN-END:variables
 
 }

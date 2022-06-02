@@ -11,12 +11,14 @@
 package freak.gui.graph;
 
 import freak.core.graph.*;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import org.jgraph.*;
-import org.jgraph.graph.*;
+import org.jgraph.JGraph;
+import org.jgraph.graph.BasicMarqueeHandler;
 import org.jgraph.graph.Port;
+import org.jgraph.graph.PortView;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.MouseEvent;
 
 /**
  * MarqueeHandler that connects <code>Operator</code>s.

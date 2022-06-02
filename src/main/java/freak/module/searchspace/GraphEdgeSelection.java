@@ -19,11 +19,13 @@ import freak.core.event.RunEvent;
 import freak.core.event.RunEventListener;
 import freak.core.modulesupport.Configurable;
 import freak.core.modulesupport.Configuration;
+import freak.core.modulesupport.inspector.CustomInspectable;
 import freak.core.modulesupport.inspector.Inspector;
 import freak.core.modulesupport.inspector.StringArrayWrapper;
 import freak.core.population.Genotype;
 import freak.core.searchspace.AbstractSearchSpace;
 import freak.core.searchspace.HasMetric;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,7 +33,8 @@ import java.util.Arrays;
 /**
  * @author  Kai, Stefan, Michael, Christian
  */
-public class GraphEdgeSelection extends AbstractSearchSpace implements Configurable, RunEventListener, BatchEventListener, HasMetric {
+public class GraphEdgeSelection extends AbstractSearchSpace implements Configurable, RunEventListener, BatchEventListener, HasMetric,
+		CustomInspectable {
 	
 	/**
 	 * This class provides the Graph functionality.

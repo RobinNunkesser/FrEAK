@@ -22,13 +22,10 @@ import freak.core.view.swingsupport.FreakScrollBarAdjustmentListener;
 import freak.core.view.swingsupport.FreakTableModel;
 import freak.core.view.swingsupport.UpdateManager;
 
-import java.awt.BorderLayout;
-import java.lang.reflect.Array;
-import javax.swing.JPanel;
-import javax.swing.JScrollBar;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.table.TableCellRenderer;
+import java.awt.*;
+import java.lang.reflect.Array;
 
 /**
  * A view that displays the number values for the last generations in  tabular form.

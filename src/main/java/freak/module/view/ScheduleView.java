@@ -11,6 +11,7 @@
 package freak.module.view;
 
 import freak.core.control.Schedule;
+import freak.core.control.ScheduleInterface;
 import freak.core.event.BatchEvent;
 import freak.core.event.BatchEventListener;
 import freak.core.event.ScheduleEvent;
@@ -26,29 +27,14 @@ import freak.core.view.swingsupport.FreakSwingModel;
 import freak.core.view.swingsupport.UpdateManager;
 import freak.gui.scheduleeditor.ObserverTreeCellRenderer;
 import freak.gui.scheduleeditor.ObserverTreeElement;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.util.Iterator;
-import javax.swing.BorderFactory;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextField;
-import javax.swing.JTree;
-import javax.swing.ToolTipManager;
+
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.MutableTreeNode;
-import javax.swing.tree.TreeCellRenderer;
-import javax.swing.tree.TreePath;
-import javax.swing.tree.TreeSelectionModel;
+import javax.swing.tree.*;
+import java.awt.*;
+import java.util.Iterator;
 
 /**
  * Displays information about the observed schedule in a table.
@@ -139,7 +125,7 @@ public class ScheduleView extends AbstractView implements ScheduleEventListener,
 	 * @author  nunkesser
 	 */
 	class SchedulePanel extends JPanel {
-		private Schedule schedule;
+		private ScheduleInterface schedule;
 
 		private int row = 0;
 
@@ -149,7 +135,7 @@ public class ScheduleView extends AbstractView implements ScheduleEventListener,
 		private DefaultTreeModel treeModel;
 		private JTree treeObsItems;
 
-		public SchedulePanel(Schedule schedule) {
+		public SchedulePanel(ScheduleInterface schedule) {
 			super();
 			this.schedule = schedule;
 

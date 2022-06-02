@@ -9,7 +9,7 @@
 
 package freak.module.operator.split;
 
-import edu.cornell.lassp.houle.RngPack.*;
+import edu.cornell.lassp.houle.RngPack.RandomElement;
 import freak.core.graph.*;
 import freak.core.population.*;
 

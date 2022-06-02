@@ -18,7 +18,8 @@ import freak.core.event.RunEvent;
 import freak.core.event.RunEventListener;
 import freak.core.fitness.*;
 import freak.core.population.*;
-import freak.module.searchspace.*;
+import freak.module.searchspace.GraphEdgeSelection;
+import freak.module.searchspace.GraphEdgeSelectionGenotype;
 
 /**
  * @author  Michael, Christian

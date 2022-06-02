@@ -9,11 +9,11 @@
 
 package freak.gui;
 
-import java.awt.*;
+import freak.core.modulesupport.*;
+import freak.core.modulesupport.Module;
 
 import javax.swing.*;
-
-import freak.core.modulesupport.*;
+import java.awt.*;
 
 /**
  * A <code>JList</code> rendering modules by <code>Module.getName()</code>

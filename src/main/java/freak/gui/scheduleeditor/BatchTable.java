@@ -11,20 +11,23 @@
 package freak.gui.scheduleeditor;
 
 import freak.core.control.*;
+
 import javax.swing.*;
-import javax.swing.table.*;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
 
 /**
  * @author  Oliver
  */
 public class BatchTable extends JTable {
 
-	private Schedule schedule;
+	private ScheduleInterface schedule;
 	private BatchList batchList;
 	private TableCellRenderer renderer;
 	private AbstractTableModel model;
 
-	public BatchTable(Schedule schedule) {
+	public BatchTable(ScheduleInterface schedule) {
 		this.schedule = schedule;
 		batchList = schedule.getBatchList();
 		model = new BatchTableModel(schedule);

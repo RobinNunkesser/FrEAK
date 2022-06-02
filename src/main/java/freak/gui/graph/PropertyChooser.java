@@ -16,17 +16,14 @@ import freak.core.modulesupport.PropertyManager;
 import freak.core.parametercontroller.ParameterController;
 import freak.gui.CheckBoxDialog;
 import freak.gui.JButtonFactory;
-import java.awt.Dialog;
+
+import javax.swing.*;
+import javax.swing.tree.*;
+import java.awt.*;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Enumeration;
 import java.util.List;
-import javax.swing.ImageIcon;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.DefaultTreeCellRenderer;
-import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.TreePath;
-import javax.swing.tree.TreeSelectionModel;
 
 /**
  * @author  Oliver

@@ -14,9 +14,9 @@ import freak.core.control.Schedule;
 import freak.core.view.AbstractView;
 import freak.core.view.swingsupport.FreakTextFieldModel;
 import freak.core.view.swingsupport.UpdateManager;
-import java.awt.Dimension;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * @author  Heiko

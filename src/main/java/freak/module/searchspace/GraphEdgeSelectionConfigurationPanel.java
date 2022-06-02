@@ -11,7 +11,11 @@
 package freak.module.searchspace;
 
 import freak.core.modulesupport.inspector.*;
-import java.awt.event.*;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 /**
  * @author  Stefan, Christian

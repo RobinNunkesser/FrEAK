@@ -11,12 +11,7 @@
 package freak.module.observer.isingmodelcliques;
 
 import freak.core.control.Schedule;
-import freak.core.event.BatchEvent;
-import freak.core.event.BatchEventListener;
-import freak.core.event.IndividualListEvent;
-import freak.core.event.IndividualListEventListener;
-import freak.core.event.RunEvent;
-import freak.core.event.RunEventListener;
+import freak.core.event.*;
 import freak.core.fitness.SingleObjectiveFitnessFunction;
 import freak.core.modulesupport.Configurable;
 import freak.core.modulesupport.UnsupportedEnvironmentException;

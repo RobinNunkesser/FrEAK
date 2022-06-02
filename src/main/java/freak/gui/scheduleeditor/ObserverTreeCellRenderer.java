@@ -9,10 +9,10 @@
 
 package freak.gui.scheduleeditor;
 
-import java.awt.*;
-
 import javax.swing.*;
-import javax.swing.tree.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeCellRenderer;
+import java.awt.*;
 
 /**
  * This class renders tree elements of the observer-tree. It displays tooltips

@@ -9,8 +9,6 @@
 
 package freak.module.operator.crossover.common;
 
-import java.util.BitSet;
-
 import freak.core.control.Schedule;
 import freak.core.graph.CompatibleWithDifferentSearchSpaces;
 import freak.core.graph.OperatorGraph;
@@ -25,6 +23,8 @@ import freak.module.searchspace.BitString;
 import freak.module.searchspace.BitStringGenotype;
 import freak.module.searchspace.GeneralString;
 import freak.module.searchspace.GeneralStringGenotype;
+
+import java.util.BitSet;
 
 /**
  * Chooses K crossing points at random and performs a k point crossover.

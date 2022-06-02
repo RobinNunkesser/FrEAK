@@ -6,47 +6,18 @@
 
 package freak.gui.gpas;
 
-import java.awt.BorderLayout;
+import freak.core.control.*;
+import freak.core.control.Actions.Action;
+import freak.gui.runframe.SingleExtensionFileFilter;
+import freak.rinterface.model.ScheduleConfigurator;
 
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.BoxLayout;
-import javax.swing.JTextField;
-import java.awt.CardLayout;
-import java.awt.FlowLayout;
-import java.awt.Frame;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import java.awt.GridLayout;
-import java.awt.Rectangle;
-import java.awt.Dimension;
+import javax.swing.*;
+import java.awt.*;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Vector;
-
-import javax.swing.JButton;
-import javax.swing.filechooser.FileFilter;
-
-import freak.Freak;
-import freak.core.control.Actions;
-import freak.core.control.BatchProcessor;
-import freak.core.control.GenerationIndex;
-import freak.core.control.Replay;
-import freak.core.control.RunControl;
-import freak.core.control.Schedule;
-import freak.core.control.StateListener;
-import freak.core.control.Actions.Action;
-import freak.gui.runframe.SingleExtensionFileFilter;
-import freak.rinterface.control.LogRegInterface;
-import freak.rinterface.model.ScheduleConfigurator;
-import javax.swing.JProgressBar;
 
 public class GPASDialog extends JDialog implements StateListener {
 
@@ -405,7 +376,7 @@ public class GPASDialog extends JDialog implements StateListener {
 		return jButton1;
 	}
 
-	public void asynchroneousFeedback(Schedule schedule, Replay replay) {
+	public void asynchroneousFeedback(ScheduleInterface schedule, Replay replay) {
 		if (schedule!=null) {
 			GenerationIndex now = schedule.getCurrentTimeIndex();
 			int currentGeneration = now.generation;
@@ -429,7 +400,7 @@ public class GPASDialog extends JDialog implements StateListener {
 		
 	}
 
-	public void synchroneousFeedback(Schedule activeSchedule, Replay replay) {
+	public void synchroneousFeedback(ScheduleInterface activeSchedule, Replay replay) {
 		// TODO Auto-generated method stub		
 	}
 
@@ -555,7 +526,7 @@ public class GPASDialog extends JDialog implements StateListener {
 			jButton4.setEnabled(true);
 			
 			ScheduleConfigurator.setDiscrimination(jTextField.getText(),runs,generations,jTextField3.getText(),jTextField7.getText());
-			Schedule schedule=ScheduleConfigurator.getCurrentSchedule();
+			ScheduleInterface schedule=ScheduleConfigurator.getCurrentSchedule();
 
 			runControl = new RunControl(this);
 			runControl.setNewSchedule(schedule);
@@ -612,7 +583,7 @@ public class GPASDialog extends JDialog implements StateListener {
 			jButton4.setEnabled(true);			
 			
 			ScheduleConfigurator.setInteraction(jTextField.getText(),runs,generations,jTextField4.getText(),occurences,ratio,jTextField7.getText());
-			Schedule schedule=ScheduleConfigurator.getCurrentSchedule();
+			ScheduleInterface schedule=ScheduleConfigurator.getCurrentSchedule();
 
 			runControl = new RunControl(this);
 			runControl.setNewSchedule(schedule);

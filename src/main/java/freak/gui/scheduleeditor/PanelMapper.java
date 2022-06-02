@@ -12,7 +12,8 @@ package freak.gui.scheduleeditor;
 
 import freak.core.mapper.Mapper;
 import freak.core.modulesupport.*;
-import freak.gui.*;
+import freak.core.modulesupport.Module;
+import freak.gui.ModuleList;
 
 /**
  * @author  Oliver, Michael

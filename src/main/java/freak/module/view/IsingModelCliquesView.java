@@ -20,10 +20,9 @@ import freak.core.view.swingsupport.UpdateManager;
 import freak.module.fitness.generalstring.IsingModelCliques;
 import freak.module.searchspace.GeneralString;
 import freak.module.searchspace.GeneralStringGenotype;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Insets;
-import javax.swing.JPanel;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * Draws the Ising Model on cliques.

@@ -10,7 +10,7 @@
 
 package freak.gui.runframe;
 
-import java.io.*;
+import java.io.File;
 
 /**
  * A general file filter for file dialogs of java swing.

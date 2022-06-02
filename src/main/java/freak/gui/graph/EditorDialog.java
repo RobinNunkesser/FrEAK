@@ -10,61 +10,36 @@
 
 package freak.gui.graph;
 
-import freak.core.control.Schedule;
-import freak.core.graph.FreakEdge;
-import freak.core.graph.FreakGraphModel;
-import freak.core.graph.FreakPort;
-import freak.core.graph.GraphSyntaxException;
-import freak.core.graph.HasFloatingNumberOfInPorts;
-import freak.core.graph.HasFloatingNumberOfOutPorts;
-import freak.core.graph.InPort;
-import freak.core.graph.Operator;
-import freak.core.graph.OperatorGraphCell;
-import freak.core.graph.OutPort;
+import freak.core.control.ScheduleInterface;
+import freak.core.graph.*;
 import freak.core.graph.Port;
-import freak.core.graph.PortConnectException;
 import freak.core.modulesupport.Module;
 import freak.core.modulesupport.ModuleInfo;
 import freak.core.modulesupport.inspector.InspectorVetoException;
 import freak.gui.ConfigurationPanel;
 import freak.gui.runframe.SingleExtensionFileFilter;
-import java.awt.Component;
-import java.awt.Dialog;
-import java.awt.Dimension;
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.awt.event.ActionEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.util.Arrays;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Vector;
-import java.util.prefs.Preferences;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
-import javax.swing.JTree;
-import javax.swing.ToolTipManager;
+import org.jgraph.event.GraphModelEvent;
+import org.jgraph.event.GraphModelListener;
+import org.jgraph.event.GraphSelectionEvent;
+import org.jgraph.graph.*;
+
+import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeCellRenderer;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeCellRenderer;
-import org.jgraph.event.GraphModelEvent;
-import org.jgraph.event.GraphModelListener;
-import org.jgraph.event.GraphSelectionEvent;
-import org.jgraph.graph.CellView;
-import org.jgraph.graph.ConnectionSet;
-import org.jgraph.graph.Edge;
-import org.jgraph.graph.GraphCell;
-import org.jgraph.graph.GraphConstants;
-import org.jgraph.graph.GraphLayoutCache;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.util.List;
+import java.util.*;
+import java.util.prefs.Preferences;
 
 /**
  * @author  Andrea, Matthias, Heiko
@@ -81,7 +56,7 @@ public class EditorDialog extends EditorDialogUI {
 	 * @param owner
 	 * @param schedule
 	 */
-	public EditorDialog(Dialog owner, Schedule schedule) {
+	public EditorDialog(Dialog owner, ScheduleInterface schedule) {
 		super(owner, schedule);
 
 		insertButton.setEnabled(false);
@@ -284,9 +259,6 @@ public class EditorDialog extends EditorDialogUI {
 		pcDialog.setVisible(true);
 	}
 
-	/**
-	 * @see com.jgraph.event.GraphSelectionListener#valueChanged(com.jgraph.event.GraphSelectionEvent)
-	 */
 	public void valueChanged(GraphSelectionEvent e) {
 		// Update button states based on current selection
 		boolean enabled = !graph.isSelectionEmpty();
@@ -328,9 +300,9 @@ public class EditorDialog extends EditorDialogUI {
 	 * @author  nunkesser
 	 */
 	private class FreakGraphModelListener implements GraphModelListener {
-		Schedule schedule;
+		ScheduleInterface schedule;
 
-		public FreakGraphModelListener(Schedule schedule) {
+		public FreakGraphModelListener(ScheduleInterface schedule) {
 			this.schedule = schedule;
 		}
 

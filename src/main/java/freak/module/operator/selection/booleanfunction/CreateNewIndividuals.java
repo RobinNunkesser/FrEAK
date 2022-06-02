@@ -13,7 +13,6 @@ import freak.core.modulesupport.Configurable;
 import freak.core.modulesupport.UnsupportedEnvironmentException;
 import freak.core.population.Individual;
 import freak.core.population.IndividualList;
-import freak.core.population.Population;
 import freak.module.searchspace.BooleanFunction;
 import freak.module.searchspace.BooleanFunctionGenotype;
 

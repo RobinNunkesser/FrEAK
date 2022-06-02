@@ -11,7 +11,8 @@ package freak.module.fitness.graphedgeselection;
 
 import freak.core.control.Schedule;
 import freak.core.population.Genotype;
-import freak.module.searchspace.*;
+import freak.module.searchspace.GraphEdgeSelection;
+import freak.module.searchspace.GraphEdgeSelectionGenotype;
 
 /**
  * @author Oliver
@@ -34,7 +35,7 @@ public class MSTOnSpanningTrees extends AbstractMSTFitnessFunction {
 
 	public String getDescription() {
 		return "This function just sums up the edge weights to find a minimal spanning tree. "
-			+ "It is only for use if every individual represents a spanning tree itself (like with Prüfer numbers). "
+			+ "It is only for use if every individual represents a spanning tree itself (like with Prï¿½fer numbers). "
 			+ "Calculations of connected components are not needed here as they are always 1.";
 	}
 

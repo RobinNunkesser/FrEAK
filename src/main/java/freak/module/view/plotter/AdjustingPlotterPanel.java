@@ -9,12 +9,8 @@
 
 package freak.module.view.plotter;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-
-import javax.swing.BorderFactory;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * A panel for the plotter adjusting its size automatically so that it

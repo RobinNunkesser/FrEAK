@@ -10,14 +10,16 @@ import freak.core.control.*;
 import freak.core.fitness.*;
 import freak.core.modulesupport.*;
 import freak.core.population.*;
-import freak.core.view.*;
+import freak.core.view.AbstractView;
 import freak.core.view.swingsupport.*;
-import freak.module.searchspace.*;
-import java.awt.*;
-import java.util.*;
-import javax.swing.*;
+import freak.module.searchspace.BooleanFunction;
+import freak.module.searchspace.BooleanFunctionGenotype;
 
-public class ParetoFront extends AbstractView implements Configurable, FreakSwingModel {
+import javax.swing.*;
+import java.awt.*;
+
+public class ParetoFront extends AbstractView
+		implements Configurable, FreakSwingModel {
 	private transient JPanel panel;
 
 	private static final float MAXIMAL_HUE = 0.8f;
@@ -348,7 +350,7 @@ public class ParetoFront extends AbstractView implements Configurable, FreakSwin
 		private void drawSearchSpace() {
 			graphics.setColor(Color.black);
 			//Koordinatenachsen zeichnen
-			//y-Achse (Größe)
+			//y-Achse (Grï¿½ï¿½e)
 			for (int y = 0; y <= currentHeight; y++) {
 				drawPixel(insets.left, y + insets.top);
 			}
@@ -364,7 +366,7 @@ public class ParetoFront extends AbstractView implements Configurable, FreakSwin
 			
 			graphics.drawLine(insets.left-5, insets.top+5, insets.left, insets.top);
 			graphics.drawLine(insets.left+5, insets.top+5, insets.left, insets.top);
-			graphics.drawString("Größe", insets.left+10, insets.top+10);
+			graphics.drawString("Grï¿½ï¿½e", insets.left+10, insets.top+10);
 
 		}
 		

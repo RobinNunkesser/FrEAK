@@ -9,11 +9,12 @@
 
 package freak.module.operator.crossover.generalstring;
 
-import edu.cornell.lassp.houle.RngPack.*;
+import edu.cornell.lassp.houle.RngPack.RandomElement;
 import freak.core.graph.*;
 import freak.core.population.*;
-import freak.module.operator.crossover.*;
-import freak.module.searchspace.*;
+import freak.module.operator.crossover.MultiPairwiseCrossover;
+import freak.module.searchspace.GeneralString;
+import freak.module.searchspace.GeneralStringGenotype;
 
 /**
  * The positions which are identical in both parents are taken over.

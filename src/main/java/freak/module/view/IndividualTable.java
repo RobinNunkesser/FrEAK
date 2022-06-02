@@ -20,11 +20,10 @@ import freak.core.view.AbstractView;
 import freak.core.view.swingsupport.FreakSmallTableModel;
 import freak.core.view.swingsupport.FreakTableModel;
 import freak.core.view.swingsupport.UpdateManager;
-import java.awt.BorderLayout;
+
+import javax.swing.*;
+import java.awt.*;
 import java.util.Iterator;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
 
 /**
  * Shows a table of all individuals with their genotypes, fitness values and  dates of birth.

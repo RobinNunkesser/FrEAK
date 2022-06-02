@@ -10,37 +10,24 @@
 
 package freak.module.view;
 
-import java.io.IOException;
-import java.util.Iterator;
-import java.util.Vector;
-
-import freak.Freak;
 import freak.core.control.*;
 import freak.core.fitness.FitnessFunction;
 import freak.core.fitness.MultiObjectiveFitnessFunction;
 import freak.core.fitness.SingleObjectiveFitnessFunction;
 import freak.core.population.Individual;
 import freak.core.view.swingsupport.*;
-import freak.module.fitness.pointset.AbstractRobustRegressionFitness;
-import freak.module.fitness.pointset.AbstractStaticSingleObjectiveRobustRegressionFitness;
-import freak.module.fitness.pointset.LtSOptimization;
 import freak.module.observer.ResultObserver.Result;
-import freak.module.searchspace.BitStringGenotype;
 import freak.module.searchspace.BooleanFunction;
 import freak.module.searchspace.BooleanFunctionGenotype;
-import freak.module.searchspace.PointSetGenotype;
 import freak.module.searchspace.logictree.DNFTree;
 import freak.module.searchspace.logictree.Data;
-import freak.rinterface.model.IndividualSummary;
-import freak.rinterface.model.RReturns;
-import freak.rinterface.model.SAtomicCharacterVector;
-import freak.rinterface.model.SAtomicIntegerVector;
-import freak.rinterface.model.SAtomicDoubleVector;
-import freak.rinterface.model.SDataFrame;
-
+import freak.rinterface.model.*;
 
 import javax.swing.*;
-import javax.swing.border.*;
+import javax.swing.border.TitledBorder;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Vector;
 
 /**
  * An extension of <code>StdView</code> that writes the displayed data in an R data.frame.
@@ -72,7 +59,7 @@ public class RReturn extends StdView {
 	 * 
 	 * @param schedule a link back to the current schedule.
 	 */
-	public RReturn(Schedule schedule) {
+	public RReturn(ScheduleInterface schedule) {
 		super(schedule);
 	}
 

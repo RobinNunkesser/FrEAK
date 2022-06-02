@@ -12,8 +12,9 @@ package freak.gui.scheduleeditor;
 
 import freak.core.graph.*;
 import freak.core.modulesupport.*;
+import freak.core.modulesupport.Module;
 import freak.core.populationmanager.*;
-import freak.gui.*;
+import freak.gui.ModuleList;
 
 /**
  * @author  Oliver

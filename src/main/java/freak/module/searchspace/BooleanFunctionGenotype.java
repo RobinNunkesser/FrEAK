@@ -6,10 +6,12 @@
 
 package freak.module.searchspace;
 
-import edu.cornell.lassp.houle.RngPack.*;
-import freak.core.control.Schedule;
+import freak.core.control.ScheduleInterface;
 import freak.core.population.*;
-import freak.module.searchspace.logictree.*;
+import freak.module.searchspace.logictree.AndNode;
+import freak.module.searchspace.logictree.DNFTree;
+import freak.module.searchspace.logictree.OperatorNodeVector;
+import freak.module.searchspace.logictree.StaticCompareNode;
 
 import java.io.Serializable;
 import java.util.BitSet;
@@ -20,17 +22,17 @@ public class BooleanFunctionGenotype extends Genotype implements Serializable{
 
 	private DNFTree dnfbaum;
 //    private final int maxPercent = 100;
-    private Schedule schedule;
+    private ScheduleInterface schedule;
     private String inputFilePath;
 	
 	/* **************************** Constructors ************************************ */
   
-    public BooleanFunctionGenotype(String inputFilePath, Schedule schedule){
+    public BooleanFunctionGenotype(String inputFilePath, ScheduleInterface schedule){
     	this(new DNFTree(inputFilePath,schedule,0,true),schedule);
 	//	System.out.print("BooleanFunktGeno:Const\n");
 	}
 	
-	public BooleanFunctionGenotype(DNFTree dnft, Schedule schedule){
+	public BooleanFunctionGenotype(DNFTree dnft, ScheduleInterface schedule){
 		if (dnft instanceof DNFTree) {
 			dnfbaum = dnft;
 		}
@@ -101,7 +103,7 @@ public class BooleanFunctionGenotype extends Genotype implements Serializable{
 	 * @return  the schedule
 	 * @uml.property  name="schedule"
 	 */
-	public Schedule getSchedule(){
+	public ScheduleInterface getSchedule(){
 		return schedule;
 	}
 	

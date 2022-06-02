@@ -9,8 +9,6 @@
 
 package freak.module.operator.selection;
 
-import java.util.Iterator;
-
 import freak.core.control.Schedule;
 import freak.core.fitness.FitnessFunction;
 import freak.core.graph.CompatibleWithDifferentSearchSpaces;
@@ -23,6 +21,8 @@ import freak.core.population.IndividualList;
 import freak.core.population.Population;
 import freak.module.fitness.generalstring.SSSPMultiObjective;
 import freak.module.fitness.generalstring.SSSPSingleObjective;
+
+import java.util.Iterator;
 
 /**
  * This selection operator assumes that its input consists of exactly 2

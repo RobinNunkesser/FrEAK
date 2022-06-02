@@ -10,11 +10,7 @@
 
 package freak.module.operator.split;
 
-import freak.core.graph.CompatibleWithDifferentSearchSpaces;
-import freak.core.graph.GraphException;
-import freak.core.graph.HasFloatingNumberOfOutPorts;
-import freak.core.graph.OperatorGraph;
-import freak.core.graph.Split;
+import freak.core.graph.*;
 import freak.core.modulesupport.inspector.CustomizableInspector;
 import freak.core.population.IndividualList;
 import freak.core.population.Population;

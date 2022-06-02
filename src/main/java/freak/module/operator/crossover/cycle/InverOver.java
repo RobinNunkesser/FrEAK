@@ -9,14 +9,14 @@
 
 package freak.module.operator.crossover.cycle;
 
-import java.util.*;
-
-import edu.cornell.lassp.houle.RngPack.*;
+import edu.cornell.lassp.houle.RngPack.RandomElement;
 import freak.core.control.*;
 import freak.core.graph.*;
 import freak.core.modulesupport.*;
 import freak.core.population.*;
-import freak.module.searchspace.*;
+import freak.module.searchspace.PermutationGenotype;
+
+import java.util.Iterator;
 
 /**
  * Inver-over Operator for the TSP<br>
@@ -71,7 +71,7 @@ public class InverOver extends Recombination implements Configurable {
 	 * Operator on every individual
 	 */
 	public IndividualList[] process(IndividualList[] input) {
-		Schedule schedule = graph.getSchedule();
+		ScheduleInterface schedule = graph.getSchedule();
 		RandomElement re = schedule.getRandomElement();
 		IndividualList population = input[0];
 		Iterator it = population.iterator();

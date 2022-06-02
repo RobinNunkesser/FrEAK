@@ -11,7 +11,8 @@ package freak.module.fitness.graphedgeselection;
 
 import freak.core.control.*;
 import freak.core.population.*;
-import freak.module.searchspace.*;
+import freak.module.searchspace.GraphEdgeSelection;
+import freak.module.searchspace.GraphEdgeSelectionGenotype;
 
 /**
  * This class implements the fitness function for the minimal spanning tree

@@ -16,7 +16,8 @@ import freak.core.fitness.MultiObjectiveFitnessFunction;
 import freak.core.fitness.SingleObjectiveFitnessFunction;
 import freak.core.observer.*;
 import freak.core.population.*;
-import java.util.*;
+
+import java.util.Iterator;
 
 /**
  * Draws a summary of all runs.

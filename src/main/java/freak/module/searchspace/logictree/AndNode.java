@@ -6,9 +6,10 @@
 
 package freak.module.searchspace.logictree;
 
+import freak.rinterface.control.RFlags;
+
 import java.io.Serializable;
 import java.util.BitSet;
-import freak.rinterface.control.RFlags;
 
 /**
  * @author Melanie
@@ -63,7 +64,7 @@ public class AndNode extends MultipleOperatorNode implements Serializable{
 	    for (int i = 0; i < children.size(); i++){
 	    	rueckgabe.and( (children.get(i)).getValueBitset() );
 	    }
-//		System.out.println(this.toString()+" liefert Bitset der LŠnge "+rueckgabe.length()+ " mit "+rueckgabe.size() +" Bits (=Datenzeilen?)");
+//		System.out.println(this.toString()+" liefert Bitset der Lï¿½nge "+rueckgabe.length()+ " mit "+rueckgabe.size() +" Bits (=Datenzeilen?)");
 		return rueckgabe;
 	}
 	

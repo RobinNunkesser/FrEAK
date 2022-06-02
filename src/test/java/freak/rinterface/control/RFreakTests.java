@@ -9,6 +9,7 @@ import freak.rinterface.model.RDoubleMatrix;
 import freak.rinterface.model.RReturns;
 import freak.rinterface.model.SDataFrame;
 import freak.rinterface.model.ScheduleConfigurator;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -33,6 +34,11 @@ public class RFreakTests {
         double crit = RReturns.getResidual();
         double[] coefficients = RReturns.getFittedHyperplane();
         int[] best = RReturns.getChosenIndices();
+        Assertions.assertNotNull(returnedFrame);
+        Assertions.assertNotNull(crit);
+        Assertions.assertNotNull(coefficients);
+        Assertions.assertNotNull(best);
+
     }
 
     @Test
@@ -45,6 +51,24 @@ public class RFreakTests {
         Data.setRData(trainingData);
         Data.setRMode();
         ScheduleConfigurator.setInteractionR(1,1000,"test.dot",10,0.1);
+        Schedule schedule = ScheduleConfigurator.getCurrentSchedule();
+        LogRegInterface.rSetSchedule(schedule);
+        RFreak.rMain(new String[] {""});
+        SDataFrame returnedFrame = RReturns.getDataFrame();
+        DNFTree[] returnedTrees = RReturns.getAllTrees();
+        Data.clear();
+    }
+
+    @Test
+    public void testDiscriminationR() throws Exception {
+        int[] preds = { 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 2, 2, 0, 1, 2, 2, 0, 1, 1, 2, 0, 2, 2, 0, 2, 0, 2, 1, 2, 1, 1, 0, 1, 0, 1, 2, 0, 1, 2, 0, 0, 0, 2, 0, 2, 1, 1, 1, 1, 0, 0, 0, 2, 2, 1, 2, 0, 0, 2, 1, 1, 1, 2, 1, 0, 2, 1, 2, 0, 0, 0, 2, 0, 2, 0, 2, 0, 0, 1, 1, 0, 1, 2, 2, 2, 0, 1, 0, 2, 1, 0, 1, 2, 0, 2, 1, 0, 2, 1, 1, 1, 1, 0, 2, 2, 0, 0, 2, 1};
+        int[] dim = {10, 11};
+        String[] columnNames = {"FK", "SNP1", "SNP2", "SNP3", "SNP4", "SNP5", "SNP6", "SNP7", "SNP8", "SNP9", "SNP10"};
+        RData trainingData = new RData(preds,dim, columnNames);
+        Data.setTrainingData(trainingData);
+        Data.setRData(trainingData);
+        Data.setRMode();
+        ScheduleConfigurator.setDiscriminationR(1,10000);
         Schedule schedule = ScheduleConfigurator.getCurrentSchedule();
         LogRegInterface.rSetSchedule(schedule);
         RFreak.rMain(new String[] {""});

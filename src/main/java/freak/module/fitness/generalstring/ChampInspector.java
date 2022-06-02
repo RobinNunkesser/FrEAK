@@ -9,21 +9,17 @@
  */
 
 package freak.module.fitness.generalstring;
+
 import freak.core.modulesupport.inspector.Inspector;
 import freak.module.searchspace.GeneralString;
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
+
+import javax.swing.*;
+import javax.swing.table.AbstractTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
-import javax.swing.JCheckBox;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.table.AbstractTableModel;
 /**
  * The inspector for the class Champ. This class extends JPanel to make it possible to configure the fitness function Champ.
  * @author  Christian
@@ -116,7 +112,7 @@ public class ChampInspector extends Inspector {
 			try {
 				value = new Integer((String)obj);
 				rule[row] = (value.intValue() >= 0) ? value.intValue() : 0;
-			} catch (java.lang.NumberFormatException e) {
+			} catch (NumberFormatException e) {
 			}
 			function.setPropertyRule(rule);
 			fireTableCellUpdated(row, col);
@@ -157,7 +153,7 @@ public class ChampInspector extends Inspector {
 			try {
 				value = new Integer((String)obj);
 				score[row - 1] = (value.intValue() >= 0) ? value.intValue() : 0;
-			} catch (java.lang.NumberFormatException e) {
+			} catch (NumberFormatException e) {
 			}
 			function.setPropertyScore(score);
 			fireTableCellUpdated(row, col);
@@ -211,7 +207,7 @@ public class ChampInspector extends Inspector {
 					realValue = function.getPropertyScore().length - 1;
 				
 				match[row - 1][col - 1] = realValue;
-			} catch (java.lang.NumberFormatException e) {
+			} catch (NumberFormatException e) {
 			}
 			
 			function.setPropertyMatch(match);
@@ -229,7 +225,7 @@ public class ChampInspector extends Inspector {
 				realValue = value.intValue();
 				if (realValue < 0)
 					textField.setText(Integer.toString(function.getPropertyRule().length));
-			} catch (java.lang.NumberFormatException event) {
+			} catch (NumberFormatException event) {
 			}
 			// refresh the score-table
 			int diff = realValue - function.getPropertyScore().length;

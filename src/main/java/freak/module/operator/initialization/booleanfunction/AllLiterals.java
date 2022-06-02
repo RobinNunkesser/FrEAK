@@ -6,32 +6,19 @@
 
 package freak.module.operator.initialization.booleanfunction;
 
-import java.util.Iterator;
-
-import edu.cornell.lassp.houle.RngPack.RandomElement;
 import freak.core.control.Schedule;
 import freak.core.fitness.AbstractMultiObjectiveFitnessFunction;
 import freak.core.fitness.MultiObjectiveFitnessFunction;
-import freak.core.graph.GraphException;
 import freak.core.graph.Initialization;
 import freak.core.graph.OperatorGraph;
-import freak.core.modulesupport.Configurable;
 import freak.core.modulesupport.UnsupportedEnvironmentException;
-import freak.core.population.Genotype;
 import freak.core.population.Individual;
 import freak.core.population.IndividualList;
 import freak.core.population.Population;
-import freak.core.searchspace.SearchSpace;
-import freak.module.searchspace.BitString;
-import freak.module.searchspace.BitStringGenotype;
 import freak.module.searchspace.BooleanFunction;
-import freak.module.searchspace.BooleanFunctionGenotype;
-import freak.module.searchspace.PointSet;
-import freak.module.searchspace.logictree.AndNode;
-import freak.module.searchspace.logictree.DNFTree;
 import freak.module.searchspace.logictree.Data;
-import freak.module.searchspace.logictree.OrNode;
-import freak.module.searchspace.logictree.StaticCompareNode;
+
+import java.util.Iterator;
 
 public class AllLiterals extends Initialization  {
 	

@@ -17,7 +17,8 @@ import freak.core.event.RunEvent;
 import freak.core.event.RunEventListener;
 import freak.core.fitness.AbstractStaticSingleObjectiveFitnessFunction;
 import freak.core.population.Genotype;
-import freak.module.searchspace.*;
+import freak.module.searchspace.GraphEdgeSelection;
+import freak.module.searchspace.GraphEdgeSelectionGenotype;
 
 /**
  * @author  Oliver

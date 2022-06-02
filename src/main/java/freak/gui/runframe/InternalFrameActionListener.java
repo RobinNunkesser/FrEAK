@@ -9,9 +9,9 @@
 
 package freak.gui.runframe;
 
-import java.awt.event.*;
-
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Brings the frame back to front.

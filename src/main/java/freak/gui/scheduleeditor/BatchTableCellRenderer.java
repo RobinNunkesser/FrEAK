@@ -11,22 +11,23 @@
 package freak.gui.scheduleeditor;
 
 import freak.core.control.*;
-import java.awt.*;
+
 import javax.swing.*;
-import javax.swing.table.*;
+import javax.swing.table.DefaultTableCellRenderer;
+import java.awt.*;
 
 /**
  * This class renders the cells of the BatchTable.
  * @author  Oliver
  */
 public class BatchTableCellRenderer extends DefaultTableCellRenderer {
-	private Schedule schedule;
+	private ScheduleInterface schedule;
 	private GenerationIndex time;
 	private static final Color COLOR_FINISHED = new Color(255, 200, 200);
 	private static final Color COLOR_RUNNING = new Color(255, 255, 200);
 	private static final Color COLOR_COMINGUP = new Color(200, 255, 200);
 
-	public BatchTableCellRenderer(Schedule schedule) {
+	public BatchTableCellRenderer(ScheduleInterface schedule) {
 		this.schedule = schedule;
 		time = schedule.getCurrentTimeIndex();
 	}

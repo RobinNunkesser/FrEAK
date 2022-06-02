@@ -10,8 +10,6 @@
 
 package freak.module.operator.selection;
 
-import java.util.Iterator;
-
 import freak.core.control.Schedule;
 import freak.core.fitness.AbstractMultiObjectiveFitnessFunction;
 import freak.core.fitness.MultiObjectiveFitnessFunction;
@@ -24,6 +22,8 @@ import freak.core.population.Individual;
 import freak.core.population.IndividualList;
 import freak.core.population.Population;
 import freak.module.searchspace.BooleanFunctionGenotype;
+
+import java.util.Iterator;
 
 /**
  * This selection operator first checks whether the newly created individuals is

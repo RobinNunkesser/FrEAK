@@ -13,12 +13,17 @@ package freak.gui;
 import freak.core.control.*;
 import freak.core.event.*;
 import freak.core.modulesupport.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
-import java.util.List;
+import freak.core.modulesupport.Module;
+
 import javax.swing.*;
-import javax.swing.table.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellEditor;
+import javax.swing.table.TableCellRenderer;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Custom JTable for assigning Events to matching EventSources.
@@ -31,7 +36,7 @@ public class EventTable extends JTable {
 		public EventSourceWrapper(Object o) {
 			obj = o;
 		}
-		/** @see java.lang.Object#toString() */
+		/** @see Object#toString() */
 		public String toString() {
 			if (obj instanceof Module)
 				return ((Module)obj).getName();
@@ -52,7 +57,7 @@ public class EventTable extends JTable {
 	 * @author Oliver
 	 */
 	private class EventTableCellRenderer implements TableCellRenderer {
-		/** @see javax.swing.table.TableCellRenderer#getTableCellRendererComponent(javax.swing.JTable, java.lang.Object, boolean, boolean, int, int) */
+		/** @see TableCellRenderer#getTableCellRendererComponent(JTable, Object, boolean, boolean, int, int) */
 		public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
 			if (column == 1)
 				return (Component)eventComboBoxes.get(row);
@@ -97,7 +102,7 @@ public class EventTable extends JTable {
 		setRowHeight(20);
 	}
 
-	/** @see javax.swing.JTable#getCellEditor(int, int) */
+	/** @see JTable#getCellEditor(int, int) */
 	public TableCellEditor getCellEditor(int row, int column) {
 		// -- no editor for event names, ComboBox for eventsource lists
 		if (column == 1)
@@ -107,7 +112,7 @@ public class EventTable extends JTable {
 	}
 
 	/**
-	 * @see javax.swing.JTable#getCellRenderer(int, int)
+	 * @see JTable#getCellRenderer(int, int)
 	 */
 	public TableCellRenderer getCellRenderer(int row, int column) {
 		if (column == 1) {

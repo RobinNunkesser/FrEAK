@@ -10,10 +10,13 @@
 
 package freak.gui.runframe;
 
-import java.awt.*;
-import java.beans.*;
-import java.util.*;
 import javax.swing.*;
+import java.awt.*;
+import java.beans.PropertyVetoException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * A <code>DesktopPane</code> providing additional functionality: the visible frames can be tiled, cascaded, minimized, restored or closed.

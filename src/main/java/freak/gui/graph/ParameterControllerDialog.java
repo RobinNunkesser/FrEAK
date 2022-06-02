@@ -10,7 +10,7 @@
 
 package freak.gui.graph;
 
-import freak.core.control.Schedule;
+import freak.core.control.ScheduleInterface;
 import freak.core.graph.Operator;
 import freak.core.modulesupport.Module;
 import freak.core.modulesupport.ModuleCollector;
@@ -21,24 +21,21 @@ import freak.gui.ConfigurationPanel;
 import freak.gui.JButtonFactory;
 import freak.gui.ModuleList;
 import freak.gui.scheduleeditor.Util;
-import java.awt.Dialog;
-import java.awt.Dimension;
-import java.lang.reflect.InvocationTargetException;
-import java.util.List;
-import javax.swing.DefaultListModel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.ListSelectionModel;
+
+import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 
 /**
  * @author  Oliver, Matthias
  */
 public class ParameterControllerDialog extends javax.swing.JDialog {
 
-	private Schedule schedule;
+	private ScheduleInterface schedule;
 	private List parameterController;
 	/**
 	 * @uml.property  name="parameterControllers"
@@ -50,7 +47,7 @@ public class ParameterControllerDialog extends javax.swing.JDialog {
 	private ConfigurationPanel displayedConfigurationPanel;
 
 	/** Creates new form ParameterControllerDialog */
-	public ParameterControllerDialog(Dialog parent, Schedule schedule) {
+	public ParameterControllerDialog(Dialog parent, ScheduleInterface schedule) {
 		super(parent, true);
 		initComponents();
 		setLocationRelativeTo(parent);
@@ -158,19 +155,19 @@ public class ParameterControllerDialog extends javax.swing.JDialog {
 		java.awt.GridBagConstraints gridBagConstraints;
 
 		jSplitPane1 = new javax.swing.JSplitPane();
-		jPanel3 = new javax.swing.JPanel();
-		jPanel2 = new javax.swing.JPanel();
+		jPanel3 = new JPanel();
+		jPanel2 = new JPanel();
 		jScrollPane2 = new javax.swing.JScrollPane();
 		listParameterController = new ModuleList();
 		buAdd = JButtonFactory.newButton();
-		jPanel1 = new javax.swing.JPanel();
+		jPanel1 = new JPanel();
 		jScrollPane3 = new javax.swing.JScrollPane();
 		listActivePCs = new javax.swing.JList();
 		jScrollPane4 = new javax.swing.JScrollPane();
 		tableProperties = new javax.swing.JTable();
 		buRemove = JButtonFactory.newButton();
 		buChoose = JButtonFactory.newButton();
-		jPanel4 = new javax.swing.JPanel();
+		jPanel4 = new JPanel();
 		buClose = JButtonFactory.newButton();
 
 		getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -188,10 +185,10 @@ public class ParameterControllerDialog extends javax.swing.JDialog {
 		jPanel2.setLayout(new java.awt.GridBagLayout());
 
 		jPanel2.setBorder(new javax.swing.border.TitledBorder("Available"));
-		jScrollPane2.setMinimumSize(new java.awt.Dimension(200, 0));
-		jScrollPane2.setPreferredSize(new java.awt.Dimension(200, 0));
-		listParameterController.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
-			public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+		jScrollPane2.setMinimumSize(new Dimension(200, 0));
+		jScrollPane2.setPreferredSize(new Dimension(200, 0));
+		listParameterController.addListSelectionListener(new ListSelectionListener() {
+			public void valueChanged(ListSelectionEvent evt) {
 				listParameterControllerValueChanged(evt);
 			}
 		});
@@ -241,8 +238,8 @@ public class ParameterControllerDialog extends javax.swing.JDialog {
 				listActivePCsFocusGained(evt);
 			}
 		});
-		listActivePCs.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
-			public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+		listActivePCs.addListSelectionListener(new ListSelectionListener() {
+			public void valueChanged(ListSelectionEvent evt) {
 				listActivePCsValueChanged(evt);
 			}
 		});
@@ -362,7 +359,7 @@ public class ParameterControllerDialog extends javax.swing.JDialog {
 			buAddActionPerformed(null);
 	} //GEN-LAST:event_listParameterControllerMouseClicked
 
-	private void listActivePCsValueChanged(javax.swing.event.ListSelectionEvent evt) { //GEN-FIRST:event_listActivePCsValueChanged
+	private void listActivePCsValueChanged(ListSelectionEvent evt) { //GEN-FIRST:event_listActivePCsValueChanged
 		if (!listActivePCs.isSelectionEmpty()) {
 			ParameterController pc = (ParameterController)parameterController.get(listActivePCs.getSelectedIndex());
 			updateParameterTable(pc);
@@ -402,7 +399,7 @@ public class ParameterControllerDialog extends javax.swing.JDialog {
 		}
 	} //GEN-LAST:event_buRemoveActionPerformed
 
-	private void listParameterControllerValueChanged(javax.swing.event.ListSelectionEvent evt) { //GEN-FIRST:event_listParameterControllerValueChanged
+	private void listParameterControllerValueChanged(ListSelectionEvent evt) { //GEN-FIRST:event_listParameterControllerValueChanged
 		if (!listParameterController.isSelectionEmpty()) {
 			buAdd.setEnabled(true);
 		} else {
@@ -437,10 +434,10 @@ public class ParameterControllerDialog extends javax.swing.JDialog {
 	private javax.swing.JButton buChoose;
 	private javax.swing.JButton buClose;
 	private javax.swing.JButton buRemove;
-	private javax.swing.JPanel jPanel1;
-	private javax.swing.JPanel jPanel2;
-	private javax.swing.JPanel jPanel3;
-	private javax.swing.JPanel jPanel4;
+	private JPanel jPanel1;
+	private JPanel jPanel2;
+	private JPanel jPanel3;
+	private JPanel jPanel4;
 	private javax.swing.JScrollPane jScrollPane2;
 	private javax.swing.JScrollPane jScrollPane3;
 	private javax.swing.JScrollPane jScrollPane4;

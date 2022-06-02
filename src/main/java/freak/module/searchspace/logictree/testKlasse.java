@@ -7,7 +7,6 @@
 package freak.module.searchspace.logictree;
 
 import java.io.IOException;
-import java.util.BitSet;
 
 public class testKlasse{
 	

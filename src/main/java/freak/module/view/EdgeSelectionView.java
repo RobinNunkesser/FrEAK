@@ -14,12 +14,15 @@ import freak.core.control.*;
 import freak.core.fitness.*;
 import freak.core.modulesupport.*;
 import freak.core.population.*;
-import freak.core.view.*;
+import freak.core.view.SingleIndividualView;
 import freak.core.view.swingsupport.*;
-import freak.module.fitness.graphedgeselection.*;
-import freak.module.searchspace.*;
-import java.awt.*;
+import freak.module.fitness.graphedgeselection.AbstractMSTFitnessFunction;
+import freak.module.fitness.graphedgeselection.MSTFitnessFunctionInterface;
+import freak.module.searchspace.GraphEdgeSelection;
+import freak.module.searchspace.GraphEdgeSelectionGenotype;
+
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * @author Michael

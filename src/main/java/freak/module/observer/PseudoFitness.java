@@ -18,21 +18,24 @@ import freak.core.modulesupport.Configurable;
 import freak.core.modulesupport.Module;
 import freak.core.modulesupport.ModuleCollector;
 import freak.core.modulesupport.UnsupportedEnvironmentException;
+import freak.core.modulesupport.inspector.CustomInspectable;
 import freak.core.modulesupport.inspector.Inspector;
 import freak.core.observer.AbstractObserver;
 import freak.core.population.Individual;
 import freak.core.population.IndividualList;
 import freak.gui.ModuleList;
-import java.awt.BorderLayout;
-import java.util.ArrayList;
+
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * Computes the fitness value of a pseudo fitness function.
  * @author  Dirk
  */
-public class PseudoFitness extends AbstractObserver implements IndividualListEventListener, Configurable {
+public class PseudoFitness extends AbstractObserver implements IndividualListEventListener, Configurable,
+		CustomInspectable {
 
 	private SingleObjectiveFitnessFunction fitness;
 

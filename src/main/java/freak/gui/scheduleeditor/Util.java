@@ -9,26 +9,25 @@
 
 package freak.gui.scheduleeditor;
 
-import java.awt.Dialog;
+import freak.core.control.GenerationIndex;
+import freak.core.control.ScheduleInterface;
+import freak.core.fitness.FitnessFunction;
+import freak.core.fitness.FitnessTransformer;
+import freak.core.graph.FreakGraphModel;
+import freak.core.graph.OperatorGraphFile;
+import freak.core.modulesupport.Configurable;
+import freak.core.modulesupport.Configuration;
+import freak.core.modulesupport.Module;
+import freak.gui.PropertyDialog;
+
+import javax.swing.*;
+import javax.swing.text.JTextComponent;
+import java.awt.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import javax.swing.DefaultListModel;
-import javax.swing.text.JTextComponent;
-
-import freak.core.control.GenerationIndex;
-import freak.core.control.Schedule;
-import freak.core.fitness.FitnessFunction;
-import freak.core.fitness.FitnessTransformer;
-import freak.core.graph.FreakGraphModel;
-import freak.core.modulesupport.Configurable;
-import freak.core.modulesupport.Configuration;
-import freak.core.modulesupport.Module;
-import freak.gui.PropertyDialog;
-import freak.gui.graph.OperatorGraphFile;
 
 /**
  * @author Oliver, Matthias
@@ -63,7 +62,7 @@ public final class Util {
 	 * @param schedule the currently active <code>Schedule</code>
 	 * @return the configuration string
 	 */
-	public static String configureModule(Dialog parent, Module mod, Schedule schedule) {
+	public static String configureModule(Dialog parent, Module mod, ScheduleInterface schedule) {
 		if ((mod != null) && (mod instanceof Configurable)) {
 			PropertyDialog pd = new PropertyDialog(parent, schedule.getEventController(), mod, schedule.getPossibleEventSources(), schedule.getBatchList());
 			pd.setVisible(true);
@@ -76,7 +75,7 @@ public final class Util {
 	/**
 	 * Sets the Text of a JTextComponent <data>ta</data> to the specified value
 	 * <data>s</data> and sets the caret position to 0.
-	 * @param ta the JTextArea component
+	 * @param tc the JTextArea component
 	 * @param s the new text
 	 */
 	public static void displayText(JTextComponent tc, String s) {
@@ -84,7 +83,7 @@ public final class Util {
 		tc.setCaretPosition(0);
 	}
 
-	public static List getFitnessTransformersFrom(Schedule schedule) {
+	public static List getFitnessTransformersFrom(ScheduleInterface schedule) {
 		List l = new ArrayList();
 		FitnessFunction f = schedule.getFitnessFunction();
 		if (f instanceof FitnessTransformer) {
@@ -101,7 +100,7 @@ public final class Util {
 		return l;
 	}
 
-	public static boolean scheduleStarted(Schedule schedule) {
+	public static boolean scheduleStarted(ScheduleInterface schedule) {
 		return !schedule.getCurrentTimeIndex().equals(GenerationIndex.START);
 	}
 
@@ -111,7 +110,7 @@ public final class Util {
 	 * @param schedule the current schedule
 	 * @return the loaded <code>OperatorGraph</code>
 	 */
-	public static FreakGraphModel loadOperatorGraph(String fileName, Schedule schedule) {
+	public static FreakGraphModel loadOperatorGraph(String fileName, ScheduleInterface schedule) {
 		try {
 			OperatorGraphFile ogFile = OperatorGraphFile.read(new FileInputStream(new File(fileName)));
 			return ogFile.generateGraph(schedule);

@@ -12,6 +12,7 @@ package freak.gui.scheduleeditor;
 
 import freak.core.control.*;
 import freak.core.modulesupport.*;
+
 import javax.swing.*;
 
 /**
@@ -20,7 +21,7 @@ import javax.swing.*;
  */
 public abstract class ScheduleEditorPanel extends JPanel {
 
-	protected Schedule schedule;
+	protected ScheduleInterface schedule;
 	protected ScheduleEditor scheduleEditor;
 	protected ScheduleDependencyChecker scheduleDependencyChecker;
 	protected ModuleCollector moduleCollector;

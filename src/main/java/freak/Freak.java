@@ -80,9 +80,9 @@ public class Freak {
 			circumventR=true;
 			if (saveEditedSchedule != null) ScheduleEditor.setRSaveTo(saveEditedSchedule);
 			if (scheduleToEdit.equals("NULL")) {
-				RFreak.showScheduleEditor();
+				//RFreak.showScheduleEditor();
 			} else {
-				RFreak.showScheduleEditor(scheduleToEdit);				
+				//RFreak.showScheduleEditor(scheduleToEdit);
 			}
 			return;
 		}

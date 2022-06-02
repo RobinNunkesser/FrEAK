@@ -15,9 +15,10 @@ import freak.core.modulesupport.Module;
 import freak.core.stoppingcriterion.StoppingCriterion;
 import freak.gui.JButtonFactory;
 import freak.gui.ModuleCheckBoxList;
+
+import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import javax.swing.JCheckBox;
 
 /**
  * @author  Oliver, Dirk

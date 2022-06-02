@@ -10,8 +10,9 @@
 package freak.gui.runframe;
 
 import freak.core.view.swingsupport.*;
-import java.beans.*;
+
 import javax.swing.*;
+import java.beans.PropertyChangeEvent;
 
 /**
  * This is a very special model designed only for the three spinners in the info panel. Although it inherits from FreakSwingModel ist has a non-transient link to a swing component, because this makes life a bit easier and is no problem as it is not part of a schedule. The whole purpose is to seperate the change events on spinners into clicks to the buttons, typings into the text field and changes from the program to treat the semantically different. The flush and update mechanism is a little bit strange with its three boolean variables. This is caused by the very strange event behaviour of JSpinners. The idea is to call each of the listener methods exactly once.

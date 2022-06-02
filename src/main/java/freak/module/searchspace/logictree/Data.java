@@ -8,9 +8,8 @@ package freak.module.searchspace.logictree;
 
 import com.Ostermiller.util.CSVParser;
 import edu.cornell.lassp.houle.RngPack.RandomElement;
-import freak.*;
-import freak.core.control.Schedule;
-import freak.module.searchspace.BooleanFunctionGenotype;
+import freak.Freak;
+import freak.core.control.ScheduleInterface;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -23,7 +22,7 @@ import java.util.Iterator;
  * @author  Melanie
  */
 public class Data implements Serializable{
-	// FŸr Gecco
+	// Fï¿½r Gecco
 	// 1= Standard
 	// 2= Alles
 	// 3= Alle != und ==
@@ -51,10 +50,10 @@ public class Data implements Serializable{
     private static int numRows;	
     private static int num1Rows;
     
-	// Array für Eingabedaten
+	// Array fï¿½r Eingabedaten
 	private static byte[][] values;
 	private static byte[][] cvalues;
-	// Array für Ergebnisspalte
+	// Array fï¿½r Ergebnisspalte
 	private static boolean[] results;  // boolsche werte
 	private static BitSet resultsBS;
 	// Array of variable names
@@ -71,7 +70,7 @@ public class Data implements Serializable{
 	
 	private static boolean debug = false;
 	
-	private static Schedule schedule;
+	private static ScheduleInterface schedule;
 	private static RandomElement randGen;
 
 	public static void clear() {
@@ -79,7 +78,7 @@ public class Data implements Serializable{
 		testData=null;
 		trainingData=null;		
 	}
-	public static void setRandomElement(Schedule se){
+	public static void setRandomElement(ScheduleInterface se){
 		schedule = se;
 		randGen = schedule.getRandomElement();
 	}
@@ -128,7 +127,7 @@ public class Data implements Serializable{
 	/**
 	 * Gives the result of row nr.
 	 * Returns false if no data is present.
-	 * @param number of the row which result is needed, numbering starting with 0 
+	 * @param nr of the row which result is needed, numbering starting with 0
 	 */
 	public static boolean getResultOfNr(int nr){
 		if (read) return results[nr]; else return false;
@@ -178,7 +177,7 @@ public class Data implements Serializable{
 	
 	/**
 	 * Sets the path of the datasheet that shall be used.
-	 * @param path Path of the datasheet, must be valid!
+	 * @param pathV Path of the datasheet, must be valid!
 	 * @return returns whether the path was successfully changed
 	 */
 	public static boolean setDataLocation(String pathV){

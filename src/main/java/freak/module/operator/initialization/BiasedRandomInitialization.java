@@ -9,8 +9,6 @@
 
 package freak.module.operator.initialization;
 
-import java.util.BitSet;
-
 import edu.cornell.lassp.houle.RngPack.RandomElement;
 import freak.core.control.Schedule;
 import freak.core.graph.Initialization;
@@ -21,6 +19,8 @@ import freak.core.population.IndividualList;
 import freak.core.population.Population;
 import freak.module.searchspace.BitString;
 import freak.module.searchspace.BitStringGenotype;
+
+import java.util.BitSet;
 
 /**
  * @author Heiko

@@ -21,11 +21,11 @@ import freak.core.view.ObserverUnknownException;
 import freak.core.view.swingsupport.FreakSwingModel;
 import freak.core.view.swingsupport.SlidingWindow;
 import freak.core.view.swingsupport.UpdateManager;
-import java.awt.BorderLayout;
-import java.awt.Color;
+
+import javax.swing.*;
+import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.TreeSet;
-import javax.swing.JPanel;
 
 /**
  * A Plotter displaying the received numbers over time. The y-axis shows the values of the numbers received and the x-axis shows the current time scale. Thus, the x values are supposed to be nondecreasing; else, an <code>DecreasingXValuesException</code> is thrown.

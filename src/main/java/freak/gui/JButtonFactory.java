@@ -10,8 +10,8 @@
 
 package freak.gui;
 
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * A bugfix for MacOS Aqua look and feel.

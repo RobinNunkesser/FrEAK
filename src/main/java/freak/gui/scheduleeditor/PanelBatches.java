@@ -18,13 +18,13 @@ import freak.core.modulesupport.Configurable;
 import freak.core.modulesupport.Module;
 import freak.core.modulesupport.UnsupportedEnvironmentException;
 import freak.core.searchspace.SearchSpace;
-import java.util.Iterator;
-import javax.swing.JOptionPane;
-import javax.swing.ListSelectionModel;
+
+import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import java.util.Iterator;
 
 /**
  * @author  Oliver, Dirk

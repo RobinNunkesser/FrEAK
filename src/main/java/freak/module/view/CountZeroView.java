@@ -14,18 +14,20 @@ import freak.core.control.*;
 import freak.core.fitness.*;
 import freak.core.modulesupport.*;
 import freak.core.population.*;
-import freak.core.view.*;
+import freak.core.view.AbstractView;
 import freak.core.view.swingsupport.*;
-import freak.module.searchspace.*;
-import java.awt.*;
-import java.util.*;
+import freak.module.searchspace.BooleanFunction;
+import freak.module.searchspace.BooleanFunctionGenotype;
+
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * A schematic visualization of a boolean hypercube. The individuals are drawn as small circles. The <code>y</code>-position of such a circle is determined by the number of ones in the genotype, the <code>x</code>-position is determined by the position of the ones in the genotype: the leftmost position of all individuals with <code>i</code> ones belongs to the genotype <code>1^i 0^n-i</code>, the rightmost position belongs to the genotype <code>0^n-i 1^i</code>.
  * @author  Dirk
  */
-public class CountZeroView extends AbstractView implements Configurable, FreakSwingModel {
+public class CountZeroView extends AbstractView
+		implements Configurable, FreakSwingModel {
 	private transient JPanel panel;
 
 	private static final float MAXIMAL_HUE = 0.8f;
@@ -362,7 +364,7 @@ public class CountZeroView extends AbstractView implements Configurable, FreakSw
 		private void drawSearchSpace() {
 			graphics.setColor(Color.black);
 			//Koordinatenachsen zeichnen
-			//y-Achse (Größe)
+			//y-Achse (Grï¿½ï¿½e)
 			for (int y = 0; y <= currentHeight; y++) {
 				drawPixel(insets.left+10, y + insets.top);
 			}

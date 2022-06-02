@@ -6,12 +6,11 @@
 
 package freak.module.operator.split.booleanfunction;
 
-import java.util.*;
-
+import edu.cornell.lassp.houle.RngPack.RandomElement;
 import freak.core.graph.*;
 import freak.core.population.*;
-import freak.module.searchspace.BooleanFunctionGenotype;
-import edu.cornell.lassp.houle.RngPack.*;
+
+import java.util.Iterator;
 
 /**
  * This class implements the splitting of a <code>IndividualList</code>. One

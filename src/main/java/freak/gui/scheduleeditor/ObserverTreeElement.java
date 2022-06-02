@@ -11,6 +11,7 @@
 package freak.gui.scheduleeditor;
 
 import freak.core.modulesupport.*;
+import freak.core.modulesupport.Module;
 
 /**
  * This is a helper-class for the ScheduleCreationDialog. It represents one node in the tree of observers and views and provides access to the displayed string as well as to the module itself.
@@ -24,7 +25,7 @@ public class ObserverTreeElement {
 	}
 
 	/**
-	 * @see java.lang.Object#toString()
+	 * @see Object#toString()
 	 */
 	public String toString() {
 		String s;

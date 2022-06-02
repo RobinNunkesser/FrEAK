@@ -9,7 +9,7 @@
 
 package freak.gui.scheduleeditor;
 
-import freak.gui.*;
+import freak.gui.JButtonFactory;
 
 /**
  * This is a simple modal dialog that displays some help-text and contains an

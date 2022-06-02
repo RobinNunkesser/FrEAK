@@ -11,21 +11,24 @@
 package freak.gui.scheduleeditor;
 
 import freak.core.graph.*;
+import freak.core.graph.OperatorGraphFile;
 import freak.core.modulesupport.*;
-import freak.gui.*;
-import freak.gui.graph.*;
-import freak.gui.runframe.*;
-import java.io.*;
-import java.util.jar.*;
+import freak.gui.JButtonFactory;
+import freak.gui.graph.EditorDialog;
+import freak.gui.runframe.SingleExtensionFileFilter;
+import org.jgraph.JGraph;
+
 import javax.swing.*;
-import org.jgraph.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.jar.JarFile;
 
 /**
  * @author  Oliver, Michael
  */
 public class PanelGraph extends ScheduleEditorPanel {
 
-	private FreakGraphModel graphModel;
+	private FreakGraphModelInterface graphModel;
 	private JGraph graphPreview;
 	protected OperatorGraphCollector graphCollector;
 
@@ -109,7 +112,7 @@ public class PanelGraph extends ScheduleEditorPanel {
 			scheduleDependencyChecker.processNewGraph();
 		}
 
-		graphPreview.setModel(graphModel);
+		graphPreview.setModel((FreakGraphModel)graphModel);
 	}
 
 	private void loadPredefinedGraph(ModuleInfo mi) {
@@ -151,12 +154,12 @@ public class PanelGraph extends ScheduleEditorPanel {
 	private void initComponents() { //GEN-BEGIN:initComponents
 		java.awt.GridBagConstraints gridBagConstraints;
 
-		panelGraph = new javax.swing.JPanel();
-		scrollpaneGraph = new javax.swing.JScrollPane();
-		jPanel15 = new javax.swing.JPanel();
-		labelPredefGraphs = new javax.swing.JLabel();
-		comboPredefinedGraphs = new javax.swing.JComboBox();
-		jPanel1 = new javax.swing.JPanel();
+		panelGraph = new JPanel();
+		scrollpaneGraph = new JScrollPane();
+		jPanel15 = new JPanel();
+		labelPredefGraphs = new JLabel();
+		comboPredefinedGraphs = new JComboBox();
+		jPanel1 = new JPanel();
 		buEditGraph = JButtonFactory.newButton();
 		buOpen = JButtonFactory.newButton();
 
@@ -204,7 +207,7 @@ public class PanelGraph extends ScheduleEditorPanel {
 		gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
 		add(jPanel15, gridBagConstraints);
 
-		buEditGraph.setIcon(new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Edit16.gif")));
+		buEditGraph.setIcon(new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Edit16.gif")));
 		buEditGraph.setMnemonic('e');
 		buEditGraph.setText("Edit Graph...");
 		buEditGraph.addActionListener(new java.awt.event.ActionListener() {
@@ -215,7 +218,7 @@ public class PanelGraph extends ScheduleEditorPanel {
 
 		jPanel1.add(buEditGraph);
 
-		buOpen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Open16.gif")));
+		buOpen.setIcon(new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Open16.gif")));
 		buOpen.setMnemonic('o');
 		buOpen.setText("Open...");
 		buOpen.addActionListener(new java.awt.event.ActionListener() {
@@ -265,14 +268,14 @@ public class PanelGraph extends ScheduleEditorPanel {
 	} //GEN-LAST:event_buEditGraphActionPerformed
 
 	// Variables declaration - do not modify//GEN-BEGIN:variables
-	private javax.swing.JButton buEditGraph;
-	private javax.swing.JButton buOpen;
-	private javax.swing.JComboBox comboPredefinedGraphs;
-	private javax.swing.JPanel jPanel1;
-	private javax.swing.JPanel jPanel15;
-	private javax.swing.JLabel labelPredefGraphs;
-	private javax.swing.JPanel panelGraph;
-	private javax.swing.JScrollPane scrollpaneGraph;
+	private JButton buEditGraph;
+	private JButton buOpen;
+	private JComboBox comboPredefinedGraphs;
+	private JPanel jPanel1;
+	private JPanel jPanel15;
+	private JLabel labelPredefGraphs;
+	private JPanel panelGraph;
+	private JScrollPane scrollpaneGraph;
 	// End of variables declaration//GEN-END:variables
 
 }

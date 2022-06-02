@@ -11,7 +11,8 @@
 package freak.gui.runframe;
 
 import freak.core.observer.*;
-import freak.core.view.*;
+import freak.core.view.View;
+
 import javax.swing.*;
 
 /**

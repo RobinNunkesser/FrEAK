@@ -23,6 +23,7 @@ import freak.core.population.NoSuchIndividualException;
 import freak.core.population.Population;
 import freak.core.populationmanager.AbstractPopulationManager;
 import freak.module.operator.selection.FitnessProportionalSelection;
+
 import java.util.Iterator;
 
 /**

@@ -12,9 +12,13 @@ package freak.gui.scheduleeditor;
 
 import freak.core.fitness.*;
 import freak.core.modulesupport.*;
-import freak.gui.*;
-import java.util.*;
-import javax.swing.table.*;
+import freak.core.modulesupport.Module;
+import freak.gui.JButtonFactory;
+import freak.gui.ModuleList;
+
+import javax.swing.table.DefaultTableModel;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author  Oliver

@@ -19,10 +19,11 @@ import freak.module.searchspace.GeneralString;
 import freak.module.searchspace.GeneralStringGenotype;
 import freak.module.searchspace.GraphEdgeSelection;
 import freak.module.searchspace.GraphEdgeSelectionGenotype;
+
 import java.util.ArrayList;
 
 /**
- * Maps spanning trees (edge selections of search space GraphEdgeSelection) to Prüfer numbers and vice versa. For this mapper to work correctly the underlying graph of the GraphEdgeSelection search space must be full.) The mapper performs the mapping from GraphEdgeSelection to GeneralString.
+ * Maps spanning trees (edge selections of search space GraphEdgeSelection) to Prï¿½fer numbers and vice versa. For this mapper to work correctly the underlying graph of the GraphEdgeSelection search space must be full.) The mapper performs the mapping from GraphEdgeSelection to GeneralString.
  * @author  Oliver
  */
 public class PruferNrMapper extends AbstractMapper {
@@ -121,7 +122,7 @@ public class PruferNrMapper extends AbstractMapper {
 		for (int i = 0; i < edgeSelection.length; i++) workEdgeSelection[i] = edgeSelection[i];
 		graphGenotype.setEdgeSelection(workEdgeSelection);
 
-		// -- the resulting Prüfer number
+		// -- the resulting Prï¿½fer number
 		int[] pnum = new int[graph.getNumberOfNodes() - 2];
 
 		// -- build incidenceTable
@@ -154,11 +155,11 @@ public class PruferNrMapper extends AbstractMapper {
 	}
 
 	public String getName() {
-		return "Edge Selection to Prüfer Number";
+		return "Edge Selection to Prï¿½fer Number";
 	}
 
 	public String getDescription() {
-		return "This mapper works only on complete graphs. It performs a bijection between spanning-trees and a generalstring which represents the corresponding Prüfer-number. The mapper works bidirectional.";
+		return "This mapper works only on complete graphs. It performs a bijection between spanning-trees and a generalstring which represents the corresponding Prï¿½fer-number. The mapper works bidirectional.";
 	}
 
 }

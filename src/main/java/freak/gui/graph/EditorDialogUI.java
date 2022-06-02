@@ -11,52 +11,33 @@
 package freak.gui.graph;
 
 import freak.Freak;
-import freak.core.control.Schedule;
+import freak.core.control.ScheduleInterface;
 import freak.core.graph.FreakGraphModel;
+import freak.core.graph.FreakGraphModelInterface;
 import freak.core.graph.OperatorGraph;
 import freak.core.modulesupport.ModuleCollector;
 import freak.core.modulesupport.inspector.InspectorVetoException;
 import freak.gui.ConfigurationPanel;
 import freak.gui.JButtonFactory;
-import java.awt.BorderLayout;
-import java.awt.Dialog;
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import javax.swing.AbstractAction;
-import javax.swing.Action;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
-import javax.swing.JSplitPane;
-import javax.swing.JToolBar;
-import javax.swing.KeyStroke;
-import javax.swing.event.UndoableEditEvent;
-import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.TreeSelectionModel;
 import org.jgraph.JGraph;
 import org.jgraph.event.GraphSelectionEvent;
 import org.jgraph.event.GraphSelectionListener;
-import org.jgraph.graph.CellMapper;
-import org.jgraph.graph.GraphModel;
-import org.jgraph.graph.GraphUndoManager;
-import org.jgraph.graph.Port;
-import org.jgraph.graph.PortView;
+import org.jgraph.graph.*;
+
+import javax.swing.*;
+import javax.swing.event.UndoableEditEvent;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreeSelectionModel;
+import java.awt.*;
+import java.awt.event.*;
 
 /**
  * Dialog to edit an OperatorGraph.
  * @author  Andrea, Matthias
  */
 public abstract class EditorDialogUI extends JDialog implements GraphSelectionListener {
-	protected FreakGraphModel graphModel;
-	protected Schedule schedule;
+	protected FreakGraphModelInterface graphModel;
+	protected ScheduleInterface schedule;
 	protected ModuleCollector manager;
 
 	protected JGraph graph;
@@ -77,11 +58,11 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 	/** The Panel where <code>ParameterController</code> can be edited */
 	protected ParameterControllerDialog parameterControllerPanel;
 
-	private EditorDialogUI.EditorPanel editor;
+	private EditorPanel editor;
 
 	private ConfigurationPanel displayedConfigurationPanel;
 
-	public EditorDialogUI(Dialog owner, Schedule schedule) {
+	public EditorDialogUI(Dialog owner, ScheduleInterface schedule) {
 		super(owner, "Edit Operator Graph", true);
 		this.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
@@ -91,10 +72,10 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 		super.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
 		this.schedule = schedule;
 		graphModel = this.schedule.getFreakGraphModel();
-		graphModel.refreshFloatingPorts();
+		((FreakGraphModel)graphModel).refreshFloatingPorts();
 
 		manager = new ModuleCollector(this.schedule);
-		editor = new EditorDialogUI.EditorPanel();
+		editor = new EditorPanel();
 		getContentPane().add(editor, BorderLayout.CENTER);
 		setJMenuBar(createMenuBar());
 		this.setSize(880, 580);
@@ -123,7 +104,7 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 		JMenu fileMenu = new JMenu("File");
 		fileMenu.setMnemonic('F');
 
-		ImageIcon icon = new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/New16.gif"));
+		ImageIcon icon = new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/New16.gif"));
 		newGraph = new AbstractAction("New", icon) {
 			public void actionPerformed(ActionEvent e) {
 				newGraph(e);
@@ -138,7 +119,7 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 
 		fileMenu.addSeparator();
 
-		icon = new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Open16.gif"));
+		icon = new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Open16.gif"));
 		open = new AbstractAction("Open...", icon) {
 			public void actionPerformed(ActionEvent e) {
 				open(e);
@@ -151,7 +132,7 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 
 		fileMenu.add(open);
 
-		icon = new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Save16.gif"));
+		icon = new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Save16.gif"));
 		save = new AbstractAction("Save", icon) {
 			public void actionPerformed(ActionEvent e) {
 				save(e);
@@ -164,7 +145,7 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 
 		fileMenu.add(save);
 
-		icon = new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/SaveAs16.gif"));
+		icon = new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/SaveAs16.gif"));
 		saveAs = new AbstractAction("Save As...", icon) {
 			public void actionPerformed(ActionEvent e) {
 				saveAs(e);
@@ -254,9 +235,6 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 		*/
 	protected abstract DefaultTreeModel createOperatorTreeModel();
 
-	/**
-	 * @see com.jgraph.event.GraphSelectionListener#valueChanged(com.jgraph.event.GraphSelectionEvent)
-	 */
 	public abstract void valueChanged(GraphSelectionEvent e);
 
 	/**
@@ -275,7 +253,7 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 
 			//FreakGraphModel graphModel = new FreakGraphModel(operatorGraph);
 
-			graph = new JGraph(graphModel) {
+			graph = new JGraph((FreakGraphModel)graphModel) {
 				/**
 				 * Constructs a PortView view for the specified object.
 				 */
@@ -313,7 +291,7 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 		}
 
 		private void addActions() {
-			ImageIcon icon = new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Delete16.gif"));
+			ImageIcon icon = new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Delete16.gif"));
 			delete = new AbstractAction("Delete", icon) {
 				public void actionPerformed(ActionEvent e) {
 					delete(e);
@@ -324,7 +302,7 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 			editToolbar.add(delete);
 			delete.setEnabled(false);
 
-			icon = new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Zoom16.gif"));
+			icon = new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/Zoom16.gif"));
 			zoom = new AbstractAction("Zoom", icon) {
 				public void actionPerformed(ActionEvent e) {
 					zoom(e);
@@ -334,7 +312,7 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 			zoom.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_Z));
 			zoomToolbar.add(zoom);
 
-			icon = new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/ZoomIn16.gif"));
+			icon = new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/ZoomIn16.gif"));
 			zoomIn = new AbstractAction("Zoom In", icon) {
 				public void actionPerformed(ActionEvent e) {
 					zoomIn(e);
@@ -344,7 +322,7 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 			zoomIn.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_I));
 			zoomToolbar.add(zoomIn);
 
-			icon = new javax.swing.ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/ZoomOut16.gif"));
+			icon = new ImageIcon(getClass().getResource("/toolbarButtonGraphics/general/ZoomOut16.gif"));
 			zoomOut = new AbstractAction("Zoom Out", icon) {
 				public void actionPerformed(ActionEvent e) {
 					zoomOut(e);
@@ -373,13 +351,13 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 		 */
 		private void initComponents() { //GEN-BEGIN:initComponents
 			toolbarPanel = new javax.swing.JPanel();
-			editToolbar = new javax.swing.JToolBar();
-			zoomToolbar = new javax.swing.JToolBar();
+			editToolbar = new JToolBar();
+			zoomToolbar = new JToolBar();
 			freakToolbar = new JToolBar();
-			outerSplitPane = new javax.swing.JSplitPane();
+			outerSplitPane = new JSplitPane();
 			innerSplitPane = new JSplitPane();
 			jPanel1 = new javax.swing.JPanel();
-			jScrollPane1 = new javax.swing.JScrollPane();
+			jScrollPane1 = new JScrollPane();
 			operatorTree = new javax.swing.JTree();
 			jPanel5 = new javax.swing.JPanel();
 			insertButton = JButtonFactory.newButton();
@@ -387,7 +365,7 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 			inspectorScrollPane.setPreferredSize(new Dimension(240, 200));
 			inspectorScrollPane.setMinimumSize(new Dimension(240, 200));
 
-			setLayout(new java.awt.BorderLayout());
+			setLayout(new BorderLayout());
 
 			toolbarPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
@@ -395,7 +373,7 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 			toolbarPanel.add(zoomToolbar);
 			toolbarPanel.add(freakToolbar);
 
-			add(toolbarPanel, java.awt.BorderLayout.NORTH);
+			add(toolbarPanel, BorderLayout.NORTH);
 
 			jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.Y_AXIS));
 
@@ -429,16 +407,16 @@ public abstract class EditorDialogUI extends JDialog implements GraphSelectionLi
 		} //GEN-END:initComponents
 
 		// Variables declaration - do not modify//GEN-BEGIN:variables
-		private javax.swing.JToolBar editToolbar;
-		private javax.swing.JScrollPane jScrollPane1;
-		private javax.swing.JSplitPane outerSplitPane;
+		private JToolBar editToolbar;
+		private JScrollPane jScrollPane1;
+		private JSplitPane outerSplitPane;
 		private JSplitPane innerSplitPane;
 		JScrollPane inspectorScrollPane;
 		private javax.swing.JPanel jPanel5;
-		private javax.swing.JToolBar zoomToolbar;
+		private JToolBar zoomToolbar;
 		private javax.swing.JPanel toolbarPanel;
 		private javax.swing.JPanel jPanel1;
-		private javax.swing.JToolBar freakToolbar;
+		private JToolBar freakToolbar;
 		// End of variables declaration//GEN-END:variables
 	}
 

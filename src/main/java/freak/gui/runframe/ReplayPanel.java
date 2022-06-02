@@ -10,8 +10,8 @@
 
 package freak.gui.runframe;
 
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Shows the blinking R.

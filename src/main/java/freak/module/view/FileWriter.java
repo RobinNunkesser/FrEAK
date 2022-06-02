@@ -14,15 +14,16 @@ import freak.core.control.*;
 import freak.core.modulesupport.*;
 import freak.core.modulesupport.inspector.*;
 import freak.core.view.swingsupport.*;
-import java.io.*;
+
 import javax.swing.*;
-import javax.swing.border.*;
+import javax.swing.border.TitledBorder;
+import java.io.*;
 
 /**
  * An extension of <code>StdView</code> that writes the displayed data into a file.
  * @author  Dirk, Stefan
  */
-public class FileWriter extends StdView implements Configurable {
+public class FileWriter extends StdView implements Configurable, CustomInspectable {
 	// a counter used to generate unique default file names
 	private static int fileNameCounter = 0;
 
@@ -39,7 +40,7 @@ public class FileWriter extends StdView implements Configurable {
 	 * 
 	 * @param schedule a link back to the current schedule.
 	 */
-	public FileWriter(Schedule schedule) {
+	public FileWriter(ScheduleInterface schedule) {
 		super(schedule);
 
 		setPropertyFile(new File(""));

@@ -10,8 +10,7 @@
 
 package freak.module.view;
 
-import freak.core.control.Schedule;
-import freak.core.observer.Observer;
+import freak.core.control.ScheduleInterface;
 import freak.core.view.HistoryView;
 import freak.core.view.swingsupport.FreakScrollBarAdjustmentListener;
 import freak.core.view.swingsupport.FreakTextAreaModel;
@@ -19,13 +18,9 @@ import freak.core.view.swingsupport.SlidingWindow;
 import freak.core.view.swingsupport.UpdateManager;
 import freak.module.observer.ResultObserver;
 
-import java.awt.BorderLayout;
-import java.awt.Rectangle;
+import javax.swing.*;
+import java.awt.*;
 import java.lang.reflect.Array;
-import javax.swing.JPanel;
-import javax.swing.JScrollBar;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
 
 public class StdView extends HistoryView {
 	
@@ -35,7 +30,7 @@ public class StdView extends HistoryView {
 	
 	private StringBuffer stringBuffer;
 
-	public StdView(Schedule schedule) {
+	public StdView(ScheduleInterface schedule) {
 		super(schedule);
 		
 		model = new FreakTextAreaModel();

@@ -10,7 +10,6 @@ import freak.core.graph.Mutation;
 import freak.core.graph.OperatorGraph;
 import freak.core.population.Individual;
 import freak.module.searchspace.BooleanFunctionGenotype;
-import freak.module.searchspace.logictree.AndNode;
 
 
 public class SetPopulation extends Mutation{

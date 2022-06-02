@@ -10,35 +10,23 @@
 
 package freak.gui.scheduleeditor;
 
-import freak.core.control.Batch;
-import freak.core.control.BatchList;
-import freak.core.control.EventController;
-import freak.core.control.EventInfo;
-import freak.core.control.Schedule;
+import freak.core.control.*;
 import freak.core.fitness.FitnessFunction;
-import freak.core.graph.FreakGraphModel;
-import freak.core.graph.GraphSyntaxException;
-import freak.core.graph.Operator;
-import freak.core.graph.OperatorGraph;
+import freak.core.graph.*;
 import freak.core.mapper.Mapper;
-import freak.core.modulesupport.Configurable;
-import freak.core.modulesupport.Configuration;
-import freak.core.modulesupport.IncompatibleModuleException;
-import freak.core.modulesupport.IncompatibleModulePropertyException;
+import freak.core.modulesupport.*;
 import freak.core.modulesupport.Module;
-import freak.core.modulesupport.ModuleCollector;
-import freak.core.modulesupport.SpecificModuleRequiredException;
-import freak.core.modulesupport.UnsupportedEnvironmentException;
 import freak.core.observer.Observer;
 import freak.core.parametercontroller.ParameterController;
 import freak.core.populationmanager.PopulationManager;
 import freak.core.searchspace.SearchSpace;
 import freak.core.stoppingcriterion.StoppingCriterion;
 import freak.core.view.View;
+
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import javax.swing.JOptionPane;
 
 /**
  * This class provides methods to check a schedule for correctness and to do mandatory things when some element of the schedule changes.
@@ -46,7 +34,7 @@ import javax.swing.JOptionPane;
  */
 public class ScheduleDependencyChecker {
 	
-	private Schedule schedule;
+	private ScheduleInterface schedule;
 	private ModuleCollector moduleCollector;
 	private EventController eventController;
 	
@@ -103,7 +91,7 @@ public class ScheduleDependencyChecker {
 	 * @param schedule  the schedule.
 	 * @uml.property  name="schedule"
 	 */
-	public void setSchedule(Schedule schedule) {
+	public void setSchedule(ScheduleInterface schedule) {
 		this.schedule = schedule;
 		eventController = schedule.getEventController();
 		moduleCollector = new ModuleCollector(schedule);
@@ -206,7 +194,7 @@ public class ScheduleDependencyChecker {
 	}
 	
 	public void createDefaultOperatorGraph() {
-		FreakGraphModel operatorGraph = new FreakGraphModel(schedule);
+		FreakGraphModelInterface operatorGraph = new FreakGraphModel(schedule);
 		operatorGraph.getOperatorGraph().createEvents();
 
 		schedule.setGraphModel(operatorGraph);
@@ -389,7 +377,7 @@ public class ScheduleDependencyChecker {
 	 * processIncompatibleModule if such a module is found.
 	 * The check is iterated until no incompatible module is found anymore.
 	 * 
-	 * @param showWarning specifies if GUI dialogs are to be shown in case an incompatible module is found.
+	 * @param showWarnings specifies if GUI dialogs are to be shown in case an incompatible module is found.
 	 */
 	protected void checkCurrentSchedule(boolean showWarnings) {
 		for (Iterator iter = schedule.getAllModules().iterator(); iter.hasNext();) {

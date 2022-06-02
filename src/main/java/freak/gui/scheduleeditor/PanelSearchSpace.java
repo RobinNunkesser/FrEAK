@@ -11,8 +11,10 @@
 package freak.gui.scheduleeditor;
 
 import freak.core.modulesupport.*;
+import freak.core.modulesupport.Module;
 import freak.core.searchspace.*;
-import freak.gui.*;
+import freak.gui.JButtonFactory;
+import freak.gui.ModuleList;
 
 /**
  * @author  Oliver

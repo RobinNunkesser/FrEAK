@@ -9,12 +9,12 @@
 
 package freak.module.populationmanager;
 
-import java.util.*;
-
 import freak.core.control.*;
 import freak.core.graph.*;
 import freak.core.population.*;
 import freak.core.populationmanager.*;
+
+import java.util.Iterator;
 
 /**
  * Implements parallel multistarts by putting the individuals separately into 

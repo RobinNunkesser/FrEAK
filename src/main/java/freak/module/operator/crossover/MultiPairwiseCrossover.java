@@ -9,11 +9,11 @@
 
 package freak.module.operator.crossover;
 
-import java.util.*;
-
 import freak.core.graph.*;
 import freak.core.population.*;
 import freak.module.searchspace.BooleanFunctionGenotype;
+
+import java.util.Iterator;
 
 /**
  * MultiPairwiseCrossover is an abstract class. It is designed to generalize

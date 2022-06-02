@@ -10,9 +10,9 @@
 
 package freak.module.searchspace;
 
-import java.awt.*;
-import java.util.*;
 import javax.swing.*;
+import java.awt.*;
+import java.util.BitSet;
 
 /**
  * A <code>TableCellEditor</code> for <code>BitStringGenotypes</code>.

@@ -10,11 +10,7 @@ import freak.core.control.Schedule;
 import freak.core.modulesupport.Configurable;
 import freak.core.population.Genotype;
 import freak.core.searchspace.AbstractSearchSpace;
-import freak.module.searchspace.logictree.AndNode;
-import freak.module.searchspace.logictree.DNFTree;
-import freak.module.searchspace.logictree.Data;
-import freak.module.searchspace.logictree.OrNode;
-import freak.module.searchspace.logictree.StaticCompareNode;
+import freak.module.searchspace.logictree.*;
 
 import java.io.Serializable;
 

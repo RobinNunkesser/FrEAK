@@ -19,14 +19,13 @@ import freak.core.view.AbstractView;
 import freak.core.view.swingsupport.FreakSwingModel;
 import freak.core.view.swingsupport.UpdateManager;
 import freak.module.fitness.bitstring.SineCosine;
-import freak.module.searchspace.*;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Insets;
+import freak.module.searchspace.BitString;
+import freak.module.searchspace.BitStringGenotype;
+
+import javax.swing.*;
+import java.awt.*;
 import java.util.BitSet;
 import java.util.Iterator;
-import javax.swing.BorderFactory;
-import javax.swing.JPanel;
 
 /**
  * A specialized view for the fitness function SineCosine. The individuals in the population are represented as points on a circle.

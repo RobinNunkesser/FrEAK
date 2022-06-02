@@ -9,8 +9,6 @@
 
 package freak.module.operator.crossover.common;
 
-import java.util.BitSet;
-
 import edu.cornell.lassp.houle.RngPack.RandomElement;
 import freak.core.control.Schedule;
 import freak.core.graph.CompatibleWithDifferentSearchSpaces;
@@ -24,6 +22,8 @@ import freak.module.searchspace.BitString;
 import freak.module.searchspace.BitStringGenotype;
 import freak.module.searchspace.GeneralString;
 import freak.module.searchspace.GeneralStringGenotype;
+
+import java.util.BitSet;
 
 /**
  * Each character is taken with probability 1/2 from the first parent and with

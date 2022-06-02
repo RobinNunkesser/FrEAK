@@ -9,11 +9,11 @@
 
 package freak.module.operator.crossover.cycle;
 
-import edu.cornell.lassp.houle.RngPack.*;
+import edu.cornell.lassp.houle.RngPack.RandomElement;
 import freak.core.graph.*;
 import freak.core.population.*;
-import freak.module.operator.crossover.*;
-import freak.module.searchspace.*;
+import freak.module.operator.crossover.MultiPairwiseCrossover;
+import freak.module.searchspace.PermutationGenotype;
 
 /**
  * Two crossing points are chosen at random. The subtour in the middle part of

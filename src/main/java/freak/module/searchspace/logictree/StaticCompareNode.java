@@ -10,10 +10,10 @@ package freak.module.searchspace.logictree;
  * @author Melanie
  */
 
+import freak.rinterface.control.RFlags;
+
 import java.io.Serializable;
 import java.util.BitSet;
-
-import freak.rinterface.control.RFlags;
 
 // this class does not support allowed operators. 
 // it does also not support changing the operator combination.
@@ -115,7 +115,7 @@ public class StaticCompareNode implements OperatorNode, Serializable {
 	 * @return
 	 */
 	public BitSet getValueBitset(){
-//		System.out.println(this.toString()+" liefert Bitset der LŠnge "+fulfilling.length()+ " mit "+fulfilling.size() +" Bits (=Datenzeilen?)");
+//		System.out.println(this.toString()+" liefert Bitset der Lï¿½nge "+fulfilling.length()+ " mit "+fulfilling.size() +" Bits (=Datenzeilen?)");
 		return fulfilling;
 	}
 	

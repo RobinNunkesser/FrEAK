@@ -6,29 +6,24 @@
 
 package freak.module.postprocessor.booleanfunction;
 
+import freak.Freak;
+import freak.core.control.ScheduleInterface;
+import freak.core.population.Individual;
+import freak.core.population.IndividualList;
+import freak.core.postprocessor.AbstractPostprocessor;
+import freak.core.util.GraphViz;
+import freak.module.searchspace.BooleanFunctionGenotype;
+import freak.module.searchspace.logictree.AndNode;
+import freak.module.searchspace.logictree.Data;
+import freak.module.searchspace.logictree.OperatorNodeVector;
+import freak.module.searchspace.logictree.StaticCompareNode;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Arrays;
 import java.util.BitSet;
 import java.util.Iterator;
 import java.util.Vector;
-
-import freak.Freak;
-import freak.core.control.Schedule;
-import freak.core.observer.AbstractObserver;
-import freak.core.population.Individual;
-import freak.core.population.IndividualList;
-import freak.core.population.Population;
-import freak.core.postprocessor.AbstractPostprocessor;
-import freak.core.util.GraphViz;
-import freak.module.searchspace.BooleanFunctionGenotype;
-import freak.module.searchspace.logictree.AndNode;
-import freak.module.searchspace.logictree.Data;
-import freak.module.searchspace.logictree.MultipleOperatorNode;
-import freak.module.searchspace.logictree.OperatorNode;
-import freak.module.searchspace.logictree.OperatorNodeVector;
-import freak.module.searchspace.logictree.OrNode;
-import freak.module.searchspace.logictree.StaticCompareNode;
 
 /**
  * @author Robin Nunkesser
@@ -45,7 +40,7 @@ public class Count extends AbstractPostprocessor {
 	private static int maxDepth=8;
 	public static String fileName="count.dot";
 	
-	public Count(Schedule schedule) {
+	public Count(ScheduleInterface schedule) {
 		super(schedule);
 	}
 
@@ -101,7 +96,7 @@ public class Count extends AbstractPostprocessor {
 	}
 	
 
-	// †bergebe valueBitSet des Literals und fŸhre And darauf aus. Wenn erstes Literal, dann Ÿbergebe 1 Bitstring
+	// ï¿½bergebe valueBitSet des Literals und fï¿½hre And darauf aus. Wenn erstes Literal, dann ï¿½bergebe 1 Bitstring
 	private void searchBestPredicting(OperatorNodeVector monomialsVector,countNode node,BitSet fulfilledWithout,int child,int depth) {
 		// to implement this quickly it is not done as efficient as possible but in the same way as searchMostCommon
 		// For example it suffices that the following is only done once
@@ -157,7 +152,7 @@ public class Count extends AbstractPostprocessor {
 			fulfilledCasesBitSet.and(Data.getResultBitSet());
 			fulfilledCases=fulfilledCasesBitSet.cardinality();
 			fulfilledControls-=fulfilledCases;
-//			System.out.println("erfŸllt "+fulfilledCases+" FŠlle und "+fulfilledControls+" Kontrollen.");
+//			System.out.println("erfï¿½llt "+fulfilledCases+" Fï¿½lle und "+fulfilledControls+" Kontrollen.");
 			if (fulfilledCases>=minCasesFulfilled) {
 				BooleanFunctionGenotype newBfg=(BooleanFunctionGenotype) node.getGenotype().clone();
 				//AndNode newMonomial=((AndNode) node.getGenotype().clone());

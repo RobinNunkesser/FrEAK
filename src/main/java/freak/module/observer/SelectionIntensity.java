@@ -9,13 +9,13 @@
 
 package freak.module.observer;
 
-import java.util.*;
-
 import freak.core.control.*;
 import freak.core.event.*;
 import freak.core.modulesupport.*;
 import freak.core.observer.*;
 import freak.core.population.*;
+
+import java.util.Iterator;
 
 /**
  * Computes the selection intensity. 

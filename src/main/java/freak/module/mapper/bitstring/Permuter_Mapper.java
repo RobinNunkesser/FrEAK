@@ -10,8 +10,6 @@
 
 package freak.module.mapper.bitstring;
 
-import java.util.BitSet;
-
 import edu.cornell.lassp.houle.RngPack.RandomElement;
 import freak.core.control.Schedule;
 import freak.core.event.BatchEvent;
@@ -21,6 +19,8 @@ import freak.core.population.Genotype;
 import freak.core.searchspace.SearchSpace;
 import freak.module.searchspace.BitString;
 import freak.module.searchspace.BitStringGenotype;
+
+import java.util.BitSet;
 
 /**
  * Permutes the order of bits.
