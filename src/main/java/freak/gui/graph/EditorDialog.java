@@ -18,6 +18,7 @@ import freak.core.modulesupport.ModuleInfo;
 import freak.core.modulesupport.inspector.InspectorVetoException;
 import freak.gui.ConfigurationPanel;
 import freak.gui.runframe.SingleExtensionFileFilter;
+import freak.module.support.OperatorGraphFile;
 import org.jgraph.event.GraphModelEvent;
 import org.jgraph.event.GraphModelListener;
 import org.jgraph.event.GraphSelectionEvent;

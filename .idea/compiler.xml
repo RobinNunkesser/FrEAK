@@ -6,9 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="FrEAK" />
         <module name="RFrEAK" />
         <module name="rfreak-code Kopie 3" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="FrEAK" target="15" />
+    </bytecodeTargetLevel>
   </component>
 </project>

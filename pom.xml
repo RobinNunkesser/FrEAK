@@ -65,16 +65,6 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-        <repository>
-            <id>thirdparty-releases</id>
-            <name>JBoss Thirdparty Releases</name>
-            <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
-        </repository>
-        <repository>
-            <id>codehaus</id>
-            <name>Codehaus Release Repo</name>
-            <url>http://dist.codehaus.org/</url>
-        </repository>
     </repositories>
 
     <dependencies>
@@ -113,21 +103,21 @@
         <dependency>
             <groupId>io.github.italbytz</groupId>
             <artifactId>freak-core</artifactId>
-            <version>0.4.1</version>
+            <version>0.4.7</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.github.italbytz</groupId>
             <artifactId>freak-rinterface</artifactId>
-            <version>0.3.0</version>
+            <version>0.4.0</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.github.italbytz</groupId>
             <artifactId>freak-modules</artifactId>
-            <version>0.4.0</version>
+            <version>0.4.1</version>
             <type>jar</type>
             <scope>compile</scope>
             <!--<systemPath>${project.basedir}/lib/freak-modules-0.2.2.jar</systemPath>-->

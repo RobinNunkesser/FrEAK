@@ -14,11 +14,11 @@ import freak.core.control.ScheduleInterface;
 import freak.core.fitness.FitnessFunction;
 import freak.core.fitness.FitnessTransformer;
 import freak.core.graph.FreakGraphModel;
-import freak.core.graph.OperatorGraphFile;
 import freak.core.modulesupport.Configurable;
 import freak.core.modulesupport.Configuration;
 import freak.core.modulesupport.Module;
 import freak.gui.PropertyDialog;
+import freak.module.support.OperatorGraphFile;
 
 import javax.swing.*;
 import javax.swing.text.JTextComponent;

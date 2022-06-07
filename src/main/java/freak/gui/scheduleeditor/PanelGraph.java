@@ -11,11 +11,12 @@
 package freak.gui.scheduleeditor;
 
 import freak.core.graph.*;
-import freak.core.graph.OperatorGraphFile;
 import freak.core.modulesupport.*;
 import freak.gui.JButtonFactory;
 import freak.gui.graph.EditorDialog;
 import freak.gui.runframe.SingleExtensionFileFilter;
+import freak.module.support.OperatorGraphCollector;
+import freak.module.support.OperatorGraphFile;
 import org.jgraph.JGraph;
 
 import javax.swing.*;
