@@ -70,6 +70,10 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -106,26 +110,19 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>io.github.italbytz</groupId>
-            <artifactId>freak-core</artifactId>
-            <version>0.4.7</version>
-            <type>jar</type>
-            <scope>compile</scope>
+            <groupId>com.github.Italbytz</groupId>
+            <artifactId>mvn-freak-core</artifactId>
+            <version>v0.4.9</version>
         </dependency>
         <dependency>
-            <groupId>io.github.italbytz</groupId>
-            <artifactId>freak-rinterface</artifactId>
-            <version>0.4.0</version>
-            <type>jar</type>
-            <scope>compile</scope>
+            <groupId>com.github.Italbytz</groupId>
+            <artifactId>mvn-freak-rinterface</artifactId>
+            <version>v0.4.2</version>
         </dependency>
         <dependency>
-            <groupId>io.github.italbytz</groupId>
-            <artifactId>freak-modules</artifactId>
-            <version>0.4.1</version>
-            <type>jar</type>
-            <scope>compile</scope>
-            <!--<systemPath>${project.basedir}/lib/freak-modules-0.2.2.jar</systemPath>-->
+            <groupId>com.github.Italbytz</groupId>
+            <artifactId>mvn-freak-modules</artifactId>
+            <version>0315803253f539716b507011526572a4b97225d4</version>
         </dependency>
         <!--    <dependency>
                 <groupId>jgraph</groupId>
