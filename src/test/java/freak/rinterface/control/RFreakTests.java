@@ -1,6 +1,6 @@
 package freak.rinterface.control;
 
-import freak.core.control.Schedule;
+import freak.core.control.ScheduleInterface;
 import freak.module.searchspace.PointSet;
 import freak.module.searchspace.logictree.DNFTree;
 import freak.module.searchspace.logictree.Data;
@@ -27,9 +27,9 @@ public class RFreakTests {
         int[] dim = {21, 4};
         RDoubleMatrix stackloss = new RDoubleMatrix(values, dim);
         PointSet.setPointsSetFromR(true);
-        Schedule schedule = ScheduleConfigurator.getLTSSchedule(stackloss, 0, false, 1, 10000, 0, 0);
+        ScheduleInterface schedule = ScheduleConfigurator.getLTSSchedule(stackloss, 0, false, 1, 10000, 0, 0);
         LogRegInterface.rSetSchedule(schedule);
-        RFreak.rMain(new String[] {""});
+        RFreak.rMain();
         SDataFrame returnedFrame = RReturns.getDataFrame();
         double crit = RReturns.getResidual();
         double[] coefficients = RReturns.getFittedHyperplane();
@@ -51,9 +51,9 @@ public class RFreakTests {
         Data.setRData(trainingData);
         Data.setRMode();
         ScheduleConfigurator.setInteractionR(1,1000,"test.dot",10,0.1);
-        Schedule schedule = ScheduleConfigurator.getCurrentSchedule();
+        ScheduleInterface schedule = ScheduleConfigurator.getCurrentSchedule();
         LogRegInterface.rSetSchedule(schedule);
-        RFreak.rMain(new String[] {""});
+        RFreak.rMain();
         SDataFrame returnedFrame = RReturns.getDataFrame();
         DNFTree[] returnedTrees = RReturns.getAllTrees();
         Data.clear();
@@ -69,9 +69,9 @@ public class RFreakTests {
         Data.setRData(trainingData);
         Data.setRMode();
         ScheduleConfigurator.setDiscriminationR(1,10000);
-        Schedule schedule = ScheduleConfigurator.getCurrentSchedule();
+        ScheduleInterface schedule = ScheduleConfigurator.getCurrentSchedule();
         LogRegInterface.rSetSchedule(schedule);
-        RFreak.rMain(new String[] {""});
+        RFreak.rMain();
         SDataFrame returnedFrame = RReturns.getDataFrame();
         DNFTree[] returnedTrees = RReturns.getAllTrees();
         Data.clear();
