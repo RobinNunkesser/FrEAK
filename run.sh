@@ -1,2 +1,2 @@
 #!/bin/bash
-java -jar rfreak-0.2.jar
+java -jar target/RFrEAK-0.2-8.jar
